@@ -4,25 +4,28 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>GoOnline — Websites &amp; Business Automation</title>
-<meta name="description" content="GoOnline builds business websites and Excel/VBA automation tools, managed entirely from a spreadsheet. Go online in 7 days." />
+<meta name="description" content="GoOnline builds business websites and automation tools that remove repetitive work. Live online in 7 days, with a real person behind every project." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,450;9..144,550;9..144,650&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 <style>
   :root{
-    --ink:#0d1512;
-    --ink-soft:#16211c;
-    --paper:#f2f4f1;
-    --paper-dim:#e7eae4;
-    --line: rgba(13,21,18,0.12);
-    --line-invert: rgba(242,244,241,0.14);
-    --web:#3e5cf0;
-    --web-soft:#e8ecfd;
-    --auto:#c9861f;
-    --auto-soft:#faf0dc;
-    --text-dim:#5b665f;
-    --font-display:'Space Grotesk', sans-serif;
-    --font-body:'Manrope', sans-serif;
+    --paper:#f5f6f2;
+    --paper-dim:#eceee7;
+    --ink:#101a1c;
+    --ink-soft:#1c2a2c;
+    --line:rgba(16,26,28,0.14);
+    --line-strong:rgba(16,26,28,0.26);
+    --line-invert:rgba(245,246,242,0.16);
+    --web:#2f5de0;
+    --web-soft:#e7ecfb;
+    --auto:#c07a12;
+    --auto-soft:#faf0da;
+    --active:#1e7a46;
+    --active-soft:#e4f2e9;
+    --text-dim:#576260;
+    --font-display:'Fraunces', serif;
+    --font-body:'Inter', sans-serif;
     --font-mono:'IBM Plex Mono', monospace;
   }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -37,42 +40,46 @@
   a{color:inherit; text-decoration:none;}
   img,video{display:block; max-width:100%;}
   .wrap{max-width:1180px; margin:0 auto; padding:0 24px;}
-  ::selection{background:var(--web); color:#fff;}
+  ::selection{background:var(--active); color:#fff;}
   :focus-visible{outline:2px solid var(--web); outline-offset:3px;}
 
-  h1,h2,h3,h4{font-family:var(--font-display); letter-spacing:-0.01em; line-height:1.08;}
-  .eyebrow{
-    font-family:var(--font-mono); font-size:12px; letter-spacing:0.08em; text-transform:uppercase;
-    display:inline-flex; align-items:center; gap:8px; color:var(--text-dim);
+  h1,h2,h3,h4{font-family:var(--font-display); letter-spacing:-0.01em; line-height:1.1; font-weight:550;}
+
+  .tab{
+    display:inline-flex; align-items:center; gap:9px; font-family:var(--font-mono); font-size:12.5px;
+    font-weight:500; color:var(--ink-soft); padding:6px 13px 6px 11px; border-left:3px solid var(--web);
+    background:var(--web-soft); border-radius:0 7px 7px 0;
   }
-  .eyebrow .dot{width:6px; height:6px; border-radius:2px; background:currentColor; display:inline-block;}
+  .tab.auto{border-left-color:var(--auto); background:var(--auto-soft);}
+  .tab.active{border-left-color:var(--active); background:var(--active-soft);}
 
   /* ---------- NAV ---------- */
   header{
     position:fixed; top:0; left:0; right:0; z-index:100;
-    background:rgba(242,244,241,0.85); backdrop-filter:blur(10px);
+    background:rgba(245,246,242,0.88); backdrop-filter:blur(10px);
     border-bottom:1px solid var(--line);
   }
-  header .wrap{display:flex; align-items:center; justify-content:space-between; padding-top:16px; padding-bottom:16px;}
-  .logo{font-family:var(--font-display); font-weight:700; font-size:20px; display:flex; align-items:center; gap:8px;}
+  header .wrap{display:flex; align-items:center; justify-content:space-between; padding-top:15px; padding-bottom:15px;}
+  .logo{font-family:var(--font-display); font-weight:650; font-size:20px; display:flex; align-items:center; gap:9px;}
   .logo .mark{
     width:26px; height:26px; border-radius:6px; background:var(--ink);
     display:grid; place-items:center; color:var(--paper); font-family:var(--font-mono); font-size:12px; font-weight:600;
   }
-  nav ul{display:flex; gap:32px; list-style:none; align-items:center;}
-  nav a.nav-link{font-size:14px; font-weight:600; color:var(--ink-soft);}
+  nav ul{display:flex; gap:30px; list-style:none; align-items:center;}
+  nav a.nav-link{font-size:14px; font-weight:500; color:var(--ink-soft);}
   nav a.nav-link:hover{color:var(--web);}
   .btn{
-    display:inline-flex; align-items:center; gap:8px; font-weight:700; font-size:14px;
-    padding:11px 20px; border-radius:100px; border:1px solid transparent; cursor:pointer; transition:.2s ease;
+    display:inline-flex; align-items:center; gap:8px; font-weight:600; font-size:14px;
+    padding:11px 20px; border-radius:8px; border:1px solid transparent; cursor:pointer; transition:.15s ease;
+    font-family:var(--font-body);
   }
   .btn-primary{background:var(--ink); color:var(--paper);}
   .btn-primary:hover{background:var(--web);}
-  .btn-ghost{border-color:var(--line); color:var(--ink);}
-  .btn-ghost:hover{border-color:var(--ink);}
-  .navbtns{display:flex; align-items:center; gap:14px;}
+  .btn-ghost{border-color:var(--line-strong); color:var(--ink);}
+  .btn-ghost:hover{border-color:var(--ink); background:var(--paper-dim);}
+  .navbtns{display:flex; align-items:center; gap:12px;}
   #mobileBtn{display:none; font-size:20px; background:none; border:0; cursor:pointer; color:var(--ink);}
-  #mobileMenu{display:none; flex-direction:column; gap:16px; padding:20px 24px 24px; border-top:1px solid var(--line);}
+  #mobileMenu{display:none; flex-direction:column; gap:16px; padding:18px 24px 22px; border-top:1px solid var(--line);}
   #mobileMenu.open{display:flex;}
 
   @media (max-width:860px){
@@ -81,150 +88,174 @@
   }
 
   /* ---------- HERO ---------- */
-  .hero{padding:168px 0 90px; position:relative;}
+  .hero{padding:150px 0 96px;}
   .hero-grid{display:grid; grid-template-columns:1.05fr 0.95fr; gap:56px; align-items:center;}
-  .hero h1{font-size:clamp(34px,5.4vw,60px); font-weight:600;}
-  .hero h1 em{font-style:normal; color:var(--web);}
-  .hero p.lead{font-size:17px; color:var(--text-dim); margin-top:20px; max-width:480px; line-height:1.6;}
+  .hero .tab{margin-bottom:18px;}
+  .hero h1{font-size:clamp(32px,4.6vw,50px);}
+  .hero p.lead{font-size:16.5px; color:var(--text-dim); margin-top:18px; line-height:1.6; max-width:480px;}
   .hero-cta{display:flex; gap:14px; margin-top:32px; flex-wrap:wrap;}
   .hero-stats{display:flex; gap:36px; margin-top:44px; flex-wrap:wrap;}
-  .hero-stats div span{font-family:var(--font-display); font-size:26px; font-weight:700; display:block;}
+  .hero-stats div span{font-family:var(--font-display); font-size:26px; font-weight:600; display:block;}
   .hero-stats div p{font-size:12px; color:var(--text-dim); margin-top:2px;}
 
-  /* signature pipeline diagram */
-  .pipeline{
-    background:var(--ink); border-radius:20px; padding:28px 22px 22px; color:var(--paper);
-    position:relative; overflow:hidden;
+  @keyframes heroIn{from{opacity:0; transform:translateY(16px);} to{opacity:1; transform:translateY(0);}}
+  .agency-visual{
+    animation:heroIn .7s cubic-bezier(.2,.7,.3,1) both;
+    background:#fff; border:1px solid var(--line-strong); border-radius:16px; overflow:hidden;
+    box-shadow:0 30px 60px -36px rgba(16,26,28,.35);
   }
-  .pipeline .pipe-label{font-family:var(--font-mono); font-size:11px; color:rgba(242,244,241,.5); text-transform:uppercase; letter-spacing:.08em; margin-bottom:18px;}
-  .pipe-row{display:flex; align-items:center; justify-content:space-between; gap:6px;}
-  .pipe-node{
-    flex:1; text-align:center; padding:16px 8px; border-radius:12px; background:var(--ink-soft);
-    border:1px solid var(--line-invert); position:relative; z-index:2;
-  }
-  .pipe-node i{font-size:18px; margin-bottom:8px; display:block;}
-  .pipe-node span{font-family:var(--font-mono); font-size:11px; display:block; line-height:1.3;}
-  .pipe-node.web i{color:var(--web);}
-  .pipe-node.auto i{color:var(--auto);}
-  .pipe-arrow{width:26px; text-align:center; color:rgba(242,244,241,.35); font-size:14px;}
-  .pipe-track{position:relative; height:2px; background:rgba(242,244,241,.14); margin:22px 0 0;}
-  .pipe-dot{
-    position:absolute; top:-3px; width:8px; height:8px; border-radius:50%; background:var(--web);
-    animation:travel 3.6s linear infinite; box-shadow:0 0 12px var(--web);
-  }
-  @keyframes travel{
-    0%{left:0; background:var(--auto); box-shadow:0 0 12px var(--auto);}
-    48%{left:calc(100% - 8px); background:var(--auto); box-shadow:0 0 12px var(--auto);}
-    52%{left:calc(100% - 8px); background:var(--web); box-shadow:0 0 12px var(--web);}
-    100%{left:0; background:var(--web); box-shadow:0 0 12px var(--web);}
-  }
-  .pipe-caption{font-size:13px; color:rgba(242,244,241,.65); margin-top:20px; line-height:1.55;}
-  .pipe-caption b{color:var(--paper); font-weight:600;}
+  .av-chrome{display:flex; align-items:center; gap:8px; padding:11px 14px; background:var(--paper-dim); border-bottom:1px solid var(--line);}
+  .av-chrome span{width:8px; height:8px; border-radius:50%; background:var(--line-strong);}
+  .av-chrome .url{margin-left:6px; font-family:var(--font-mono); font-size:11px; color:var(--text-dim); background:#fff; border:1px solid var(--line); border-radius:5px; padding:4px 10px; flex:1;}
+  .av-page{padding:22px;}
+  .av-navline{height:8px; width:38%; border-radius:4px; background:var(--line-strong); margin-bottom:18px;}
+  .av-heroblock{display:flex; gap:16px; margin-bottom:18px;}
+  .av-heroblock .txt{flex:1; display:flex; flex-direction:column; gap:9px; justify-content:center;}
+  .av-heroblock .txt span{height:9px; border-radius:4px; background:var(--line-strong); display:block;}
+  .av-heroblock .txt span:nth-child(1){width:88%;}
+  .av-heroblock .txt span:nth-child(2){width:62%;}
+  .av-heroblock .btn-block{width:76px; height:24px; border-radius:6px; background:var(--web); margin-top:6px;}
+  .av-heroblock .img{width:120px; height:76px; border-radius:8px; background:var(--web-soft); flex:0 0 120px;}
+  .av-cards{display:flex; gap:10px;}
+  .av-cards div{flex:1; height:44px; border-radius:6px; background:var(--paper-dim); border:1px solid var(--line);}
 
-  @media (max-width:900px){
-    .hero-grid{grid-template-columns:1fr;}
-  }
+  .av-link{display:flex; align-items:center; justify-content:center; gap:8px; padding:12px; font-family:var(--font-mono); font-size:11.5px; color:var(--text-dim); background:var(--paper); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .av-link i{color:var(--auto);}
+
+  .av-flow{padding:22px 18px; display:flex; align-items:flex-start; justify-content:space-between; gap:6px;}
+  .av-node{display:flex; flex-direction:column; align-items:center; gap:9px; flex:1;}
+  .av-node .ic{width:38px; height:38px; border-radius:10px; background:var(--auto-soft); color:var(--auto); display:grid; place-items:center; font-size:15px;}
+  .av-node span{font-size:10.5px; color:var(--text-dim); text-align:center; line-height:1.3;}
+  .av-arrow{color:var(--line-strong); font-size:13px; margin-top:12px;}
+
+  @media (max-width:900px){.hero-grid{grid-template-columns:1fr;}}
+  @media (max-width:480px){.av-heroblock .img{display:none;} .av-node span{display:none;}}
 
   /* ---------- SECTION SHELL ---------- */
-  section{padding:88px 0;}
-  .section-head{max-width:640px; margin-bottom:48px;}
-  .section-head h2{font-size:clamp(26px,3.4vw,38px); font-weight:600; margin-top:10px;}
-  .section-head p{color:var(--text-dim); margin-top:12px; font-size:15.5px; line-height:1.6;}
+  section{padding:84px 0;}
+  .section-head{max-width:620px; margin-bottom:44px;}
+  .section-head h2{font-size:clamp(25px,3.2vw,36px); margin-top:14px;}
+  .section-head p{color:var(--text-dim); margin-top:12px; font-size:15px; line-height:1.6;}
   .section-foot-row{display:flex; align-items:flex-end; justify-content:space-between; gap:24px; flex-wrap:wrap;}
 
   /* ---------- SERVICES ---------- */
-  .services-grid{display:grid; grid-template-columns:1fr 1fr; gap:20px;}
-  .service-card{
-    border-radius:18px; padding:32px; border:1px solid var(--line); background:#fff;
-    transition:transform .25s ease, box-shadow .25s ease;
-  }
-  .service-card:hover{transform:translateY(-4px); box-shadow:0 18px 40px -20px rgba(13,21,18,.25);}
-  .service-card .tag{
-    font-family:var(--font-mono); font-size:11px; text-transform:uppercase; letter-spacing:.06em;
-    display:inline-block; padding:5px 10px; border-radius:6px; margin-bottom:18px;
-  }
-  .service-card.web .tag{background:var(--web-soft); color:var(--web);}
-  .service-card.auto .tag{background:var(--auto-soft); color:var(--auto);}
-  .service-card h3{font-size:22px; font-weight:600; margin-bottom:10px;}
-  .service-card p{color:var(--text-dim); font-size:14.5px; line-height:1.6; margin-bottom:18px;}
-  .service-card ul{list-style:none; display:flex; flex-direction:column; gap:9px;}
-  .service-card li{font-size:14px; display:flex; gap:9px; align-items:flex-start;}
-  .service-card li i{font-size:12px; margin-top:4px; color:var(--text-dim);}
+  .services-grid{display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--line-strong); border:1px solid var(--line-strong); border-radius:14px; overflow:hidden;}
+  .service-card{background:#fff; padding:34px;}
+  .service-card h3{font-size:22px; margin-bottom:10px; margin-top:16px;}
+  .service-card p{color:var(--text-dim); font-size:14.5px; line-height:1.6; margin-bottom:20px;}
+  .service-card ul{list-style:none; display:flex; flex-direction:column; gap:10px;}
+  .service-card li{font-size:13.5px; display:flex; gap:10px; align-items:flex-start; font-family:var(--font-mono); color:var(--ink-soft);}
+  .service-card li i{font-size:10px; margin-top:5px; color:var(--text-dim);}
   @media (max-width:760px){.services-grid{grid-template-columns:1fr;}}
 
   /* ---------- PORTFOLIO ---------- */
   .portfolio-section.web{background:var(--paper);}
   .portfolio-section.auto{background:var(--paper-dim);}
-  .cards-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+  .cards-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line-strong); border:1px solid var(--line-strong); border-radius:14px; overflow:hidden;}
   @media (max-width:980px){.cards-grid{grid-template-columns:1fr 1fr;}}
   @media (max-width:640px){.cards-grid{grid-template-columns:1fr;}}
 
   .proj-card{
-    background:#fff; border-radius:16px; overflow:hidden; border:1px solid var(--line);
-    transition:transform .25s ease, box-shadow .25s ease; display:flex; flex-direction:column;
+    background:#fff; overflow:hidden; display:flex; flex-direction:column;
   }
-  .proj-card:hover{transform:translateY(-6px); box-shadow:0 20px 44px -22px rgba(13,21,18,.3);}
-  .proj-media{position:relative; aspect-ratio:16/10; background:var(--ink-soft); overflow:hidden;}
-  .proj-media video, .proj-media img{width:100%; height:100%; object-fit:cover;}
-  .proj-card:hover .proj-media video, .proj-card:hover .proj-media img{transform:scale(1.04);}
-  .proj-media video, .proj-media img{transition:transform .5s ease;}
+  .proj-media{position:relative; aspect-ratio:16/10; background:var(--ink-soft); overflow:hidden; display:flex; flex-direction:column;}
+  .proj-img-row{flex:1; display:flex; gap:1px; background:var(--line); min-height:0;}
+  .proj-img-slot{flex:1; position:relative; overflow:hidden; display:grid; place-items:center;}
+  .proj-img-slot img{width:100%; height:100%; object-fit:cover; display:block;}
+  .proj-img-slot.placeholder i{font-size:16px; opacity:.55;}
   .proj-badge{
     position:absolute; top:12px; left:12px; font-family:var(--font-mono); font-size:10.5px;
-    text-transform:uppercase; letter-spacing:.06em; padding:5px 10px; border-radius:6px; backdrop-filter:blur(6px);
+    padding:5px 10px; border-radius:6px; backdrop-filter:blur(6px); z-index:2;
   }
-  .proj-card.web .proj-badge{background:rgba(62,92,240,.9); color:#fff;}
-  .proj-card.auto .proj-badge{background:rgba(201,134,31,.92); color:#fff;}
-  .cell-strip{display:flex; gap:2px; padding:6px; background:var(--auto-soft);}
-  .cell-strip span{flex:1; height:14px; border-radius:2px; background:rgba(201,134,31,.28);}
-  .cell-strip span:nth-child(3n+1){background:rgba(201,134,31,.5);}
-  .browser-chrome{display:flex; gap:5px; padding:9px 10px; background:var(--web-soft);}
-  .browser-chrome span{width:8px; height:8px; border-radius:50%; background:rgba(62,92,240,.35);}
-  .browser-chrome span:first-child{background:rgba(62,92,240,.55);}
+  .proj-card.web .proj-badge{background:rgba(47,93,224,.92); color:#fff;}
+  .proj-card.auto .proj-badge{background:rgba(192,122,18,.92); color:#fff;}
+  .cell-strip{display:flex; gap:2px; padding:6px; background:var(--auto-soft); flex:0 0 auto;}
+  .cell-strip span{flex:1; height:14px; border-radius:2px; background:rgba(192,122,18,.3);}
+  .cell-strip span:nth-child(3n+1){background:rgba(192,122,18,.52);}
+  .browser-chrome{display:flex; align-items:center; gap:6px; padding:9px 10px; background:var(--web-soft); font-family:var(--font-mono); font-size:10px; color:var(--text-dim); flex:0 0 auto;}
+  .browser-chrome span{width:7px; height:7px; border-radius:50%; background:rgba(47,93,224,.4);}
+  .browser-chrome span:first-child{background:rgba(47,93,224,.6);}
   .proj-body{padding:18px 20px 20px; display:flex; flex-direction:column; gap:8px; flex:1;}
-  .proj-body h4{font-size:16.5px; font-weight:700;}
+  .proj-body h4{font-size:16.5px; font-weight:600; font-family:var(--font-display);}
   .proj-body p{font-size:13.5px; color:var(--text-dim); line-height:1.55; flex:1;}
-  .proj-links{display:flex; gap:14px; margin-top:6px; font-size:13px; font-weight:700;}
-  .proj-links a{display:inline-flex; align-items:center; gap:6px;}
+  .proj-links{display:flex; gap:14px; margin-top:6px; font-size:13px; font-weight:600;}
   .proj-card.web .proj-links a{color:var(--web);}
   .proj-card.auto .proj-links a{color:var(--auto);}
   .proj-links a:hover{text-decoration:underline;}
 
   .state-box{
-    border:1px dashed var(--line); border-radius:16px; padding:40px 24px; text-align:center;
-    color:var(--text-dim); font-size:14px; grid-column:1/-1;
+    border:1px dashed var(--line-strong); border-radius:8px; padding:40px 24px; text-align:center;
+    color:var(--text-dim); font-size:14px; grid-column:1/-1; background:#fff;
   }
   .state-box i{font-size:20px; display:block; margin-bottom:10px;}
   .skeleton{background:linear-gradient(90deg, var(--paper-dim) 25%, #ffffff 37%, var(--paper-dim) 63%); background-size:400% 100%; animation:shine 1.4s ease infinite;}
   @keyframes shine{0%{background-position:100% 0;}100%{background-position:0 0;}}
-  .skel-card{border-radius:16px; overflow:hidden; border:1px solid var(--line); background:#fff;}
+  .skel-card{overflow:hidden; background:#fff;}
   .skel-media{aspect-ratio:16/10;}
   .skel-line{height:11px; border-radius:5px; margin:14px 20px;}
   .skel-line.short{width:55%;}
 
   /* ---------- PROCESS ---------- */
   .process{background:var(--ink); color:var(--paper);}
-  .process .section-head p{color:rgba(242,244,241,.65);}
-  .process .eyebrow{color:rgba(242,244,241,.55);}
-  .process-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  .process .section-head p{color:rgba(245,246,242,.62);}
+  .process-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line-invert); border:1px solid var(--line-invert); border-radius:14px; overflow:hidden;}
   @media (max-width:820px){.process-grid{grid-template-columns:1fr;}}
-  .process-card{border:1px solid var(--line-invert); border-radius:16px; padding:26px;}
-  .process-card .num{font-family:var(--font-mono); font-size:12px; color:rgba(242,244,241,.45); margin-bottom:14px;}
-  .process-card h4{font-size:17px; font-weight:600; margin-bottom:8px;}
-  .process-card p{font-size:14px; color:rgba(242,244,241,.6); line-height:1.6;}
+  .process-card{background:var(--ink-soft); padding:28px;}
+  .process-card .num{font-family:var(--font-mono); font-size:12px; color:rgba(245,246,242,.42); margin-bottom:14px;}
+  .process-card h4{font-size:18px; margin-bottom:9px; font-weight:600;}
+  .process-card p{font-size:14px; color:rgba(245,246,242,.62); line-height:1.6;}
 
-  /* ---------- CONTACT ---------- */
+  /* ---------- PRICING ---------- */
+  .pricing-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line-strong); border:1px solid var(--line-strong); border-radius:14px; overflow:hidden;}
+  @media (max-width:820px){.pricing-grid{grid-template-columns:1fr;}}
+  .price-card{background:#fff; padding:30px; display:flex; flex-direction:column;}
+  .price-card.featured{background:var(--ink); color:var(--paper);}
+  .price-card .amount{font-family:var(--font-display); font-size:30px; font-weight:600; margin:16px 0 2px;}
+  .price-card .amount small{font-size:13px; font-weight:400; color:var(--text-dim); font-family:var(--font-body);}
+  .price-card.featured .amount small{color:rgba(245,246,242,.6);}
+  .price-card ul{list-style:none; display:flex; flex-direction:column; gap:10px; margin:18px 0 24px; flex:1;}
+  .price-card li{font-size:13.5px; display:flex; gap:9px; align-items:flex-start;}
+  .price-card li i{font-size:9px; margin-top:5px; color:var(--text-dim);}
+  .price-card.featured li i{color:rgba(245,246,242,.55);}
+  .price-note{font-family:var(--font-mono); font-size:12px; color:var(--text-dim); margin-top:22px;}
+  .payment-row{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;}
+  .pay-chip{display:inline-flex; align-items:center; gap:7px; font-family:var(--font-mono); font-size:12px; padding:8px 13px; border:1px solid var(--line-strong); border-radius:20px; background:#fff;}
+
+  /* ---------- TRUST / BIO ---------- */
+  .trust-grid{display:grid; grid-template-columns:1.15fr 0.85fr; gap:40px; align-items:start;}
+  @media (max-width:860px){.trust-grid{grid-template-columns:1fr;}}
+  .trust-list{display:flex; flex-direction:column; gap:20px;}
+  .trust-item{display:flex; gap:14px;}
+  .trust-item i{width:36px; height:36px; border-radius:9px; background:var(--active-soft); color:var(--active); display:grid; place-items:center; flex:0 0 36px; font-size:14px;}
+  .trust-item h4{font-size:15.5px; margin-bottom:4px; font-weight:600;}
+  .trust-item p{font-size:13.5px; color:var(--text-dim); line-height:1.55;}
+
+  .bio-card{background:#fff; border:1px solid var(--line-strong); border-radius:14px; padding:28px;}
+  .bio-top{display:flex; gap:16px; align-items:center;}
+  .bio-avatar{width:56px; height:56px; border-radius:12px; background:var(--ink); color:var(--paper); display:grid; place-items:center; font-family:var(--font-display); font-weight:600; font-size:19px; flex:0 0 56px;}
+  .bio-top h4{font-size:17px; font-weight:600;}
+  .bio-top span{font-size:13px; color:var(--text-dim);}
+  .bio-badges{display:flex; gap:8px; flex-wrap:wrap; margin:18px 0;}
+  .bio-badge{font-family:var(--font-mono); font-size:11px; padding:6px 11px; border-radius:6px; background:var(--web-soft); color:var(--web); font-weight:500;}
+  .bio-badge.alt{background:var(--auto-soft); color:var(--auto);}
+  .bio-card p.quote{font-size:13.5px; color:var(--text-dim); line-height:1.6;}
+
+  /* ---------- IMPACT CHIP (portfolio cards) ---------- */
+  .impact-chip{display:inline-flex; align-items:center; gap:5px; font-family:var(--font-mono); font-size:11px; padding:4px 9px; border-radius:6px; background:var(--active-soft); color:var(--active); width:fit-content;}
+
+
   .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start;}
   @media (max-width:860px){.contact-grid{grid-template-columns:1fr;}}
   .contact-info .item{display:flex; align-items:center; gap:14px; margin-top:16px; font-size:14.5px;}
-  .contact-info .item i{width:34px; height:34px; border-radius:9px; background:#fff; border:1px solid var(--line); display:grid; place-items:center;}
+  .contact-info .item i{width:34px; height:34px; border-radius:8px; background:#fff; border:1px solid var(--line); display:grid; place-items:center;}
   .social-row{display:flex; gap:12px; margin-top:28px;}
-  .social-row a{width:42px; height:42px; border-radius:50%; border:1px solid var(--line); display:grid; place-items:center; transition:.2s;}
+  .social-row a{width:40px; height:40px; border-radius:8px; border:1px solid var(--line-strong); display:grid; place-items:center; transition:.15s;}
   .social-row a:hover{background:var(--ink); color:var(--paper); border-color:var(--ink);}
-  form.contact-form{background:#fff; border:1px solid var(--line); border-radius:18px; padding:28px;}
+  form.contact-form{background:#fff; border:1px solid var(--line-strong); border-radius:12px; padding:28px;}
   .field{margin-bottom:16px;}
-  .field label{font-size:12.5px; font-weight:700; display:block; margin-bottom:6px;}
+  .field label{font-size:12.5px; font-weight:600; display:block; margin-bottom:6px; font-family:var(--font-mono);}
   .field input, .field select, .field textarea{
-    width:100%; padding:12px 14px; border-radius:10px; border:1px solid var(--line);
+    width:100%; padding:12px 14px; border-radius:8px; border:1px solid var(--line-strong);
     font-family:var(--font-body); font-size:14px; background:var(--paper);
   }
   .field input:focus, .field select:focus, .field textarea:focus{outline:none; border-color:var(--web);}
@@ -232,14 +263,11 @@
   footer{border-top:1px solid var(--line); padding:44px 0 30px;}
   .footer-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:32px;}
   @media (max-width:760px){.footer-grid{grid-template-columns:1fr 1fr;}}
-  footer h5{font-size:13px; font-weight:700; margin-bottom:12px;}
+  footer h5{font-size:13px; font-weight:600; margin-bottom:12px; font-family:var(--font-mono);}
   footer ul{list-style:none; display:flex; flex-direction:column; gap:8px;}
   footer a{font-size:13.5px; color:var(--text-dim);}
   footer a:hover{color:var(--ink);}
   .footer-bottom{margin-top:36px; padding-top:20px; border-top:1px solid var(--line); font-size:12.5px; color:var(--text-dim); display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;}
-
-  .fade-in{opacity:0; transform:translateY(22px); transition:opacity .7s ease, transform .7s ease;}
-  .fade-in.visible{opacity:1; transform:translateY(0);}
 </style>
 </head>
 <body>
@@ -249,21 +277,21 @@
     <a href="#" class="logo"><span class="mark">G</span>GoOnline</a>
     <nav><ul>
       <li><a class="nav-link" href="#services">Services</a></li>
-      <li><a class="nav-link" href="#web-projects">Web Work</a></li>
-      <li><a class="nav-link" href="#automation-projects">Automation</a></li>
-      <li><a class="nav-link" href="#process">Process</a></li>
+      <li><a class="nav-link" href="#web-projects">Web work</a></li>
+      <li><a class="nav-link" href="#pricing">Pricing</a></li>
+      <li><a class="nav-link" href="#about">About</a></li>
     </ul></nav>
     <div class="navbtns">
       <a href="#contact" class="btn btn-ghost">Contact</a>
-      <a href="#contact" class="btn btn-primary">Go online in 7 days</a>
+      <a href="#contact" class="btn btn-primary">Start your project</a>
     </div>
     <button id="mobileBtn"><i class="fas fa-bars"></i></button>
   </div>
   <div id="mobileMenu" class="wrap">
     <a class="nav-link" href="#services">Services</a>
-    <a class="nav-link" href="#web-projects">Web Work</a>
-    <a class="nav-link" href="#automation-projects">Automation</a>
-    <a class="nav-link" href="#process">Process</a>
+    <a class="nav-link" href="#web-projects">Web work</a>
+    <a class="nav-link" href="#pricing">Pricing</a>
+    <a class="nav-link" href="#about">About</a>
     <a class="btn btn-primary" href="#contact" style="width:fit-content;">Contact</a>
   </div>
 </header>
@@ -271,31 +299,39 @@
 <!-- ================= HERO ================= -->
 <section class="hero">
   <div class="wrap hero-grid">
-    <div class="fade-in">
-      <span class="eyebrow"><span class="dot"></span> Web Development &amp; Business Automation</span>
-      <h1 style="margin-top:16px;">Go online in 7 days.<br>Then run on <em>autopilot</em>.</h1>
-      <p class="lead">GoOnline designs business websites and builds Excel/VBA automation tools — and wires both to a spreadsheet, so you can update your site or your workflow without ever touching code.</p>
+    <div>
+      <span class="tab active">Web development &amp; business automation</span>
+      <h1>Professional websites, paired with automation that removes the busywork.</h1>
+      <p class="lead">We design and build business websites, then automate the workflows behind them — enquiries, reports, repetitive admin — so less of it lands on your desk.</p>
       <div class="hero-cta">
-        <a href="#contact" class="btn btn-primary"><i class="fas fa-arrow-right"></i> Start your project</a>
+        <a href="#contact" class="btn btn-primary">Start your project</a>
         <a href="#web-projects" class="btn btn-ghost">See our work</a>
       </div>
       <div class="hero-stats">
         <div><span>7 days</span><p>Typical launch time</p></div>
-        <div><span>0</span><p>Code edits to update content</p></div>
+        <div><span>1:1</span><p>Direct access to your builder</p></div>
         <div><span>2</span><p>Disciplines, one team</p></div>
       </div>
     </div>
-    <div class="fade-in pipeline" aria-hidden="true">
-      <div class="pipe-label">// how a goonline site stays current</div>
-      <div class="pipe-row">
-        <div class="pipe-node auto"><i class="fas fa-table-cells"></i><span>Google<br>Sheet</span></div>
-        <div class="pipe-arrow">→</div>
-        <div class="pipe-node"><i class="fas fa-code-branch" style="color:var(--paper);"></i><span>Apps<br>Script API</span></div>
-        <div class="pipe-arrow">→</div>
-        <div class="pipe-node web"><i class="fas fa-window-maximize"></i><span>Live<br>Website</span></div>
+
+    <div class="agency-visual">
+      <div class="av-chrome"><span></span><span></span><span></span><div class="url">yourbusiness.com</div></div>
+      <div class="av-page">
+        <div class="av-navline"></div>
+        <div class="av-heroblock">
+          <div class="txt"><span></span><span></span><div class="btn-block"></div></div>
+          <div class="img"></div>
+        </div>
+        <div class="av-cards"><div></div><div></div><div></div></div>
       </div>
-      <div class="pipe-track"><div class="pipe-dot"></div></div>
-      <p class="pipe-caption">Add a row to your sheet — mark it <b>Active</b> — and it appears on your site automatically. No developer required for day-to-day updates.</p>
+      <div class="av-link"><i class="fas fa-bolt"></i> Connected to an automated workflow</div>
+      <div class="av-flow">
+        <div class="av-node"><div class="ic"><i class="fas fa-inbox"></i></div><span>Enquiry received</span></div>
+        <i class="fas fa-arrow-right av-arrow"></i>
+        <div class="av-node"><div class="ic"><i class="fas fa-gears"></i></div><span>Auto-processed</span></div>
+        <i class="fas fa-arrow-right av-arrow"></i>
+        <div class="av-node"><div class="ic"><i class="fas fa-bell"></i></div><span>Team notified</span></div>
+      </div>
     </div>
   </div>
 </section>
@@ -303,32 +339,32 @@
 <!-- ================= SERVICES ================= -->
 <section id="services">
   <div class="wrap">
-    <div class="section-head fade-in">
-      <span class="eyebrow"><span class="dot"></span> What we do</span>
+    <div class="section-head">
+      <span class="tab">What we do</span>
       <h2>Two disciplines. One team.</h2>
-      <p>Most agencies build a site and disappear. We build the site and the systems that keep it — and your business — running.</p>
+      <p>Most agencies build a site and disappear. We build the site and the systems that keep it — and your business — running, and stay reachable long after launch.</p>
     </div>
     <div class="services-grid">
-      <div class="service-card web fade-in">
-        <span class="tag">Website Development</span>
+      <div class="service-card">
+        <span class="tab">Website development</span>
         <h3>Business &amp; brand websites</h3>
-        <p>Fast, responsive websites for shops, brands and service businesses — built to load quickly and convert visitors.</p>
+        <p>Fast, responsive websites for shops, brands and service businesses — built to load quickly and turn visitors into enquiries.</p>
         <ul>
-          <li><i class="fas fa-check"></i> Responsive, mobile-first builds</li>
-          <li><i class="fas fa-check"></i> Product catalogues &amp; storefronts</li>
-          <li><i class="fas fa-check"></i> WhatsApp / enquiry integration</li>
-          <li><i class="fas fa-check"></i> Sheet-driven content, no CMS login needed</li>
+          <li><i class="fas fa-square"></i> Responsive, mobile-first builds</li>
+          <li><i class="fas fa-square"></i> Product catalogues &amp; storefronts</li>
+          <li><i class="fas fa-square"></i> WhatsApp &amp; enquiry integration</li>
+          <li><i class="fas fa-square"></i> Simple content updates, no complicated CMS</li>
         </ul>
       </div>
-      <div class="service-card auto fade-in">
-        <span class="tag">Excel / VBA / Automation</span>
+      <div class="service-card">
+        <span class="tab auto">Automation &amp; AI</span>
         <h3>Business process automation</h3>
-        <p>Custom Excel dashboards, VBA tools and Sheets automations that remove repetitive manual work from your day.</p>
+        <p>Custom automation and AI-assisted tools that take repetitive manual work off your team's plate — built around the systems you already use.</p>
         <ul>
-          <li><i class="fas fa-check"></i> VBA tools &amp; report automation</li>
-          <li><i class="fas fa-check"></i> Data reconciliation &amp; cleanup</li>
-          <li><i class="fas fa-check"></i> PDF ⇄ Excel workflows</li>
-          <li><i class="fas fa-check"></i> Google Sheets-powered dashboards</li>
+          <li><i class="fas fa-square"></i> Workflow &amp; report automation</li>
+          <li><i class="fas fa-square"></i> Data reconciliation &amp; cleanup</li>
+          <li><i class="fas fa-square"></i> Document &amp; data-entry workflows</li>
+          <li><i class="fas fa-square"></i> Dashboards &amp; internal tools</li>
         </ul>
       </div>
     </div>
@@ -338,11 +374,11 @@
 <!-- ================= WEB PROJECTS ================= -->
 <section id="web-projects" class="portfolio-section web">
   <div class="wrap">
-    <div class="section-foot-row fade-in" style="margin-bottom:48px;">
+    <div class="section-foot-row" style="margin-bottom:44px;">
       <div class="section-head" style="margin-bottom:0;">
-        <span class="eyebrow" style="color:var(--web);"><span class="dot"></span> Latest Web Projects</span>
-        <h2>Recent websites &amp; digital experiences</h2>
-        <p>Pulled live from our project sheet — the newest six active builds, newest first.</p>
+        <span class="tab">Recent web projects</span>
+        <h2>Websites &amp; digital experiences</h2>
+        <p>The newest six projects we've shipped, most recent first.</p>
       </div>
       <a href="https://www.instagram.com/goonlinein7/" target="_blank" rel="noopener" class="btn btn-ghost" id="viewAllWeb" style="display:none;">View all web projects</a>
     </div>
@@ -353,11 +389,11 @@
 <!-- ================= AUTOMATION PROJECTS ================= -->
 <section id="automation-projects" class="portfolio-section auto">
   <div class="wrap">
-    <div class="section-foot-row fade-in" style="margin-bottom:48px;">
+    <div class="section-foot-row" style="margin-bottom:44px;">
       <div class="section-head" style="margin-bottom:0;">
-        <span class="eyebrow" style="color:var(--auto);"><span class="dot"></span> Latest Automation Projects</span>
-        <h2>Excel &amp; Automation Projects</h2>
-        <p>Automation that turns repetitive work into efficient workflows.</p>
+        <span class="tab auto">Recent automation projects</span>
+        <h2>Automation &amp; process tools</h2>
+        <p>Real workflows we've automated for real businesses, most recent first.</p>
       </div>
       <a href="https://www.instagram.com/goonlinein7/" target="_blank" rel="noopener" class="btn btn-ghost" id="viewAllAuto" style="display:none;">View all automation projects</a>
     </div>
@@ -368,26 +404,124 @@
 <!-- ================= PROCESS ================= -->
 <section id="process" class="process">
   <div class="wrap">
-    <div class="section-head fade-in">
-      <span class="eyebrow"><span class="dot"></span> How it works</span>
-      <h2>From spreadsheet to shipped</h2>
-      <p>The same sheet-first workflow powers this page's own portfolio sections above.</p>
+    <div class="section-head">
+      <span class="tab active">How it works</span>
+      <h2>From first call to launch</h2>
+      <p>A short, structured process — you always know what stage your project is at and what happens next.</p>
     </div>
     <div class="process-grid">
-      <div class="process-card fade-in">
+      <div class="process-card">
         <div class="num">01</div>
-        <h4>We build the system</h4>
-        <p>A website or automation tool, connected to a Google Sheet that acts as its content or data source.</p>
+        <h4>Scope the project</h4>
+        <p>A short call to understand your business, what you need, and a fixed price before any work starts.</p>
       </div>
-      <div class="process-card fade-in">
+      <div class="process-card">
         <div class="num">02</div>
-        <h4>You manage the sheet</h4>
-        <p>Add a row, mark it Active, and it's live. No GitHub, no code editor, no developer on standby.</p>
+        <h4>Build &amp; review</h4>
+        <p>We build in the open — you see progress and give feedback before anything goes live.</p>
       </div>
-      <div class="process-card fade-in">
+      <div class="process-card">
         <div class="num">03</div>
-        <h4>It stays current on its own</h4>
-        <p>Old entries age out automatically as new ones are added — your site and tools never go stale.</p>
+        <h4>Launch &amp; support</h4>
+        <p>You go live, with 7 days of free support included and direct access to the person who built it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRICING ================= -->
+<section id="pricing">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tab">Pricing</span>
+      <h2>Simple, fixed-price packages</h2>
+      <p>No hourly billing, no surprise invoices — you know the full cost before we start. Every project starts with a short scoping call, so treat these as starting points rather than a final number.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <span class="tab">Website</span>
+        <div class="amount">₹10,000<small> onwards</small></div>
+        <span class="impact-chip" style="margin-bottom:14px;"><i class="fas fa-tag"></i>₹6,000 for small businesses</span>
+        <ul>
+          <li><i class="fas fa-square"></i> Multi-page, mobile-first build</li>
+          <li><i class="fas fa-square"></i> Simple content updates, no complicated CMS</li>
+          <li><i class="fas fa-square"></i> WhatsApp / enquiry integration</li>
+          <li><i class="fas fa-square"></i> Live in 7 days</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost" style="justify-content:center;">Get a quote</a>
+      </div>
+      <div class="price-card">
+        <span class="tab auto">Automation</span>
+        <div class="amount">Custom quote</div>
+        <p style="font-size:12.5px; color:var(--text-dim); margin-top:6px;">Priced after a free scoping call — depends on the workflow.</p>
+        <ul>
+          <li><i class="fas fa-square"></i> One workflow automated end-to-end</li>
+          <li><i class="fas fa-square"></i> Excel/VBA, Sheets, or light AI tooling</li>
+          <li><i class="fas fa-square"></i> Handover walkthrough included</li>
+          <li><i class="fas fa-square"></i> Built around your existing files</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost" style="justify-content:center;">Get a quote</a>
+      </div>
+      <div class="price-card featured">
+        <span class="tab active">Website + Automation</span>
+        <div class="amount">Custom quote</div>
+        <p style="font-size:12.5px; color:rgba(245,246,242,.6); margin-top:6px;">Bundled — cheaper than buying separately.</p>
+        <ul>
+          <li><i class="fas fa-square"></i> Everything in both plans above</li>
+          <li><i class="fas fa-square"></i> One connected system running both</li>
+          <li><i class="fas fa-square"></i> Priority support window</li>
+          <li><i class="fas fa-square"></i> Bundled — cheaper than buying separately</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary" style="justify-content:center;">Get a quote</a>
+      </div>
+    </div>
+    <p class="price-note">Payment: 50% advance to start, 50% on delivery.</p>
+    <div class="payment-row">
+      <span class="pay-chip"><i class="fas fa-mobile-screen-button"></i> UPI</span>
+      <span class="pay-chip"><i class="fas fa-building-columns"></i> Bank transfer</span>
+      <span class="pay-chip"><i class="fas fa-credit-card"></i> Razorpay (Cards / Netbanking)</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT / TRUST ================= -->
+<section id="about" style="background:var(--paper-dim);">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tab active">Why business owners trust this</span>
+      <h2>A real person is accountable for what you get</h2>
+      <p>Not a faceless agency inbox — every project is scoped, built and handed over by someone you can actually call.</p>
+    </div>
+    <div class="trust-grid">
+      <div class="trust-list">
+        <div class="trust-item">
+          <i class="fas fa-file-contract"></i>
+          <div><h4>Fixed price, agreed upfront</h4><p>You see the full cost before work starts — no hourly billing, no surprise line items later.</p></div>
+        </div>
+        <div class="trust-item">
+          <i class="fas fa-table"></i>
+          <div><h4>Full ownership from day one</h4><p>You get the source files and admin access to everything we build — nothing locked behind us.</p></div>
+        </div>
+        <div class="trust-item">
+          <i class="fas fa-headset"></i>
+          <div><h4>Support window after launch</h4><p>7 days of bug-fixes and small tweaks included after handover, at no extra cost.</p></div>
+        </div>
+        <div class="trust-item">
+          <i class="fas fa-chart-line"></i>
+          <div><h4>Proof, not promises</h4><p>Every project below is a real delivery to a real business — see the results on each card, not just a screenshot.</p></div>
+        </div>
+      </div>
+      <div class="bio-card">
+        <div class="bio-top">
+          <div class="bio-avatar">AS</div>
+          <div><h4>Ankush Sawant</h4><span>Founder, GoOnline</span></div>
+        </div>
+        <div class="bio-badges">
+          <span class="bio-badge">Process Expert — AI &amp; Automation, TCS</span>
+          <span class="bio-badge alt">Claude certified</span>
+          <span class="bio-badge alt">AWS certified — AI</span>
+        </div>
+        <p class="quote">By day, I work on AI &amp; automation inside TCS. GoOnline is where I apply the same thinking to small and mid-size businesses — practical systems, not experiments. When you message GoOnline, you're talking directly to the person scoping and building your project, not a sales rep.</p>
       </div>
     </div>
   </div>
@@ -396,10 +530,10 @@
 <!-- ================= CONTACT ================= -->
 <section id="contact">
   <div class="wrap contact-grid">
-    <div class="fade-in contact-info">
-      <span class="eyebrow"><span class="dot"></span> Get in touch</span>
-      <h2 style="font-size:clamp(26px,3.4vw,38px); font-weight:600; margin-top:10px;">Let's get you online.</h2>
-      <p style="color:var(--text-dim); margin-top:12px; font-size:15.5px; line-height:1.6;">Tell us whether you need a website, an automation tool, or both — we'll reply within a day.</p>
+    <div class="contact-info">
+      <span class="tab">Get in touch</span>
+      <h2 style="font-size:clamp(25px,3.2vw,36px); margin-top:14px;">Let's get you online.</h2>
+      <p style="color:var(--text-dim); margin-top:12px; font-size:15px; line-height:1.6;">Tell us whether you need a website, an automation tool, or both — we'll reply within a day.</p>
       <div class="item"><i class="fab fa-instagram"></i><a href="https://www.instagram.com/goonlinein7/" target="_blank" rel="noopener">@goonlinein7</a></div>
       <div class="item"><i class="fas fa-envelope"></i><span>hello@goonline.in</span></div>
       <div class="item"><i class="fas fa-location-dot"></i><span>Pune, Maharashtra, India</span></div>
@@ -409,7 +543,7 @@
         <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
       </div>
     </div>
-    <form class="contact-form fade-in" onsubmit="event.preventDefault(); alert('Thanks! Wire this form to your Apps Script or form endpoint to receive messages.');">
+    <form class="contact-form" onsubmit="event.preventDefault(); alert('Thanks! Wire this form to your Apps Script or form endpoint to receive messages.');">
       <div class="field"><label>Full name</label><input type="text" placeholder="Your name" required /></div>
       <div class="field"><label>Email</label><input type="email" placeholder="you@company.com" required /></div>
       <div class="field"><label>What do you need?</label>
@@ -421,7 +555,7 @@
         </select>
       </div>
       <div class="field"><label>Project details</label><textarea rows="4" placeholder="Tell us about it..."></textarea></div>
-      <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;"><i class="fas fa-paper-plane"></i> Send message</button>
+      <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Send message</button>
     </form>
   </div>
 </section>
@@ -430,15 +564,15 @@
   <div class="wrap footer-grid">
     <div>
       <a href="#" class="logo"><span class="mark">G</span>GoOnline</a>
-      <p style="font-size:13.5px; color:var(--text-dim); margin-top:12px; max-width:260px;">Websites and automation tools, managed from a spreadsheet.</p>
+      <p style="font-size:13.5px; color:var(--text-dim); margin-top:12px; max-width:260px;">Websites and automation tools, built and supported end-to-end.</p>
     </div>
-    <div><h5>Services</h5><ul><li><a href="#services">Web Development</a></li><li><a href="#services">Automation</a></li></ul></div>
-    <div><h5>Work</h5><ul><li><a href="#web-projects">Web Projects</a></li><li><a href="#automation-projects">Automation Projects</a></li></ul></div>
+    <div><h5>Services</h5><ul><li><a href="#services">Web development</a></li><li><a href="#services">Automation</a></li></ul></div>
+    <div><h5>Work</h5><ul><li><a href="#web-projects">Web projects</a></li><li><a href="#automation-projects">Automation projects</a></li></ul></div>
     <div><h5>Connect</h5><ul><li><a href="https://www.instagram.com/goonlinein7/" target="_blank" rel="noopener">Instagram</a></li><li><a href="#contact">Contact</a></li></ul></div>
   </div>
   <div class="wrap footer-bottom">
     <span>&copy; 2026 GoOnline. All rights reserved.</span>
-    <span>Built on Sheets + Apps Script.</span>
+    <span>Designed &amp; built in-house.</span>
   </div>
 </footer>
 
@@ -455,14 +589,14 @@ const CONFIG = {
 // Sample fallback data so the layout is visible before the API is connected
 const SAMPLE = {
   web: [
-    { id:1, projectName:"Saaj Shrungaar", description:"Custom jewellery catalogue with live category filtering, an admin panel and WhatsApp enquiries.", video:"", link:"https://www.instagram.com/saaj_by_panu05/", date:"2026-08-20", status:"Active" },
-    { id:2, projectName:"SmartResumeATS", description:"ATS resume scoring tool with keyword extraction and an animated results dashboard.", video:"", link:"#", date:"2026-08-10", status:"Active" },
-    { id:3, projectName:"Agency Landing Page", description:"Premium single-page site with a sheet-driven, self-updating portfolio.", video:"", link:"#", date:"2026-07-28", status:"Active" }
+    { id:1, projectName:"Saaj Shrungaar", description:"Custom jewellery catalogue with live category filtering, an admin panel and WhatsApp enquiries.", impact:"3x more WhatsApp enquiries", images:[], link:"https://www.instagram.com/saaj_by_panu05/", date:"2026-08-20", status:"Active" },
+    { id:2, projectName:"SmartResumeATS", description:"ATS resume scoring tool with keyword extraction and an animated results dashboard.", impact:"500+ resumes scored", images:[], link:"#", date:"2026-08-10", status:"Active" },
+    { id:3, projectName:"Agency Landing Page", description:"Premium single-page site with a self-updating portfolio section.", impact:"Zero-maintenance updates", images:[], link:"#", date:"2026-07-28", status:"Active" }
   ],
   automation: [
-    { id:1, projectName:"ACCUPILOT", description:"VBA automation tool that significantly cut ocean-export documentation errors.", video:"", link:"#", date:"2026-08-15", status:"Active" },
-    { id:2, projectName:"Container Description Reconciler", description:"Excel VBA macro using an LCS diff to flag mismatched container descriptions.", video:"", link:"#", date:"2026-07-30", status:"Active" },
-    { id:3, projectName:"JD Keyword Extractor", description:"NLP-style keyword matcher scoring resumes against job descriptions.", video:"", link:"#", date:"2026-07-05", status:"Active" }
+    { id:1, projectName:"ACCUPILOT", description:"VBA automation tool that significantly cut ocean-export documentation errors.", impact:"~80% fewer doc errors", images:[], link:"#", date:"2026-08-15", status:"Active" },
+    { id:2, projectName:"Container Description Reconciler", description:"Excel VBA macro using an LCS diff to flag mismatched container descriptions.", impact:"Hours of checking cut to minutes", images:[], link:"#", date:"2026-07-30", status:"Active" },
+    { id:3, projectName:"JD Keyword Extractor", description:"NLP-style keyword matcher scoring resumes against job descriptions.", impact:"Screens a resume in seconds", images:[], link:"#", date:"2026-07-05", status:"Active" }
   ]
 };
 
@@ -486,56 +620,50 @@ function errorState(msg){
 }
 
 function emptyState(kind){
-  return `<div class="state-box"><i class="fas fa-inbox"></i>No ${kind} projects published yet — add an Active row to the sheet to see it here.</div>`;
+  return `<div class="state-box"><i class="fas fa-inbox"></i>No ${kind} projects published yet — check back soon.</div>`;
 }
 
 function cardHTML(kind, p){
   const isWeb = kind === "web";
-  const badgeText = isWeb ? "Website Development" : "Excel / VBA";
-  const video = (p.video || "").trim();
+  const badgeText = isWeb ? "Website development" : "Automation & AI";
   const link = (p.link || "#").trim() || "#";
-  const media = video
-    ? `<video class="lazy-video" data-src="${escapeHTML(video)}" muted loop playsinline preload="metadata"></video>`
-    : `<div style="width:100%;height:100%;display:grid;place-items:center;background:${isWeb ? 'var(--web-soft)' : 'var(--auto-soft)'};">
-         <i class="fas ${isWeb ? 'fa-window-maximize' : 'fa-file-excel'}" style="font-size:26px;color:${isWeb ? 'var(--web)' : 'var(--auto)'};"></i>
-       </div>`;
+  const images = (Array.isArray(p.images) ? p.images : []).map(u => (u || "").trim()).filter(Boolean).slice(0,3);
+
+  const imgSlots = Array.from({length:3}).map((_, i) => {
+    const src = images[i];
+    if(src){
+      return `<div class="proj-img-slot"><img src="${escapeHTML(src)}" alt="${escapeHTML(p.projectName || 'Project image')} — view ${i+1}" loading="lazy" /></div>`;
+    }
+    return `<div class="proj-img-slot placeholder" style="background:${isWeb ? 'var(--web-soft)' : 'var(--auto-soft)'};">
+              <i class="fas fa-image" style="color:${isWeb ? 'var(--web)' : 'var(--auto)'};"></i>
+            </div>`;
+  }).join("");
+
   const chrome = isWeb
     ? `<div class="browser-chrome"><span></span><span></span><span></span></div>`
     : `<div class="cell-strip"><span></span><span></span><span></span><span></span><span></span><span></span></div>`;
 
+  const impact = (p.impact || "").trim();
+  const impactHTML = impact
+    ? `<span class="impact-chip"><i class="fas fa-arrow-trend-up"></i>${escapeHTML(impact)}</span>`
+    : "";
+
   return `
-    <div class="proj-card ${isWeb ? 'web' : 'auto'} fade-in visible">
+    <div class="proj-card ${isWeb ? 'web' : 'auto'}">
       <div class="proj-media">
         ${chrome}
-        ${media}
+        <div class="proj-img-row">${imgSlots}</div>
         <span class="proj-badge">${escapeHTML(badgeText)}</span>
       </div>
       <div class="proj-body">
         <h4>${escapeHTML(p.projectName || "Untitled project")}</h4>
         <p>${escapeHTML(p.description || "")}</p>
+        ${impactHTML}
         <div class="proj-links">
-          <a href="${escapeHTML(link)}" target="_blank" rel="noopener">View Project <i class="fas fa-arrow-right" style="font-size:11px;"></i></a>
+          <a href="${escapeHTML(link)}" target="_blank" rel="noopener">View project</a>
         </div>
       </div>
     </div>`;
-}
-
-function lazyLoadVideos(container){
-  const videos = container.querySelectorAll('video.lazy-video[data-src]');
-  if(!videos.length) return;
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(entry=>{
-      if(entry.isIntersecting){
-        const v = entry.target;
-        v.src = v.dataset.src;
-        v.autoplay = true;
-        v.load();
-        v.play().catch(()=>{});
-        io.unobserve(v);
-      }
-    });
-  }, { rootMargin: "150px" });
-  videos.forEach(v=>io.observe(v));
 }
 
 function normalizeProjects(list){
@@ -571,7 +699,6 @@ async function loadPortfolio(kind, gridId, viewAllId){
     }
 
     grid.innerHTML = projects.map(p => cardHTML(kind, p)).join("");
-    lazyLoadVideos(grid);
 
     if(total > 6){
       const btn = document.getElementById(viewAllId);
@@ -586,13 +713,6 @@ async function loadPortfolio(kind, gridId, viewAllId){
 // Load each portfolio section independently — one failing never blocks the other
 loadPortfolio("web", "webGrid", "viewAllWeb");
 loadPortfolio("automation", "autoGrid", "viewAllAuto");
-
-/* ---------- fade-in on scroll ---------- */
-const fadeEls = document.querySelectorAll('.fade-in');
-const fadeObserver = new IntersectionObserver((entries)=>{
-  entries.forEach(entry=>{ if(entry.isIntersecting) entry.target.classList.add('visible'); });
-}, { threshold: 0.12 });
-fadeEls.forEach(el => fadeObserver.observe(el));
 
 /* ---------- mobile menu ---------- */
 const mobileBtn = document.getElementById('mobileBtn');
