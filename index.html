@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" type="image/png" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhlS-JMLoxzAao_p4WdZ21VKZyVBqnkG2mB5tuyNgEprxw3PgYsrLFTQ1imE31kpmTg4Sx2AnrFSsLzw4VZJ6hbHDPYENda8Ng23LkI7sfEoCYvv6_4RfIXXufBf85I-ZrAVRQstBFubrluY33PdllKnliLbUOCB0JesATc_UvzoZM6vu7Mum_qjOoFAZKk/s581/Logo.png" />
+    <link rel="icon" type="image/png" href="Logo.png" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>G7 — Websites &amp; Business Automation</title>
@@ -14,12 +14,12 @@
     <meta property="og:description" content="Professional websites and business automation, built and supported end-to-end." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://g-7.shop/" />
-    <meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhlS-JMLoxzAao_p4WdZ21VKZyVBqnkG2mB5tuyNgEprxw3PgYsrLFTQ1imE31kpmTg4Sx2AnrFSsLzw4VZJ6hbHDPYENda8Ng23LkI7sfEoCYvv6_4RfIXXufBf85I-ZrAVRQstBFubrluY33PdllKnliLbUOCB0JesATc_UvzoZM6vu7Mum_qjOoFAZKk/s581/Logo.png" />
+    <meta property="og:image" content="https://g-7.shop/Logo.png" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="G7 — Websites & Business Automation" />
     <meta name="twitter:description" content="Professional websites and business automation, built and supported end-to-end." />
-    <meta name="twitter:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhlS-JMLoxzAao_p4WdZ21VKZyVBqnkG2mB5tuyNgEprxw3PgYsrLFTQ1imE31kpmTg4Sx2AnrFSsLzw4VZJ6hbHDPYENda8Ng23LkI7sfEoCYvv6_4RfIXXufBf85I-ZrAVRQstBFubrluY33PdllKnliLbUOCB0JesATc_UvzoZM6vu7Mum_qjOoFAZKk/s581/Logo.png" />
+    <meta name="twitter:image" content="https://g-7.shop/Logo.png" />
 
     <link rel="canonical" href="https://g-7.shop/" />
     
@@ -137,7 +137,13 @@
             font-size: 20px;
             display: flex;
             align-items: center;
-            gap: 9px;
+            gap: 10px;
+        }
+        .logo img {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+            border-radius: 50%;
         }
         .logo .mark {
             width: 26px;
@@ -1512,7 +1518,7 @@ body.image-lightbox-open {
         /* WELCOME */
         .g7-welcome {
             font-size: clamp(32px, 7vw, 72px);
-            animation: g7Welcome 2s ease forwards;
+            animation: g7Welcome 7s cubic-bezier(.2, .75, .25, 1) forwards;
         }
 
         /* TO */
@@ -1523,7 +1529,7 @@ body.image-lightbox-open {
                 0 0 8px rgba(185,245,255,0.9),
                 0 0 25px rgba(0,212,255,0.9),
                 0 0 55px rgba(0,140,255,0.65);
-            animation: g7To 3s ease forwards;
+            animation: g7To 7s cubic-bezier(.2, .75, .25, 1) forwards;
         }
 
         /* G-7 */
@@ -1539,7 +1545,7 @@ body.image-lightbox-open {
                 0 0 38px rgba(0,212,255,0.9),
                 0 0 75px rgba(139,92,246,0.8),
                 0 0 120px rgba(139,92,246,0.45);
-            animation: g7Brand 7s ease forwards;
+            animation: g7Brand 7s cubic-bezier(.2, .75, .25, 1) forwards;
         }
 
         /* Small line under G-7 */
@@ -1555,7 +1561,7 @@ body.image-lightbox-open {
             letter-spacing: 0.28em;
             color: rgba(255,255,255,0.72);
             text-transform: uppercase;
-            animation: g7Tagline 7s ease forwards;
+            animation: g7Tagline 7s cubic-bezier(.2, .75, .25, 1) forwards;
         }
 
         /* Thin neon scanning line */
@@ -1593,21 +1599,21 @@ body.image-lightbox-open {
         @keyframes g7Welcome {
             0% {
                 opacity: 0;
-                transform: translate(-50%, -50%) scale(1.25);
-                filter: blur(12px);
+                transform: translate(-50%, -50%) scale(0.72);
+                filter: blur(8px);
             }
-            12% {
+            10% {
                 opacity: 1;
                 transform: translate(-50%, -50%) scale(1);
                 filter: blur(0);
             }
-            32% {
+            25% {
                 opacity: 1;
             }
-            43% {
+            36% {
                 opacity: 0;
-                transform: translate(-50%, -58%) scale(0.92);
-                filter: blur(5px);
+                transform: translate(-50%, -50%) scale(1.12);
+                filter: blur(3px);
             }
             100% {
                 opacity: 0;
@@ -1615,23 +1621,23 @@ body.image-lightbox-open {
         }
 
         @keyframes g7To {
-            0%, 36% {
+            0%, 24% {
                 opacity: 0;
-                transform: translate(-50%, -50%) scale(1.2);
-                filter: blur(10px);
+                transform: translate(-50%, -50%) scale(0.72);
+                filter: blur(8px);
             }
-            44% {
+            32% {
                 opacity: 1;
                 transform: translate(-50%, -50%) scale(1);
                 filter: blur(0);
             }
-            57% {
+            46% {
                 opacity: 1;
             }
-            66% {
+            54% {
                 opacity: 0;
-                transform: translate(-50%, -50%) scale(0.9);
-                filter: blur(5px);
+                transform: translate(-50%, -50%) scale(1.12);
+                filter: blur(3px);
             }
             100% {
                 opacity: 0;
@@ -1639,24 +1645,24 @@ body.image-lightbox-open {
         }
 
         @keyframes g7Brand {
-            0%, 59% {
+            0%, 43% {
                 opacity: 0;
                 transform: translate(-50%, -50%) scale(0.72);
-                filter: blur(14px);
+                filter: blur(10px);
             }
-            68% {
+            52% {
                 opacity: 1;
                 transform: translate(-50%, -50%) scale(1.04);
                 filter: blur(0);
             }
-            74% {
+            60% {
                 transform: translate(-50%, -50%) scale(0.98);
             }
-            82% {
+            70% {
                 transform: translate(-50%, -50%) scale(1);
                 opacity: 1;
             }
-            92% {
+            93% {
                 opacity: 1;
             }
             100% {
@@ -1667,15 +1673,15 @@ body.image-lightbox-open {
         }
 
         @keyframes g7Tagline {
-            0%, 68% {
+            0%, 50% {
                 opacity: 0;
                 transform: translate(-50%, 10px);
             }
-            76% {
+            59% {
                 opacity: 0.75;
                 transform: translate(-50%, 0);
             }
-            91% {
+            93% {
                 opacity: 0.75;
             }
             100% {
@@ -1754,7 +1760,9 @@ body.image-lightbox-open {
     <!-- ===== HEADER ===== -->
     <header>
         <div class="wrap">
-            <a href="" class="logo"><span class="mark">G-7</span>Go Online In 7 Days</a>
+            <a href="index.html" class="logo" aria-label="G-7 home">
+                <img src="Logo.png" alt="G-7 GoOnline logo" />
+            </a>
             <nav>
                 <ul>
                     <li><a class="nav-link" href="#services">Services</a></li>
@@ -2013,28 +2021,30 @@ body.image-lightbox-open {
     <!-- ===== ABOUT / TRUST ===== -->
     <section id="about" style="background:var(--paper-dim);">
         <div class="wrap">
-            <div class="section-head">
-                <span class="tab active">Why business owners trust this</span>
-                <h2>A real person is accountable for what you get</h2>
-                <p>Not a faceless agency inbox — every project is scoped, built and handed over by someone you can actually call.</p>
-            </div>
             <div class="trust-grid">
-                <div class="trust-list">
-                    <div class="trust-item">
-                        <i class="fas fa-file-contract"></i>
-                        <div><h4>Fixed price, agreed upfront</h4><p>You see the full cost before work starts — no hourly billing, no surprise line items later.</p></div>
+                <div class="trust-main">
+                    <div class="section-head">
+                        <span class="tab active">Why business owners trust this</span>
+                        <h2>A real person is accountable for what you get</h2>
+                        <p>Not a faceless agency inbox — every project is scoped, built and handed over by someone you can actually call.</p>
                     </div>
-                    <div class="trust-item">
-                        <i class="fas fa-table"></i>
-                        <div><h4>Full ownership from day one</h4><p>You get the source files and admin access to everything we build — nothing locked behind us.</p></div>
-                    </div>
-                    <div class="trust-item">
-                        <i class="fas fa-headset"></i>
-                        <div><h4>Support window after launch</h4><p>7 days of bug-fixes and small tweaks included after handover, at no extra cost.</p></div>
-                    </div>
-                    <div class="trust-item">
-                        <i class="fas fa-chart-line"></i>
-                        <div><h4>Proof, not promises</h4><p>See examples of client work, internal tools and practical builds — with the outcome shown on each card.</p></div>
+                    <div class="trust-list">
+                        <div class="trust-item">
+                            <i class="fas fa-file-contract"></i>
+                            <div><h4>Fixed price, agreed upfront</h4><p>You see the full cost before work starts — no hourly billing, no surprise line items later.</p></div>
+                        </div>
+                        <div class="trust-item">
+                            <i class="fas fa-table"></i>
+                            <div><h4>Full ownership from day one</h4><p>You get the source files and admin access to everything we build — nothing locked behind us.</p></div>
+                        </div>
+                        <div class="trust-item">
+                            <i class="fas fa-headset"></i>
+                            <div><h4>Support window after launch</h4><p>7 days of bug-fixes and small tweaks included after handover, at no extra cost.</p></div>
+                        </div>
+                        <div class="trust-item">
+                            <i class="fas fa-chart-line"></i>
+                            <div><h4>Proof, not promises</h4><p>See examples of client work, internal tools and practical builds — with the outcome shown on each card.</p></div>
+                        </div>
                     </div>
                 </div>
                 <div class="bio-card">
@@ -2097,7 +2107,9 @@ body.image-lightbox-open {
     <footer>
         <div class="wrap footer-grid">
             <div>
-                <a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhlS-JMLoxzAao_p4WdZ21VKZyVBqnkG2mB5tuyNgEprxw3PgYsrLFTQ1imE31kpmTg4Sx2AnrFSsLzw4VZJ6hbHDPYENda8Ng23LkI7sfEoCYvv6_4RfIXXufBf85I-ZrAVRQstBFubrluY33PdllKnliLbUOCB0JesATc_UvzoZM6vu7Mum_qjOoFAZKk/s581/Logo.png" class="logo"><span class="mark">G-7</span>Go Online In 7 Days</a>
+                <a href="index.html" class="logo" aria-label="G-7 home">
+                    <img src="Logo.png" alt="G-7 GoOnline logo" />
+                </a>
                 <p style="font-size:13.5px; color:var(--text-dim); margin-top:12px; max-width:260px;">Websites and automation tools, built and supported end-to-end.</p>
             </div>
             <div><h5>Services</h5><ul><li><a href="#services">Web development</a></li><li><a href="#services">Automation</a></li></ul></div>
