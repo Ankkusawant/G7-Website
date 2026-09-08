@@ -2248,41 +2248,21 @@ body.image-lightbox-open {
                     </select>
                 </div>
                 <div class="field">
-                
                     <label for="budget">Estimated Budget</label>
-                
                     <select id="budget" name="budget">
-                
                         <option value="">Select your budget</option>
-                
-                        <option value="6000-10000">
-                            ₹6,000 – ₹10,000
-                        </option>
-                
-                        <option value="10000-20000">
-                            ₹10,000 – ₹20,000
-                        </option>
-                
-                        <option value="20000-50000">
-                            ₹20,000 – ₹50,000
-                        </option>
-                
-                        <option value="50000+">
-                            ₹50,000+
-                        </option>
-                
-                        <option value="not-sure">
-                            Not sure yet
-                        </option>
-                
+                        <option value="6000-10000">₹6,000 – ₹10,000</option>
+                        <option value="10000-20000">₹10,000 – ₹20,000</option>
+                        <option value="20000-50000">₹20,000 – ₹50,000</option>
+                        <option value="50000+">₹50,000+</option>
+                        <option value="not-sure">Not sure yet</option>
                     </select>
-                
                 </div>
-                
                 <div class="field"><label for="contactDetails">Project details</label><textarea id="contactDetails" name="details" rows="4" placeholder="Tell us about it..." required></textarea></div>
                 <input type="hidden" name="_subject" value="New G-7 website enquiry" />
                 <input type="hidden" name="_template" value="table" />
                 <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_next" value="thank-you.html" />
                 <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Send message</button>
                 <p class="contact-status" id="contactStatus" role="status" aria-live="polite"></p>
             </form>
@@ -2346,40 +2326,9 @@ body.image-lightbox-open {
         };
 
         // ---- Contact form submission ----
-        (function initContactForm() {
-            const form = document.getElementById('contactForm');
-            const status = document.getElementById('contactStatus');
-            if (!form || !status) return;
-
-            form.addEventListener('submit', async event => {
-                event.preventDefault();
-                const submitButton = form.querySelector('button[type="submit"]');
-                submitButton.disabled = true;
-                status.className = 'contact-status';
-                status.textContent = 'Sending your message...';
-
-                try {
-                    const response = await fetch(CONFIG.CONTACT_FORM_URL, {
-                        method: 'POST',
-                        mode: 'no-cors',
-                        body: new URLSearchParams(new FormData(form))
-                    });
-                    if (!response.ok && response.type !== 'opaque') {
-                        throw new Error(`Request failed with status ${response.status}`);
-                    }
-
-                    form.reset();
-                    status.className = 'contact-status success';
-                    status.textContent = 'Thanks - your message has been sent. We will reply within a day.';
-                } catch (error) {
-                    console.error('Contact form submission failed:', error);
-                    status.className = 'contact-status error';
-                    status.textContent = 'We could not send your message. Please try again or contact us on WhatsApp.';
-                } finally {
-                    submitButton.disabled = false;
-                }
-            });
-        })();
+        // FormSubmit should receive the browser's normal form POST.
+        // Using a no-cors fetch hides the server response, so delivery cannot be confirmed reliably.
+        // Keeping the default HTML form submit avoids false success states.
 
         // ---- Sample fallback data ----
         const SAMPLE = {
