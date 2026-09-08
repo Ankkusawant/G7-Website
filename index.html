@@ -185,7 +185,7 @@
             border-radius: 8px;
             border: 1px solid transparent;
             cursor: pointer;
-            transition: .15s ease;
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             font-family: var(--font-body);
         }
         .btn-primary {
@@ -195,17 +195,24 @@
         }
         .btn-primary:hover {
             background: linear-gradient(135deg, var(--web) 0%, var(--web-strong) 100%);
-            transform: translateY(-1px);
+            transform: translateY(-2px);
+            box-shadow: 0 16px 32px rgba(37, 99, 235, 0.18);
+        }
+        .btn-primary:focus-visible {
+            outline: 2px solid var(--web);
+            outline-offset: 2px;
         }
         .btn-ghost {
             border-color: var(--line-strong);
             background: rgba(255, 255, 255, 0.4);
             color: var(--ink);
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
         .btn-ghost:hover {
             border-color: var(--web);
             background: var(--web-soft);
             color: var(--web-strong);
+            transform: translateY(-2px);
         }
         .navbtns {
             display: flex;
@@ -485,6 +492,56 @@
             flex-wrap: wrap;
         }
 
+        /* ===== SCROLL REVEAL ANIMATIONS ===== */
+        /* Base animation styles for scroll-triggered reveals */
+        .reveal-fade {
+            opacity: 0;
+            transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .reveal-fade.revealed {
+            opacity: 1;
+        }
+
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+                        transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .reveal-up.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Staggered reveals for cards - each card reveals with delay */
+        .card-stagger {
+            opacity: 0;
+            transform: translateY(24px);
+        }
+        .card-stagger.revealed {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) var(--stagger-delay, 0s),
+                        transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) var(--stagger-delay, 0s);
+        }
+
+        /* Support for prefers-reduced-motion */
+        @media (prefers-reduced-motion: reduce) {
+            .reveal-fade,
+            .reveal-up,
+            .card-stagger {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+            .reveal-fade.revealed,
+            .reveal-up.revealed,
+            .card-stagger.revealed {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
         /* ----- SERVICES ----- */
         .services-grid {
             display: grid;
@@ -496,8 +553,17 @@
             overflow: hidden;
         }
         .service-card {
-            background: #fff;
+            background: linear-gradient(135deg, #ffffff 0%, rgba(255, 255, 255, 0.95) 100%);
             padding: 34px;
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            border-right: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+            position: relative;
+            overflow: hidden;
+        }
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 48px rgba(15, 23, 42, 0.14);
         }
         .service-card h3 {
             font-size: 22px;
@@ -532,6 +598,9 @@
         @media (max-width:760px) {
             .services-grid {
                 grid-template-columns: 1fr;
+            }
+            .service-card {
+                border-right: none;
             }
         }
 
@@ -569,6 +638,20 @@
             display: flex;
             flex-direction: column;
             position: relative;
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            border: 1px solid transparent;
+        }
+        .proj-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 56px rgba(37, 99, 235, 0.12);
+            border-color: rgba(37, 99, 235, 0.2);
+        }
+        .proj-card.web:hover {
+            box-shadow: 0 20px 56px rgba(37, 99, 235, 0.14);
+        }
+        .proj-card.auto:hover {
+            box-shadow: 0 20px 56px rgba(14, 165, 233, 0.12);
+            border-color: rgba(14, 165, 233, 0.2);
         }
         .proj-media {
             position: relative;
@@ -578,6 +661,10 @@
             display: flex;
             flex-direction: column;
             flex: 0 0 auto;
+            transition: filter 0.3s ease;
+        }
+        .proj-card:hover .proj-media {
+            filter: brightness(1.05);
         }
 
         /* ---- Slider ---- */
@@ -926,10 +1013,25 @@
             padding: 30px;
             display: flex;
             flex-direction: column;
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            border: 1px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        .price-card:hover:not(.featured) {
+            transform: translateY(-8px);
+            border-color: rgba(37, 99, 235, 0.2);
+            box-shadow: 0 20px 48px rgba(37, 99, 235, 0.1);
         }
         .price-card.featured {
-            background: var(--ink);
+            background: linear-gradient(135deg, var(--ink) 0%, #1c2b44 100%);
             color: var(--paper);
+            transform: scale(1);
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .price-card.featured:hover {
+            transform: scale(1.02) translateY(-4px);
+            box-shadow: 0 24px 64px rgba(37, 99, 235, 0.2);
         }
         .price-card .amount {
             font-family: var(--font-display);
@@ -1467,42 +1569,7 @@ body.image-lightbox-open {
         .slider-wrapper:focus-within .slider-btn {
             opacity: 1;
         }
-        .call-float {
-            position: fixed;
-            right: 24px;
-            bottom: 92px; /* sits above the WhatsApp button */
-            z-index: 999;
-            width: 56px;
-            height: 56px;
-            display: grid;
-            place-items: center;
-            border-radius: 50%;
-            background: var(--web);
-            color: #fff;
-            font-size: 24px;
-            box-shadow: 0 8px 24px rgba(37, 99, 235, 0.35);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        
-        .call-float:hover {
-            color: #fff;
-            transform: translateY(-3px) scale(1.04);
-            box-shadow: 0 12px 28px rgba(37, 99, 235, 0.45);
-        }
-        
-        .call-float:focus-visible {
-            outline-color: var(--web);
-        }
-        
-        @media (max-width: 480px) {
-            .call-float {
-                right: 18px;
-                bottom: 84px;
-                width: 50px;
-                height: 50px;
-                font-size: 20px;
-            }
-        }
+      
 
         /* =========================================================
            G-7 WELCOME INTRO — neon cinematic entrance
@@ -1937,13 +2004,13 @@ body.image-lightbox-open {
     <!-- ===== SERVICES ===== -->
     <section id="services">
         <div class="wrap">
-            <div class="section-head">
+            <div class="section-head reveal-up">
                 <span class="tab">What we do</span>
                 <h2>Two disciplines. One team.</h2>
                 <p>We don't stop at the website. We build the site and the systems that keep it — and your business — running, and stay reachable long after launch.</p>
             </div>
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card card-stagger" style="--stagger-delay: 0ms;">
                     <span class="tab">Website development</span>
                     <h3>Business &amp; brand websites</h3>
                     <p>Fast, responsive websites for shops, brands and service businesses — built to load quickly and turn visitors into enquiries.</p>
@@ -1954,7 +2021,7 @@ body.image-lightbox-open {
                         <li><i class="fas fa-square"></i> Simple content updates, no complicated CMS</li>
                     </ul>
                 </div>
-                <div class="service-card">
+                <div class="service-card card-stagger" style="--stagger-delay: 100ms;">
                     <span class="tab auto">Automation &amp; AI</span>
                     <h3>Business process automation</h3>
                     <p>Custom automation and AI-assisted tools that take repetitive manual work off your team's plate — built around the systems you already use.</p>
@@ -1973,7 +2040,7 @@ body.image-lightbox-open {
     <section id="web-projects" class="portfolio-section web">
         <div class="wrap">
             <div class="section-foot-row" style="margin-bottom:44px;">
-                <div class="section-head" style="margin-bottom:0;">
+                <div class="section-head reveal-up" style="margin-bottom:0;">
                     <span class="tab">Recent web projects</span>
                     <h2>Websites &amp; digital experiences</h2>
                     <p>The newest six projects we've shipped, most recent first.</p>
@@ -1988,7 +2055,7 @@ body.image-lightbox-open {
     <section id="automation-projects" class="portfolio-section auto">
         <div class="wrap">
             <div class="section-foot-row" style="margin-bottom:44px;">
-                <div class="section-head" style="margin-bottom:0;">
+                <div class="section-head reveal-up" style="margin-bottom:0;">
                     <span class="tab auto">Recent automation projects</span>
                     <h2>Automation &amp; process tools</h2>
                     <p>Recent projects, client work and practical automation builds, most recent first.</p>
@@ -2002,23 +2069,23 @@ body.image-lightbox-open {
     <!-- ===== PROCESS ===== -->
     <section id="process" class="process">
         <div class="wrap">
-            <div class="section-head">
+            <div class="section-head reveal-up">
                 <span class="tab active">How it works</span>
                 <h2>From first call to launch</h2>
                 <p>A short, structured process — you always know what stage your project is at and what happens next.</p>
             </div>
             <div class="process-grid">
-                <div class="process-card">
+                <div class="process-card card-stagger" style="--stagger-delay: 0ms;">
                     <div class="num">01</div>
                     <h4>Scope the project</h4>
                     <p>A short call to understand your business, what you need, and a fixed price before any work starts.</p>
                 </div>
-                <div class="process-card">
+                <div class="process-card card-stagger" style="--stagger-delay: 100ms;">
                     <div class="num">02</div>
                     <h4>Build &amp; review</h4>
                     <p>We build in the open — you see progress and give feedback before anything goes live.</p>
                 </div>
-                <div class="process-card">
+                <div class="process-card card-stagger" style="--stagger-delay: 200ms;">
                     <div class="num">03</div>
                     <h4>Launch &amp; support</h4>
                     <p>You go live, with 7 days of free support included and direct access to the person who built it.</p>
@@ -2030,13 +2097,13 @@ body.image-lightbox-open {
     <!-- ===== PRICING ===== -->
     <section id="pricing">
         <div class="wrap">
-            <div class="section-head">
+            <div class="section-head reveal-up">
                 <span class="tab">Pricing</span>
                 <h2>Simple, fixed-price packages</h2>
                 <p>No hourly billing, no surprise invoices — you know the full cost before we start. Every project starts with a short scoping call, so treat these as starting points rather than a final number.</p>
             </div>
             <div class="pricing-grid">
-                <div class="price-card">
+                <div class="price-card card-stagger" style="--stagger-delay: 0ms;">
                     <span class="tab">Website</span>
                     <div class="amount">₹10,000<small> onwards</small></div>
                     <span class="impact-chip" style="margin-bottom:14px;"><i class="fas fa-tag"></i>₹6,000 for small businesses</span>
@@ -2048,7 +2115,7 @@ body.image-lightbox-open {
                     </ul>
                     <a href="#contact" class="btn btn-ghost" style="justify-content:center;">Get a quote</a>
                 </div>
-                <div class="price-card">
+                <div class="price-card card-stagger" style="--stagger-delay: 100ms;">
                     <span class="tab auto">Automation</span>
                     <div class="amount">Custom quote</div>
                     <p style="font-size:12.5px; color:var(--text-dim); margin-top:6px;">Priced after a free scoping call — depends on the workflow.</p>
@@ -2060,7 +2127,7 @@ body.image-lightbox-open {
                     </ul>
                     <a href="#contact" class="btn btn-ghost" style="justify-content:center;">Get a quote</a>
                 </div>
-                <div class="price-card featured">
+                <div class="price-card featured card-stagger" style="--stagger-delay: 200ms;">
                     <span class="tab active">Website + Automation</span>
                     <div class="amount">Custom quote</div>
                     <p style="font-size:12.5px; color:rgba(245,246,242,.6); margin-top:6px;">Bundled — cheaper than buying separately.</p>
@@ -2101,7 +2168,7 @@ body.image-lightbox-open {
     
         <div class="wrap">
     
-            <div class="section-head">
+            <div class="section-head reveal-up">
     
                 <span class="tab active">
                     <i class="fas fa-shield-halved"></i>
@@ -2120,7 +2187,7 @@ body.image-lightbox-open {
     
             <div class="process-grid">
     
-                <div class="process-card">
+                <div class="process-card card-stagger" style="--stagger-delay: 0ms;">
     
                     <div class="num">01</div>
     
@@ -2133,7 +2200,7 @@ body.image-lightbox-open {
                 </div>
     
     
-                <div class="process-card">
+                <div class="process-card card-stagger" style="--stagger-delay: 100ms;">
     
                     <div class="num">02</div>
     
@@ -2146,7 +2213,7 @@ body.image-lightbox-open {
                 </div>
     
     
-                <div class="process-card">
+                <div class="process-card card-stagger" style="--stagger-delay: 200ms;">
     
                     <div class="num">03</div>
     
@@ -2159,7 +2226,7 @@ body.image-lightbox-open {
                 </div>
     
     
-                <div class="process-card">
+                <div class="process-card card-stagger" style="--stagger-delay: 300ms;">
     
                     <div class="num">04</div>
     
@@ -2172,7 +2239,7 @@ body.image-lightbox-open {
                 </div>
     
     
-                <div class="process-card">
+                <div class="process-card card-stagger" style="--stagger-delay: 400ms;">
     
                     <div class="num">05</div>
     
@@ -2185,7 +2252,7 @@ body.image-lightbox-open {
                 </div>
     
     
-                <div class="process-card">
+                <div class="process-card card-stagger" style="--stagger-delay: 500ms;">
     
                     <div class="num">06</div>
     
@@ -2208,31 +2275,31 @@ body.image-lightbox-open {
         <div class="wrap">
             <div class="trust-grid">
                 <div class="trust-main">
-                    <div class="section-head">
+                    <div class="section-head reveal-up">
                         <span class="tab active">Why business owners trust this</span>
                         <h2>A real person is accountable for what you get</h2>
                         <p>Not a faceless agency inbox — every project is scoped, built and handed over by someone you can actually call.</p>
                     </div>
                     <div class="trust-list">
-                        <div class="trust-item">
+                        <div class="trust-item card-stagger" style="--stagger-delay: 0ms;">
                             <i class="fas fa-file-contract"></i>
                             <div><h4>Fixed price, agreed upfront</h4><p>You see the full cost before work starts — no hourly billing, no surprise line items later.</p></div>
                         </div>
-                        <div class="trust-item">
+                        <div class="trust-item card-stagger" style="--stagger-delay: 100ms;">
                             <i class="fas fa-table"></i>
                             <div><h4>Full ownership from day one</h4><p>You get the source files and admin access to everything we build — nothing locked behind us.</p></div>
                         </div>
-                        <div class="trust-item">
+                        <div class="trust-item card-stagger" style="--stagger-delay: 200ms;">
                             <i class="fas fa-headset"></i>
                             <div><h4>Support window after launch</h4><p>7 days of bug-fixes and small tweaks included after handover, at no extra cost.</p></div>
                         </div>
-                        <div class="trust-item">
+                        <div class="trust-item card-stagger" style="--stagger-delay: 300ms;">
                             <i class="fas fa-chart-line"></i>
                             <div><h4>Proof, not promises</h4><p>See examples of client work, internal tools and practical builds — with the outcome shown on each card.</p></div>
                         </div>
                     </div>
                 </div>
-                <div class="bio-card">
+                <div class="bio-card card-stagger" style="--stagger-delay: 200ms;">
                     <div class="bio-top">
                             <div class="founder-photo">
                               <img src="My image.png"alt="Ankush Sawant — Founder of G-7">
@@ -2258,7 +2325,7 @@ body.image-lightbox-open {
     <!-- ===== CONTACT ===== -->
     <section id="contact">
         <div class="wrap contact-grid">
-            <div class="contact-info">
+            <div class="contact-info reveal-up">
                 <span class="tab">Get in touch</span>
                 <h2 style="font-size:clamp(25px,3.2vw,36px); margin-top:14px;">Let's get you online.</h2>
                 <p style="color:var(--text-dim); margin-top:12px; font-size:15px; line-height:1.6;">Tell us whether you need a website, an automation tool, or both — we'll reply within a day.</p>
@@ -2271,7 +2338,7 @@ body.image-lightbox-open {
                     <a href="https://www.linkedin.com/in/ankush-sawant-g7" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
-            <form class="contact-form" id="contactForm" action="https://formsubmit.co/GoOnline@g-7.shop" method="POST">
+            <form class="contact-form reveal-up" id="contactForm" action="https://formsubmit.co/GoOnline@g-7.shop" method="POST" style="--stagger-delay: 100ms;">
                 <div class="field"><label for="contactName">Full name</label><input id="contactName" name="name" type="text" placeholder="Your name" autocomplete="name" required /></div>
                 <div class="field"><label for="contactEmail">Email</label><input id="contactEmail" name="email" type="email" placeholder="you@company.com" autocomplete="email" required /></div>
                 <div class="field"><label>What do you need?</label>
@@ -2297,7 +2364,7 @@ body.image-lightbox-open {
                 <input type="hidden" name="_subject" value="New G-7 website enquiry" />
                 <input type="hidden" name="_template" value="table" />
                 <input type="hidden" name="_captcha" value="false" />
-                
+                <input type="hidden" name="_next" value="thank-you.html" />
                 <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Send message</button>
                 <p class="contact-status" id="contactStatus" role="status" aria-live="polite"></p>
             </form>
@@ -2325,9 +2392,6 @@ body.image-lightbox-open {
 
     <a class="whatsapp-float" href="https://wa.me/919307427854" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
         <i class="fab fa-whatsapp" aria-hidden="true"></i>
-    </a>
-    <a class="call-float" href="tel:+919307427854" aria-label="Call us">
-        <i class="fas fa-phone" aria-hidden="true"></i>
     </a>
 
     <!-- =========================================================
@@ -2362,6 +2426,45 @@ body.image-lightbox-open {
             API_URL: "https://script.google.com/macros/s/AKfycbwAG_SpqPKBSDIELdWR4X2oxFsnO8CJY4ezBIhOhH5Lua44v9PanKaHxXPmV3hVVX-UXA/exec", // e.g. https://script.google.com/macros/s/XXXX/exec
             CONTACT_FORM_URL: "https://formsubmit.co/GoOnline@g-7.shop",
         };
+
+        // ===== SCROLL REVEAL ANIMATIONS (Phase 2) =====
+        // Efficient IntersectionObserver-based reveals using CSS transitions
+        (function initScrollAnimations() {
+            // Check for prefers-reduced-motion
+            const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (prefersReduced) return; // Skip if user prefers reduced motion
+
+            // IntersectionObserver options
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px 0px -80px 0px', // Trigger 80px before entering viewport
+                threshold: 0
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        const element = entry.target;
+                        
+                        // For staggered cards, calculate delay based on data attribute or index
+                        if (element.classList.contains('card-stagger')) {
+                            const delay = element.dataset.staggerDelay || (index * 100);
+                            element.style.setProperty('--stagger-delay', `${delay}ms`);
+                        }
+                        
+                        // Add the revealed class to trigger CSS animation
+                        element.classList.add('revealed');
+                        
+                        // Optionally unobserve after reveal (for performance)
+                        observer.unobserve(element);
+                    }
+                });
+            }, observerOptions);
+
+            // Find all reveal elements
+            const revealElements = document.querySelectorAll('.reveal-fade, .reveal-up, .card-stagger');
+            revealElements.forEach(el => observer.observe(el));
+        })();
 
         // ---- Contact form submission ----
         // FormSubmit should receive the browser's normal form POST.
@@ -2453,7 +2556,7 @@ body.image-lightbox-open {
         }
 
         // ---- Card HTML with slider ----
-        function cardHTML(kind, p) {
+        function cardHTML(kind, p, index) {
             const isWeb = kind === "web";
             const badgeText = isWeb ? "Website development" : "Automation & AI";
             const link = (p.link || "#").trim() || "#";
@@ -2469,7 +2572,7 @@ body.image-lightbox-open {
                 "";
 
             return `
-                    <div class="proj-card ${isWeb ? 'web' : 'auto'}">
+                    <div class="proj-card ${isWeb ? 'web' : 'auto'} card-stagger" style="--stagger-delay: ${index * 100}ms;">
                         <div class="proj-media">
                             ${chrome}
                             ${buildSlider(images, p.projectName)}
@@ -2626,7 +2729,7 @@ body.image-lightbox-open {
                     return;
                 }
 
-                grid.innerHTML = projects.map(p => cardHTML(kind, p)).join("");
+                grid.innerHTML = projects.map((p, index) => cardHTML(kind, p, index)).join("");
 
                 // Init all sliders in this grid
                 const wrappers = grid.querySelectorAll('.slider-wrapper');
