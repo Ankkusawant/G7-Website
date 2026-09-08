@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You | G-7</title>
+  <link rel="icon" type="image/png" href="Logo.png" />
+  <style>
+    :root {
+      --paper: #f5f7fb;
+      --ink: #0f172a;
+      --line: rgba(15, 23, 42, 0.12);
+      --web: #2563eb;
+      --web-soft: #e8f0ff;
+      --text-dim: #52607a;
+      --font-body: 'Inter', 'Segoe UI', sans-serif;
+      --font-display: Georgia, 'Times New Roman', serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(180deg, #f7f9fc 0%, #edf3fa 100%);
+      color: var(--ink);
+      font-family: var(--font-body);
+    }
+    .card {
+      max-width: 620px;
+      width: calc(100% - 32px);
+      background: rgba(255,255,255,0.9);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: 0 25px 60px rgba(15,23,42,0.08);
+      padding: 40px 28px;
+      text-align: center;
+    }
+    .badge {
+      display: inline-block;
+      background: var(--web-soft);
+      color: var(--web);
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    h1 {
+      margin: 0 0 16px;
+      font-family: var(--font-display);
+      font-size: clamp(34px, 5vw, 52px);
+      line-height: 1.05;
+    }
+    p {
+      margin: 0;
+      color: var(--text-dim);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+    .actions {
+      margin-top: 28px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 22px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.15s ease;
+    }
+    .btn-primary {
+      background: var(--ink);
+      color: #fff;
+    }
+    .btn-ghost {
+      border: 1px solid var(--line);
+      color: var(--ink);
+      background: #fff;
+    }
+    .btn:hover { transform: translateY(-1px); }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="badge">Message sent</div>
+    <h1>Thank you for reaching out.</h1>
+    <p>Your message has been sent successfully. We usually reply within a day, and if it is urgent, you can also contact us directly on WhatsApp.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="index.html">Back to home</a>
+      <a class="btn btn-ghost" href="https://wa.me/919307427854" target="_blank" rel="noopener">Chat on WhatsApp</a>
+    </div>
+  </main>
+</body>
+</html>
