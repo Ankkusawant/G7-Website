@@ -876,6 +876,21 @@
             color: rgba(245, 246, 242, .62);
             line-height: 1.6;
         }
+        #payment {
+            background: var(--paper-dim);
+        }
+        
+        #payment .process-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
+        @media (max-width: 820px) {
+        
+            #payment .process-grid {
+                grid-template-columns: 1fr;
+            }
+        
+        }
 
         /* ----- PRICING ----- */
         .pricing-grid {
@@ -2009,13 +2024,134 @@ body.image-lightbox-open {
                     <a href="#contact" class="btn btn-primary" style="justify-content:center;">Get a quote</a>
                 </div>
             </div>
-            <p class="price-note">Payment: 50% advance to start, 50% on delivery.</p>
+            <p class="price-note">
+                Payment: 50% advance to start your project, remaining 50% on delivery.
+                Final project price is confirmed before any payment is requested.
+            </p>
+            
             <div class="payment-row">
-                <span class="pay-chip"><i class="fas fa-mobile-screen-button"></i> UPI</span>
-                <span class="pay-chip"><i class="fas fa-building-columns"></i> Bank transfer</span>
-                <span class="pay-chip"><i class="fas fa-credit-card"></i> Razorpay- Coming Soon</span>
+                <span class="pay-chip">
+                    <i class="fas fa-shield-halved"></i> Secure payments
+                </span>
+            
+                <span class="pay-chip">
+                    <i class="fas fa-mobile-screen-button"></i> UPI
+                </span>
+            
+                <span class="pay-chip">
+                    <i class="fas fa-credit-card"></i> Cards
+                </span>
+            
+                <span class="pay-chip">
+                    <i class="fas fa-bolt"></i> Powered by Razorpay
+                </span>
             </div>
         </div>
+    </section>
+    <section id="payment">
+    
+        <div class="wrap">
+    
+            <div class="section-head">
+    
+                <span class="tab active">
+                    <i class="fas fa-shield-halved"></i>
+                    SIMPLE & SECURE
+                </span>
+    
+                <h2>How Payment Works</h2>
+    
+                <p>
+                    Every project is different. We confirm the final price and requirements
+                    with you before requesting any payment.
+                </p>
+    
+            </div>
+    
+    
+            <div class="process-grid">
+    
+                <div class="process-card">
+    
+                    <div class="num">01</div>
+    
+                    <h4>Share Your Requirements</h4>
+    
+                    <p>
+                        Tell us about your business and what you need.
+                    </p>
+    
+                </div>
+    
+    
+                <div class="process-card">
+    
+                    <div class="num">02</div>
+    
+                    <h4>Get Your Final Quote</h4>
+    
+                    <p>
+                        We discuss your requirements and confirm the final project price.
+                    </p>
+    
+                </div>
+    
+    
+                <div class="process-card">
+    
+                    <div class="num">03</div>
+    
+                    <h4>Pay 50% Advance</h4>
+    
+                    <p>
+                        Pay your project advance securely through Razorpay. Work begins after payment confirmation.
+                    </p>
+    
+                </div>
+    
+    
+                <div class="process-card">
+    
+                    <div class="num">04</div>
+    
+                    <h4>We Build Your Project</h4>
+    
+                    <p>
+                        We design and build your website or automation solution.
+                    </p>
+    
+                </div>
+    
+    
+                <div class="process-card">
+    
+                    <div class="num">05</div>
+    
+                    <h4>Review Your Project</h4>
+    
+                    <p>
+                        Review the completed work and share your feedback.
+                    </p>
+    
+                </div>
+    
+    
+                <div class="process-card">
+    
+                    <div class="num">06</div>
+    
+                    <h4>Final Payment & Delivery</h4>
+    
+                    <p>
+                        Complete the remaining payment and receive your finished project.
+                    </p>
+    
+                </div>
+    
+            </div>
+    
+        </div>
+    
     </section>
 
     <!-- ===== ABOUT / TRUST ===== -->
@@ -2097,6 +2233,38 @@ body.image-lightbox-open {
                         <option>Not sure yet</option>
                     </select>
                 </div>
+                <div class="field">
+                
+                    <label for="budget">Estimated Budget</label>
+                
+                    <select id="budget" name="budget">
+                
+                        <option value="">Select your budget</option>
+                
+                        <option value="6000-10000">
+                            ₹6,000 – ₹10,000
+                        </option>
+                
+                        <option value="10000-20000">
+                            ₹10,000 – ₹20,000
+                        </option>
+                
+                        <option value="20000-50000">
+                            ₹20,000 – ₹50,000
+                        </option>
+                
+                        <option value="50000+">
+                            ₹50,000+
+                        </option>
+                
+                        <option value="not-sure">
+                            Not sure yet
+                        </option>
+                
+                    </select>
+                
+                </div>
+                
                 <div class="field"><label for="contactDetails">Project details</label><textarea id="contactDetails" name="details" rows="4" placeholder="Tell us about it..." required></textarea></div>
                 <input type="hidden" name="_subject" value="New G-7 website enquiry" />
                 <input type="hidden" name="_template" value="table" />
