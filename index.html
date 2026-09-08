@@ -26,20 +26,24 @@
     <style>
         /* ----- ROOT ----- */
         :root {
-            --paper: #f5f6f2;
-            --paper-dim: #eceee7;
-            --ink: #101a1c;
-            --ink-soft: #1c2a2c;
-            --line: rgba(16, 26, 28, 0.14);
-            --line-strong: rgba(16, 26, 28, 0.26);
-            --line-invert: rgba(245, 246, 242, 0.16);
-            --web: #2f5de0;
-            --web-soft: #e7ecfb;
-            --auto: #c07a12;
-            --auto-soft: #faf0da;
-            --active: #1e7a46;
-            --active-soft: #e4f2e9;
-            --text-dim: #576260;
+            --paper: #f5f7fb;
+            --paper-dim: #ebf0f6;
+            --paper-strong: #edf6ff;
+            --ink: #0f172a;
+            --ink-soft: #1d2b3d;
+            --line: rgba(15, 23, 42, 0.12);
+            --line-strong: rgba(15, 23, 42, 0.2);
+            --line-invert: rgba(245, 247, 251, 0.16);
+            --web: #2563eb;
+            --web-strong: #1d4ed8;
+            --web-soft: #e8f0ff;
+            --auto: #0ea5e9;
+            --auto-soft: #e0f7ff;
+            --active: #10b981;
+            --active-soft: #eafcf4;
+            --text-dim: #52607a;
+            --brand-gold: #d99d32;
+            --brand-gold-soft: #fff2d9;
             --font-display: 'Fraunces', serif;
             --font-body: 'Inter', sans-serif;
             --font-mono: 'IBM Plex Mono', monospace;
@@ -55,7 +59,7 @@
         }
         body {
             font-family: var(--font-body);
-            background: var(--paper);
+            background: linear-gradient(180deg, #f5f7fb 0%, #eef3f8 100%);
             color: var(--ink);
             -webkit-font-smoothing: antialiased;
             overflow-x: hidden;
@@ -120,7 +124,7 @@
             left: 0;
             right: 0;
             z-index: 100;
-            background: rgba(245, 246, 242, 0.88);
+            background: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid var(--line);
         }
@@ -185,19 +189,23 @@
             font-family: var(--font-body);
         }
         .btn-primary {
-            background: var(--ink);
-            color: var(--paper);
+            background: linear-gradient(135deg, var(--ink) 0%, #1c2b44 100%);
+            color: #fff;
+            box-shadow: 0 12px 22px rgba(15, 23, 42, 0.12);
         }
         .btn-primary:hover {
-            background: var(--web);
+            background: linear-gradient(135deg, var(--web) 0%, var(--web-strong) 100%);
+            transform: translateY(-1px);
         }
         .btn-ghost {
             border-color: var(--line-strong);
+            background: rgba(255, 255, 255, 0.4);
             color: var(--ink);
         }
         .btn-ghost:hover {
-            border-color: var(--ink);
-            background: var(--paper-dim);
+            border-color: var(--web);
+            background: var(--web-soft);
+            color: var(--web-strong);
         }
         .navbtns {
             display: flex;
@@ -237,6 +245,8 @@
           	position: relative;
     		overflow: hidden;
             padding: 150px 0 96px;
+            background: radial-gradient(circle at top right, rgba(37, 99, 235, 0.08), transparent 32%),
+                        linear-gradient(180deg, rgba(14, 165, 233, 0.04), transparent 38%);
         }
         .hero-grid {
             position: relative;
@@ -294,11 +304,11 @@
         }
         .agency-visual {
             animation: heroIn .7s cubic-bezier(.2, .7, .3, 1) both;
-            background: #fff;
-            border: 1px solid var(--line-strong);
+            background: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(237, 245, 255, 0.96) 100%);
+            border: 1px solid rgba(37, 99, 235, 0.14);
             border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 30px 60px -36px rgba(16, 26, 28, .35);
+            box-shadow: 0 28px 60px -32px rgba(15, 23, 42, 0.28);
         }
         .av-chrome {
             display: flex;
@@ -863,17 +873,21 @@
         .process-card .num {
             font-family: var(--font-mono);
             font-size: 12px;
-            color: rgba(245, 246, 242, .42);
+            color: rgba(255, 255, 255, 0.88);
             margin-bottom: 14px;
+            letter-spacing: 0.18em;
+            font-weight: 700;
+            opacity: 1;
         }
         .process-card h4 {
             font-size: 18px;
             margin-bottom: 9px;
             font-weight: 600;
+            color: #ffffff;
         }
         .process-card p {
             font-size: 14px;
-            color: rgba(245, 246, 242, .62);
+            color: rgba(245, 246, 242, 0.82);
             line-height: 1.6;
         }
         #payment {
