@@ -998,8 +998,7 @@ section{padding:92px 0;position:relative;scroll-margin-top:90px}
     overflow:hidden;
 }
 .process::before{
-    content:"";
-    position:absolute;inset:0;
+    content:"";position:absolute;inset:0;
     background-image:
         linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),
         linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
@@ -1087,8 +1086,7 @@ section{padding:92px 0;position:relative;scroll-margin-top:90px}
     z-index:1;
 }
 .price-card::before{
-    content:"";
-    position:absolute;inset:0;
+    content:"";position:absolute;inset:0;
     background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),rgba(37,99,235,.1),transparent 45%);
     opacity:0;transition:opacity .45s ease;pointer-events:none;
 }
@@ -1205,6 +1203,115 @@ section{padding:92px 0;position:relative;scroll-margin-top:90px}
 #payment .process-card p{color:var(--text-dim)}
 @media (min-width:861px){
     #payment .process-grid{grid-template-columns:repeat(3,1fr)}
+}
+
+/* ============================================================
+   GET A DEMO — ₹1,000
+   ============================================================ */
+#demo{
+    background:
+        radial-gradient(ellipse 55% 45% at 20% 20%, rgba(217,157,50,.10), transparent 60%),
+        radial-gradient(ellipse 50% 45% at 85% 85%, rgba(37,99,235,.10), transparent 60%),
+        linear-gradient(180deg,#f7f9fd 0%,#eef3f9 100%);
+    position:relative;
+    overflow:hidden;
+}
+.demo-card{
+    position:relative;
+    max-width:780px;
+    margin:0 auto;
+    padding:44px 40px 40px;
+    background:linear-gradient(160deg,#ffffff 0%,#fbfdff 100%);
+    border:1px solid rgba(217,157,50,.32);
+    border-radius:22px;
+    box-shadow:
+        0 30px 70px -32px rgba(15,23,42,.35),
+        0 0 0 6px rgba(217,157,50,.06);
+    text-align:center;
+    overflow:hidden;
+}
+.demo-card::before{
+    content:"";
+    position:absolute;
+    top:0;left:0;right:0;
+    height:4px;
+    background:linear-gradient(90deg,var(--brand-gold),var(--web) 55%,var(--auto));
+}
+.demo-card h2{
+    font-size:clamp(24px,3.2vw,34px);
+    margin-top:16px;
+}
+.demo-lead{
+    color:var(--text-dim);
+    margin:14px auto 0;
+    font-size:15.5px;
+    line-height:1.65;
+    max-width:560px;
+}
+.demo-benefits{
+    list-style:none;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px 22px;
+    text-align:left;
+    max-width:640px;
+    margin:28px auto 30px;
+    padding:0;
+}
+.demo-benefits li{
+    display:flex;
+    gap:11px;
+    align-items:flex-start;
+    font-size:14px;
+    color:var(--ink-soft);
+    line-height:1.55;
+    background:rgba(255,255,255,.7);
+    border:1px solid var(--line);
+    border-radius:11px;
+    padding:12px 14px;
+    transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .3s ease;
+}
+.demo-benefits li:hover{
+    transform:translateY(-3px);
+    border-color:rgba(217,157,50,.4);
+    box-shadow:0 14px 30px -18px rgba(217,157,50,.6);
+}
+.demo-benefits li i{
+    color:var(--active);
+    font-size:12px;
+    margin-top:3px;
+    flex:0 0 auto;
+}
+.demo-pay-wrap{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    max-width:100%;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    padding:8px 4px 4px;
+}
+.demo-pay-wrap form{display:inline-block;max-width:100%}
+.demo-after{
+    margin-top:22px;
+    font-size:13.5px;
+    color:var(--ink-soft);
+    font-family:var(--font-mono);
+}
+.demo-disclaimer{
+    margin:14px auto 0;
+    font-size:12px;
+    color:var(--text-dim);
+    line-height:1.65;
+    max-width:600px;
+    padding-top:14px;
+    border-top:1px dashed var(--line-strong);
+}
+.demo-hero-btn{font-size:13px;padding:10px 18px}
+@media (max-width:640px){
+    .demo-card{padding:32px 22px 30px;border-radius:18px}
+    .demo-benefits{grid-template-columns:1fr}
 }
 
 /* ============================================================
@@ -1678,6 +1785,7 @@ footer a:hover{color:var(--web);transform:translateX(4px)}
                 <li><a class="nav-link" href="#services">Services</a></li>
                 <li><a class="nav-link" href="portfolio.html">Portfolio</a></li>
                 <li><a class="nav-link" href="#pricing">Pricing</a></li>
+                <li><a class="nav-link" href="#demo">Demo</a></li>
                 <li><a class="nav-link" href="#about">About</a></li>
             </ul>
         </nav>
@@ -1691,6 +1799,7 @@ footer a:hover{color:var(--web);transform:translateX(4px)}
         <a class="nav-link" href="#services">Services</a>
         <a class="nav-link" href="portfolio.html">Portfolio</a>
         <a class="nav-link" href="#pricing">Pricing</a>
+        <a class="nav-link" href="#demo">Demo</a>
         <a class="nav-link" href="#about">About</a>
         <a class="btn btn-primary" href="#contact" style="width:fit-content;margin-top:8px;">Contact</a>
     </div>
@@ -1730,6 +1839,7 @@ footer a:hover{color:var(--web);transform:translateX(4px)}
             <div class="hero-cta">
                 <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i><span>Claim ₹6,000 offer</span></a>
                 <a href="portfolio.html" class="btn btn-ghost"><i class="fas fa-eye"></i><span>See our work</span></a>
+                <a href="#demo" class="btn btn-ghost demo-hero-btn"><i class="fas fa-play-circle"></i><span>Get a Demo — ₹1,000</span></a>
             </div>
             <div class="hero-stats">
                 <div><span data-count="7" data-suffix=" days">0 days</span><p>Typical launch time</p></div>
@@ -1930,6 +2040,33 @@ footer a:hover{color:var(--web);transform:translateX(4px)}
             <span class="pay-chip"><i class="fas fa-mobile-screen-button"></i> UPI</span>
             <span class="pay-chip"><i class="fas fa-credit-card"></i> Cards</span>
             <span class="pay-chip"><i class="fas fa-bolt"></i> Powered by Razorpay</span>
+        </div>
+    </div>
+</section>
+
+<!-- ===== GET A DEMO — ₹1,000 ===== -->
+<section id="demo">
+    <div class="wrap">
+        <div class="demo-card reveal-up">
+            <span class="tab active"><i class="fas fa-play-circle"></i> Try before you commit</span>
+            <h2>Want to see it before you commit?</h2>
+            <p class="demo-lead">Get a working demo of your website, web app or automation idea for ₹1,000.</p>
+
+            <ul class="demo-benefits">
+                <li><i class="fas fa-check"></i> Customized to your idea</li>
+                <li><i class="fas fa-check"></i> Working preview</li>
+                <li><i class="fas fa-check"></i> Discuss the approach before full development</li>
+                <li><i class="fas fa-check"></i> ₹1,000 demo fee can be adjusted against the final project price if you proceed with G-7</li>
+            </ul>
+
+            <div class="demo-pay-wrap">
+                <form>
+                    <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_TeS1PKmD9ZMjft" async></script>
+                </form>
+            </div>
+
+            <p class="demo-after">After payment, we'll contact you for your requirements and demo scope.</p>
+            <p class="demo-disclaimer">Demo scope is limited and depends on the project. A demo is not the complete final product and does not include unlimited revisions or unrestricted source-code delivery unless separately agreed.</p>
         </div>
     </div>
 </section>
@@ -2892,7 +3029,6 @@ footer a:hover{color:var(--web);transform:translateX(4px)}
                 // Already added? Toggle it off.
                 if(chip.classList.contains('added')){
                     const current = textarea.value;
-                    // Remove the exact line + its trailing newline(s)
                     const escaped = text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
                     const re = new RegExp('(?:^|\\n)' + escaped + '\\n?', 'g');
                     let next = current.replace(re, '\n').replace(/\n{3,}/g, '\n\n');
@@ -2905,7 +3041,6 @@ footer a:hover{color:var(--web);transform:translateX(4px)}
                     chip.classList.add('added');
                 }
 
-                // Small pulse feedback on the textarea
                 textarea.style.transition = 'box-shadow .25s ease';
                 textarea.style.boxShadow = '0 0 0 4px rgba(37,99,235,.15)';
                 setTimeout(function(){
@@ -2913,7 +3048,6 @@ footer a:hover{color:var(--web);transform:translateX(4px)}
                 }, 400);
 
                 updateClearVisibility();
-                // Keep cursor at end
                 textarea.focus();
                 textarea.setSelectionRange(textarea.value.length, textarea.value.length);
             });
