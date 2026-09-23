@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/png" href="Logo.png" />
+<title>50 Website Templates | G-7 Studio</title>
+<meta name="description" content="Explore 50 distinct, live website templates for businesses, creators, shops and communities. Preview every design at desktop, tablet or mobile size." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,450;9..144,550;9..144,650&family=Inter:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+<style>
+:root{
+  --paper:#f5f7fb;--paper-dim:#ebf0f6;--ink:#0f172a;--ink-soft:#1d2b3d;
+  --line:rgba(15,23,42,.12);--line-strong:rgba(15,23,42,.2);
+  --web:#2563eb;--web-strong:#1d4ed8;--web-soft:#e8f0ff;
+  --auto:#0ea5e9;--active:#10b981;
+  --text-dim:#52607a;--brand-gold:#d99d32;
+  --font-display:'Fraunces',serif;--font-body:'Inter',sans-serif;
+  --font-mono:'IBM Plex Mono',monospace;
+  --ease:cubic-bezier(.16,1,.3,1);--ease-back:cubic-bezier(.34,1.56,.64,1);
+  --sh-1:0 1px 2px rgba(15,23,42,.05),0 2px 8px rgba(15,23,42,.05);
+  --sh-2:0 8px 24px -10px rgba(15,23,42,.16),0 2px 6px rgba(15,23,42,.05);
+  --sh-3:0 28px 60px -28px rgba(15,23,42,.3),0 8px 20px -12px rgba(15,23,42,.14);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--font-body);color:var(--ink);background:var(--paper);
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+  overflow-x:hidden;min-height:100vh;position:relative;
+}
+body::before{
+  content:"";position:fixed;inset:-10%;z-index:-2;
+  background:
+    radial-gradient(ellipse 46% 46% at 12% 8%,rgba(37,99,235,.13),transparent 62%),
+    radial-gradient(ellipse 42% 42% at 88% 20%,rgba(14,165,233,.12),transparent 62%),
+    radial-gradient(ellipse 48% 40% at 50% 100%,rgba(217,157,50,.10),transparent 62%),
+    linear-gradient(180deg,#f7f9fd 0%,#eef3f9 55%,#e9eff7 100%);
+  animation:meshDrift 26s ease-in-out infinite alternate;
+}
+@keyframes meshDrift{0%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(-2%,1.5%,0) scale(1.04)}100%{transform:translate3d(2%,-1.5%,0) scale(1.02)}}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+button{font-family:inherit}
+::selection{background:var(--web);color:#fff}
+:focus-visible{outline:2px solid var(--web);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1280px;margin:0 auto;padding:0 24px;position:relative}
+h1,h2,h3,h4{font-family:var(--font-display);letter-spacing:-.02em;line-height:1.1;font-weight:550}
+
+header{
+  position:fixed;top:0;left:0;right:0;z-index:900;
+  background:rgba(255,255,255,.72);
+  backdrop-filter:blur(16px) saturate(160%);
+  -webkit-backdrop-filter:blur(16px) saturate(160%);
+  border-bottom:1px solid transparent;
+  transition:background .4s ease,border-color .4s ease,box-shadow .4s ease;
+}
+header.scrolled{background:rgba(255,255,255,.9);border-bottom-color:var(--line);box-shadow:0 8px 32px -20px rgba(15,23,42,.35)}
+header .wrap{max-width:1280px;display:flex;align-items:center;justify-content:space-between;padding:14px 24px;transition:padding .4s var(--ease)}
+header.scrolled .wrap{padding-top:9px;padding-bottom:9px}
+.logo{font-family:var(--font-display);font-weight:650;font-size:20px;display:flex;align-items:center;gap:10px}
+.logo img{width:46px;height:46px;object-fit:contain;border-radius:50%;transition:transform .5s var(--ease-back),filter .4s ease}
+.logo:hover img{transform:rotate(-8deg) scale(1.08)}
+nav ul{display:flex;gap:26px;list-style:none;align-items:center}
+nav a.nav-link{position:relative;font-size:14px;font-weight:500;color:var(--ink-soft);padding:4px 0;transition:color .25s ease}
+nav a.nav-link::after{content:"";position:absolute;left:0;bottom:-2px;width:100%;height:2px;border-radius:2px;background:linear-gradient(90deg,var(--web),var(--auto));transform:scaleX(0);transform-origin:0 50%;transition:transform .4s var(--ease)}
+nav a.nav-link:hover{color:var(--web)}
+nav a.nav-link:hover::after{transform:scaleX(1)}
+nav a.nav-link.current{color:var(--web)}
+nav a.nav-link.current::after{transform:scaleX(1)}
+.navbtns{display:flex;align-items:center;gap:12px}
+.btn{
+  position:relative;display:inline-flex;align-items:center;gap:9px;
+  font-weight:600;font-size:14px;padding:12px 22px;border-radius:9px;
+  border:1px solid transparent;cursor:pointer;
+  transition:transform .35s var(--ease),box-shadow .35s var(--ease),background .35s var(--ease),color .25s ease,border-color .25s ease;
+  font-family:var(--font-body);overflow:hidden;isolation:isolate;white-space:nowrap;
+}
+.btn-primary{background:linear-gradient(135deg,var(--ink) 0%,#1c2b44 100%);color:#fff;box-shadow:0 12px 26px -12px rgba(15,23,42,.55)}
+.btn-primary:hover{background:linear-gradient(135deg,var(--web) 0%,var(--web-strong) 100%);box-shadow:0 18px 48px -18px rgba(37,99,235,.5);transform:translateY(-3px)}
+.btn-ghost{border-color:var(--line-strong);background:rgba(255,255,255,.55);backdrop-filter:blur(6px);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--web);background:var(--web-soft);color:var(--web-strong);transform:translateY(-3px)}
+#mobileBtn{display:none;font-size:20px;background:none;border:0;cursor:pointer;color:var(--ink);width:44px;height:44px;border-radius:10px;transition:background .3s ease}
+#mobileBtn:hover{background:var(--web-soft)}
+#mobileMenu{display:none;flex-direction:column;gap:6px;padding:14px 24px 24px;border-top:1px solid var(--line);background:rgba(255,255,255,.96);backdrop-filter:blur(16px)}
+#mobileMenu.open{display:flex}
+#mobileMenu a{padding:13px 12px;border-radius:9px;font-weight:500;font-size:15px;transition:background .25s ease,color .25s ease}
+#mobileMenu a:hover{background:var(--web-soft);color:var(--web)}
+@media (max-width:1040px){nav ul,.navbtns .btn-ghost{display:none}#mobileBtn{display:grid;place-items:center}}
+@media (max-width:520px){.navbtns .btn-primary{display:none}}
+
+.tpl-hero{padding:148px 0 40px;position:relative}
+.tpl-eyebrow{font-family:var(--font-mono);font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--web);display:inline-flex;align-items:center;gap:9px;padding:6px 13px;border-left:3px solid var(--web);background:var(--web-soft);border-radius:0 7px 7px 0}
+.tpl-hero h1{font-size:clamp(40px,6.4vw,84px);line-height:.98;letter-spacing:-.04em;margin-top:22px;font-weight:650}
+.tpl-hero h1 .grad{background:linear-gradient(120deg,var(--web),var(--auto) 55%,var(--brand-gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.tpl-hero .lead{color:var(--text-dim);max-width:600px;font-size:17px;line-height:1.65;margin-top:20px}
+.tpl-hero .lead strong{color:var(--ink);font-weight:600}
+
+.tpl-toolbar{margin-top:34px;display:flex;flex-direction:column;gap:18px}
+.tpl-search{
+  display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--line-strong);
+  border-radius:12px;padding:14px 18px;width:100%;max-width:440px;
+  transition:border-color .3s ease,box-shadow .3s ease;
+}
+.tpl-search:focus-within{border-color:var(--web);box-shadow:0 0 0 4px rgba(37,99,235,.12)}
+.tpl-search i{color:var(--text-dim)}
+.tpl-search input{width:100%;background:transparent;border:0;outline:0;font-size:14.5px;color:var(--ink);font-family:var(--font-body)}
+.tpl-search input::placeholder{color:#94a3b8}
+
+#filters{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;-ms-overflow-style:none}
+#filters::-webkit-scrollbar{display:none}
+.chip{
+  white-space:nowrap;flex:none;padding:9px 18px;border-radius:99px;
+  background:#fff;border:1px solid var(--line-strong);color:var(--ink-soft);
+  font-size:13.5px;font-weight:500;cursor:pointer;
+  transition:background .25s ease,border-color .25s ease,color .25s ease,transform .3s var(--ease-back);
+}
+.chip:hover{border-color:var(--web);color:var(--web);transform:translateY(-2px)}
+.chip.active{background:linear-gradient(135deg,var(--web),var(--web-strong));border-color:transparent;color:#fff;box-shadow:0 10px 24px -12px rgba(37,99,235,.7)}
+#resultCount{font-family:var(--font-mono);font-size:12px;color:var(--text-dim);letter-spacing:.04em}
+
+#gallery{
+  max-width:1280px;margin:0 auto;padding:44px 24px 100px;
+  display:grid;gap:26px;grid-template-columns:repeat(1,1fr);
+}
+@media(min-width:640px){#gallery{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){#gallery{grid-template-columns:repeat(3,1fr)}}
+
+.gallery-card{
+  background:#111522;border:1px solid rgba(15,23,42,.14);
+  border-radius:18px;overflow:hidden;
+  transition:transform .4s var(--ease),box-shadow .4s var(--ease),border-color .3s ease;
+  animation:show-card .55s backwards;animation-delay:var(--order,0ms);
+  color:#e7eaf3;
+}
+.gallery-card:hover{transform:translateY(-6px);border-color:rgba(37,99,235,.5);box-shadow:0 28px 60px -20px rgba(15,23,42,.5),0 0 0 1px rgba(37,99,235,.2)}
+.gallery-card:focus-within{border-color:var(--web)}
+@keyframes show-card{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+
+.shell{aspect-ratio:16/10;overflow:hidden;position:relative;background:#202534}
+.frame{
+  width:1280px;height:800px;border:0;pointer-events:none;
+  transform:scale(var(--preview-scale,.3));transform-origin:top left;
+  opacity:0;transition:opacity .45s ease;
+  position:relative;
+}
+.frame.ready{opacity:1}
+.shell .shell-loader{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  color:#8b93a8;font-size:12.5px;font-family:var(--font-mono);letter-spacing:.05em;
+  background:
+    linear-gradient(110deg,transparent 40%,rgba(255,255,255,.05) 50%,transparent 60%),
+    #202534;
+  background-size:200% 100%;
+  animation:shimmer 1.8s linear infinite;
+}
+@keyframes shimmer{0%{background-position:100% 0}100%{background-position:-100% 0}}
+
+.gallery-card .card-body{padding:18px 20px 20px}
+.gallery-card h2{font-size:16.5px;font-weight:700;font-family:var(--font-body);color:#f1f5fa;line-height:1.3}
+.gallery-card .tag{
+  font-size:10.5px;padding:4px 10px;border-radius:99px;
+  background:rgba(37,99,235,.18);color:#93b8ff;border:1px solid rgba(37,99,235,.35);
+  font-family:var(--font-mono);font-weight:600;letter-spacing:.03em;
+}
+.gallery-card .meta{color:#8b93a8;font-size:13px;margin-top:6px}
+.gallery-card .actions{display:flex;gap:8px;margin-top:14px}
+.gallery-card .demo{
+  flex:1;padding:10px 14px;border-radius:10px;border:0;cursor:pointer;
+  background:linear-gradient(135deg,var(--web),#8b5cf6);color:#fff;
+  font-weight:600;font-size:13.5px;
+  transition:filter .25s ease,transform .3s var(--ease);
+}
+.gallery-card .demo:hover{filter:brightness(1.1);transform:translateY(-1px)}
+.gallery-card .tab{
+  padding:10px 14px;border-radius:10px;border:1px solid rgba(255,255,255,.14);
+  background:rgba(255,255,255,.06);color:#e7eaf3;font-weight:600;font-size:13.5px;
+  cursor:pointer;transition:background .25s ease,border-color .25s ease;
+}
+.gallery-card .tab:hover{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.28)}
+
+#modal{
+  position:fixed;inset:0;z-index:5000;background:rgba(2,3,7,.9);
+  backdrop-filter:blur(10px);display:flex;flex-direction:column;
+  animation:modalIn .35s var(--ease) both;
+}
+#modal.hidden{display:none}
+@keyframes modalIn{from{opacity:0}to{opacity:1}}
+#modal .m-bar{
+  display:flex;align-items:center;gap:12px;padding:12px 18px;
+  background:#0d1220;border-bottom:1px solid rgba(255,255,255,.1);color:#e7eaf3;
+}
+#modal .dots{display:flex;gap:6px}
+#modal .dots i{width:11px;height:11px;border-radius:50%;display:block}
+#modal .dots i:nth-child(1){background:#ff5f57}
+#modal .dots i:nth-child(2){background:#febc2e}
+#modal .dots i:nth-child(3){background:#28c840}
+#mTitle{font-size:13.5px;font-weight:600;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:220px}
+#modal .m-bar .spacer{flex:1}
+#devices{display:flex;gap:6px}
+#modal .dev{
+  padding:7px 13px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);color:#d4d8e2;
+  transition:background .2s ease,border-color .2s ease,color .2s ease;
+}
+#modal .dev:hover{border-color:rgba(147,184,255,.5)}
+#modal .dev.active{background:var(--web);border-color:var(--web);color:#fff}
+#modal .m-btn{
+  padding:8px 14px;border-radius:8px;font-size:12.5px;font-weight:700;cursor:pointer;border:0;
+  background:rgba(255,255,255,.1);color:#fff;transition:background .2s ease;
+}
+#modal .m-btn.primary{background:var(--web);color:#fff}
+#modal .m-btn:hover{background:rgba(255,255,255,.2)}
+#modal .m-btn.primary:hover{background:var(--web-strong)}
+#modal .m-stage{
+  flex:1;min-height:0;display:grid;place-items:center;overflow:auto;
+  background:#12182a;padding:8px;
+}
+#mFrame{
+  width:100%;height:100%;border:0;background:#fff;border-radius:8px;
+  box-shadow:0 40px 80px -30px rgba(0,0,0,.8);
+}
+@media (max-width:640px){
+  #modal .dots,#devices{display:none}
+  #mTitle{max-width:120px}
+}
+
+.tpl-cta{
+  max-width:920px;margin:0 auto 90px;padding:48px 40px;text-align:center;
+  background:linear-gradient(160deg,#ffffff 0%,#fbfdff 100%);
+  border:1px solid rgba(37,99,235,.2);border-radius:24px;
+  box-shadow:0 30px 70px -32px rgba(15,23,42,.28);
+  position:relative;overflow:hidden;
+}
+.tpl-cta::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--web),var(--auto) 55%,var(--brand-gold))}
+.tpl-cta h2{font-size:clamp(24px,3.4vw,34px)}
+.tpl-cta p{color:var(--text-dim);margin-top:12px;font-size:15.5px;line-height:1.65}
+.tpl-cta .actions{display:flex;gap:12px;justify-content:center;margin-top:26px;flex-wrap:wrap}
+
+footer{border-top:1px solid var(--line);padding:52px 0 32px;background:linear-gradient(180deg,rgba(255,255,255,.5),var(--paper));position:relative;z-index:2}
+footer .footer-grid{max-width:1280px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px}
+@media (max-width:760px){footer .footer-grid{grid-template-columns:1fr 1fr}}
+footer h5{font-size:12.5px;font-weight:600;margin-bottom:14px;font-family:var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
+footer ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+footer a{font-size:13.5px;color:var(--text-dim);transition:color .25s ease,transform .3s var(--ease);display:inline-block}
+footer a:hover{color:var(--web);transform:translateX(4px)}
+footer .footer-bottom{max-width:1280px;margin:40px auto 0;padding:22px 24px 0;border-top:1px solid var(--line);font-size:12.5px;color:var(--text-dim);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+.wa-float{
+  position:fixed;right:24px;bottom:24px;z-index:999;
+  width:58px;height:58px;display:grid;place-items:center;border-radius:50%;
+  background:linear-gradient(135deg,#25d366,#128c4a);color:#fff;font-size:28px;
+  box-shadow:0 10px 28px rgba(18,140,74,.45);
+  transition:transform .4s var(--ease-back),box-shadow .4s ease;
+}
+.wa-float:hover{transform:translateY(-4px) scale(1.08);box-shadow:0 16px 38px rgba(18,140,74,.6)}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important}
+  .gallery-card{animation:none}
+}
+</style>
+</head>
+<body>
+
+<header id="siteHeader">
+  <div class="wrap">
+    <a href="index.html" class="logo" aria-label="G-7 home">
+      <img src="Logo.png" alt="G-7 logo" />
+    </a>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a class="nav-link" href="index.html#services">Services</a></li>
+        <li><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+        <li><a class="nav-link current" href="templates.html">Templates</a></li>
+        <li><a class="nav-link" href="index.html#pricing">Pricing</a></li>
+        <li><a class="nav-link" href="index.html#demo">Demo</a></li>
+        <li><a class="nav-link" href="index.html#about">About</a></li>
+      </ul>
+    </nav>
+    <div class="navbtns">
+      <a href="index.html#contact" class="btn btn-ghost">Contact</a>
+      <a href="index.html#contact" class="btn btn-primary"><i class="fas fa-rocket"></i><span>Start your project</span></a>
+    </div>
+    <button id="mobileBtn" aria-label="Toggle menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
+  </div>
+  <div id="mobileMenu">
+    <a href="index.html#services">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="templates.html">Templates</a>
+    <a href="index.html#pricing">Pricing</a>
+    <a href="index.html#demo">Demo</a>
+    <a href="index.html#about">About</a>
+    <a class="btn btn-primary" href="index.html#contact" style="width:fit-content;margin-top:8px;">Contact</a>
+  </div>
+</header>
+
+<section class="tpl-hero">
+  <div class="wrap">
+    <span class="tpl-eyebrow"><i class="fas fa-layer-group"></i> G-7 Studio / The collection</span>
+    <h1>50 live <span class="grad">templates.</span><br>One perfect fit.</h1>
+    <p class="lead">A website for every ambition. Explore <strong id="totalCount">50</strong> distinct live designs — click any card to preview it full screen at desktop, tablet or mobile size.</p>
+
+    <div class="tpl-toolbar">
+      <label class="tpl-search" for="search">
+        <i class="fas fa-magnifying-glass" aria-hidden="true"></i>
+        <input id="search" type="search" autocomplete="off" placeholder="Search a business, style or industry…" aria-label="Search templates" />
+      </label>
+      <div id="filters" role="group" aria-label="Filter templates by category"></div>
+      <p id="resultCount" aria-live="polite">Showing all 50 templates</p>
+    </div>
+  </div>
+</section>
+
+<main id="gallery" aria-label="Website template gallery"></main>
+
+<section class="tpl-cta">
+  <span class="tpl-eyebrow" style="display:inline-flex"><i class="fas fa-wand-magic-sparkles"></i> Made to be customised</span>
+  <h2 style="margin-top:16px">Want one of these for your business?</h2>
+  <p>Pick a starting point. We'll tailor the content, identity and experience to you.</p>
+  <div class="actions">
+    <a href="index.html#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i><span>Discuss my website</span></a>
+    <a id="contactLink" href="https://wa.me/919307427854?text=Hi%20G-7%2C%20I%20would%20like%20to%20discuss%20a%20website%20template." target="_blank" rel="noopener" class="btn btn-ghost"><i class="fab fa-whatsapp"></i><span>Chat on WhatsApp</span></a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <a href="index.html" class="logo"><img src="Logo.png" alt="G-7 logo" /></a>
+      <p style="font-size:13.5px;color:var(--text-dim);margin-top:14px;max-width:260px;line-height:1.6;">Websites and automation tools, built and supported end-to-end.</p>
+    </div>
+    <div>
+      <h5>Services</h5>
+      <ul>
+        <li><a href="index.html#services">Web development</a></li>
+        <li><a href="index.html#services">Automation</a></li>
+        <li><a href="templates.html">Templates</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Work</h5>
+      <ul>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="templates.html">Templates</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Connect</h5>
+      <ul>
+        <li><a href="https://www.instagram.com/goonlinein7/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms-and-conditions.html">Terms &amp; Conditions</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 G-7. All rights reserved.</span>
+    <span>Designed &amp; built with ❤️.</span>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/919307427854" target="_blank" rel="noopener" aria-label="Chat with G-7 on WhatsApp">
+  <i class="fab fa-whatsapp" aria-hidden="true"></i>
+</a>
+
+<div id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle" class="hidden">
+  <div class="m-bar">
+    <div class="dots" aria-hidden="true"><i></i><i></i><i></i></div>
+    <span id="mTitle"></span>
+    <div class="spacer"></div>
+    <div id="devices">
+      <button type="button" class="dev active" data-w="100%">Desktop</button>
+      <button type="button" class="dev" data-w="820px">Tablet</button>
+      <button type="button" class="dev" data-w="400px">Mobile</button>
+    </div>
+    <button type="button" id="newTab" class="m-btn primary">Open in tab</button>
+    <button type="button" id="close" class="m-btn" aria-label="Close preview">Close</button>
+  </div>
+  <div class="m-stage">
+    <iframe id="mFrame" title="Full website template demo" sandbox="allow-scripts"></iframe>
+  </div>
+</div>
+
+<script>
+const base = (accent, accent2, font) => `*{margin:0;padding:0;box-sizing:border-box}body{font-family:${font};color:#111;line-height:1.6}
+:root{--a:${accent};--b:${accent2}}
+a{text-decoration:none;color:inherit}img{max-width:100%;display:block}
+.wrap{max-width:1140px;margin:auto;padding:0 28px}
+.btn{display:inline-block;padding:14px 28px;border-radius:10px;background:var(--a);color:#fff;font-weight:700;border:0;cursor:pointer;transition:transform .25s,filter .25s}
+.btn:hover{transform:translateY(-3px);filter:brightness(1.1)}
+.btn.alt{background:transparent;border:2px solid var(--a);color:var(--a)}
+nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
+nav .logo{font-weight:900;font-size:24px}nav ul{display:flex;gap:28px;list-style:none;font-weight:600;font-size:15px}
+h1{font-size:56px;line-height:1.08;letter-spacing:-1.5px}h2{font-size:38px;letter-spacing:-1px}
+.grid{display:grid;gap:26px}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}.g2{grid-template-columns:1fr 1fr}
+.sec{padding:80px 0}.center{text-align:center}.muted{color:#6b7280}
+.card{background:#fff;border:1px solid #e9ecf3;border-radius:18px;padding:28px;box-shadow:0 10px 30px rgba(20,20,60,.06)}
+footer{padding:36px 0;text-align:center;color:#9aa2b1;font-size:14px;border-top:1px solid #e9ecf3}
+.hero h1{animation:liftIn .7s both}.hero p{animation:liftIn .8s .12s both}
+@keyframes liftIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}`;
+
+const responsive = `@media(max-width:800px){.wrap{padding-left:20px;padding-right:20px}.sec{padding-top:56px;padding-bottom:56px}.grid.g2,.grid.g3,.grid.g4,.search,.filters,.sheet,.grid[style*="grid-template-columns"],.approach,.step,.feature,.match,.episode,.work,.path,.age{grid-template-columns:1fr!important}nav ul{display:none}nav{padding:18px 0}nav .logo{font-size:20px}nav>.btn{padding:10px 14px;font-size:12px}h1{font-size:clamp(38px,9vw,58px)!important;letter-spacing:-.04em}h2{font-size:clamp(28px,7vw,36px)!important}.sheet{margin:0;border-radius:0}.split img{height:340px}.ticker{overflow:auto}.mas{columns:2}.count{gap:8px}.count div{padding:12px}.hero{min-height:auto}.service,.treatment,.route,.policy,.shape,.book,.class-row,.bookbar,.desk,.course,.harvest{flex-wrap:wrap}}@media(max-width:520px){.mas{columns:1}.side,.main{padding:24px}.btn{padding:12px 18px}}@media(prefers-reduced-motion:reduce){.hero h1,.hero p{animation:none}.btn{transition:none}}`;
+const page = (css, body, font='Inter,system-ui,Arial,sans-serif', title='Website demo') => `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${title}</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&family=Playfair+Display:wght@700;900&family=Poppins:wght@400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet"><style>${css}${responsive}</style></head><body>${body}<script>document.querySelectorAll('[data-count]').forEach(function(el){var t=+el.dataset.count,n=0;var i=setInterval(function(){n+=Math.ceil(t/40);if(n>=t){n=t;clearInterval(i)}el.textContent=n+(el.dataset.suf||'')},35)});document.querySelectorAll('form[data-demo]').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();var s=f.querySelector('[role=status]');if(s)s.textContent=f.dataset.demo||'This is a design preview. Contact the studio to make it yours.'})});<\/script></body></html>`;
+
+const nav = (name, links, style='') => `<nav class="wrap" style="${style}"><div class="logo">${name}</div><ul>${links.map(l=>`<li>${l}</li>`).join('')}</ul><a class="btn" href="#">Get Started</a></nav>`;
+
+const T = [];
+const add = (t,cat,tag,accent,accent2,font,css,body)=>T.push({t,cat,tag,html:page(base(accent,accent2,font)+css,body,font,t)});
+const photo = (id,w=1200) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=${w}`;
+
+/* 1 SaaS */
+add('NovaCloud SaaS','Business','SaaS','#6366f1','#ec4899','Inter,sans-serif',`
+body{background:#fff}.hero{background:linear-gradient(160deg,#eef2ff,#fff 60%);padding:60px 0 100px}
+.hero .g2{align-items:center;gap:50px}.tagline{display:inline-block;background:#e0e7ff;color:#4338ca;padding:7px 16px;border-radius:99px;font-size:13px;font-weight:700}
+.mock{background:#111827;border-radius:18px;padding:16px;box-shadow:0 30px 60px rgba(30,30,80,.25)}
+.bar{height:10px;background:#374151;border-radius:6px;margin-bottom:10px}.bar.s{width:60%}.bar.a{background:var(--a)}
+.price{border:2px solid #eef}.price.hot{border-color:var(--a);transform:scale(1.05)}
+.big{font-size:44px;font-weight:900}`,`
+<div class="hero">${nav('NovaCloud',['Product','Solutions','Pricing','Docs'])}
+<div class="wrap grid g2" style="margin-top:50px"><div><span class="tagline">🚀 v4.0 just launched</span>
+<h1 style="margin:18px 0">Run your entire business on one dashboard</h1>
+<p class="muted" style="font-size:19px">Automate billing, analytics and customer support with AI. Loved by 12,000+ teams worldwide.</p>
+<div style="margin-top:28px;display:flex;gap:14px"><a class="btn" href="#">Start free trial</a><a class="btn alt" href="#">Watch demo ▶</a></div>
+<p class="muted" style="margin-top:16px;font-size:14px">★★★★★ 4.9/5 from 2,300 reviews</p></div>
+<div class="mock"><div class="bar a"></div><div class="bar"></div><div class="bar s"></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px"><div style="background:#1f2937;height:90px;border-radius:12px"></div><div style="background:var(--a);height:90px;border-radius:12px"></div></div><div class="bar" style="margin-top:14px"></div><div class="bar s"></div></div></div></div>
+<div class="wrap sec grid g4 center">${[['12k+','Active teams'],['99.9%','Uptime SLA'],['4.2M','Tasks / day'],['60+','Integrations']].map(s=>`<div><div class="big" style="color:var(--a)">${s[0]}</div><div class="muted">${s[1]}</div></div>`).join('')}</div>
+<div class="wrap sec"><div class="center"><h2>Everything you need, nothing you don't</h2><p class="muted" style="margin-top:10px">Powerful modules that work together beautifully.</p></div>
+<div class="grid g3" style="margin-top:44px">${[['⚡','Realtime Analytics','Track every metric live with zero lag dashboards.'],['🔐','Bank-grade Security','SOC2, GDPR and end-to-end encryption by default.'],['🤖','AI Automations','Let agents handle repetitive workflows for you.'],['📱','Mobile Ready','Native apps for iOS and Android included.'],['🔗','60+ Integrations','Slack, Stripe, Notion, HubSpot and more.'],['💬','24/7 Support','Real humans replying in under 3 minutes.']].map(f=>`<div class="card"><div style="font-size:30px">${f[0]}</div><h3 style="margin:12px 0 6px">${f[1]}</h3><p class="muted">${f[2]}</p></div>`).join('')}</div></div>
+<div style="background:#f8fafc"><div class="wrap sec center"><h2>Simple pricing</h2><div class="grid g3" style="margin-top:40px;text-align:left">
+${[['Starter','$19','Up to 5 users',''],['Growth','$49','Up to 25 users','hot'],['Scale','$99','Unlimited users','']].map(p=>`<div class="card price ${p[3]}"><h3>${p[0]}</h3><div class="big">${p[1]}<span style="font-size:15px" class="muted">/mo</span></div><p class="muted">${p[2]}</p><ul style="margin:18px 0;padding-left:18px;color:#475569"><li>Unlimited projects</li><li>Advanced reports</li><li>Priority support</li></ul><a class="btn" style="width:100%;text-align:center" href="#">Choose plan</a></div>`).join('')}</div></div></div>
+<div class="wrap sec center"><h2>Ready to grow faster?</h2><p class="muted">Free 14-day trial. No credit card.</p><a class="btn" style="margin-top:20px" href="#">Create account</a></div>
+<footer>© 2026 NovaCloud Inc. · Privacy · Terms</footer>`);
+
+/* 2 Restaurant */
+add('Saffron Restaurant','Food','Restaurant','#c1440e','#1c1917','Poppins,sans-serif',`
+body{background:#fffaf5}.hero{min-height:620px;background:linear-gradient(rgba(20,10,5,.6),rgba(20,10,5,.7)),url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1400') center/cover;color:#fff;display:flex;flex-direction:column}
+.hero nav ul,.hero .logo{color:#fff}.hero .mid{flex:1;display:grid;place-items:center;text-align:center}
+h1{font-family:'Playfair Display',serif;font-size:66px}
+.menu-item{display:flex;justify-content:space-between;gap:14px;border-bottom:1px dashed #e7d9cc;padding:14px 0}
+.dot{flex:1;border-bottom:1px dotted #d6c3b2;margin-bottom:6px}
+.pill{letter-spacing:5px;text-transform:uppercase;font-size:12px;color:var(--a);font-weight:700}
+.gal img{height:190px;object-fit:cover;border-radius:14px;width:100%}`,`
+<div class="hero">${nav('🍷 SAFFRON',['Menu','About','Events','Reserve'],'color:#fff')}
+<div class="mid wrap"><div><div class="pill" style="color:#f5c26b">Fine dining since 1994</div><h1 style="margin:14px 0">Taste the Art of<br>Slow Cooking</h1><p style="max-width:560px;margin:auto;opacity:.9">Seasonal ingredients, wood-fired flavours and a wine list curated over three decades.</p><div style="margin-top:28px;display:flex;gap:14px;justify-content:center"><a class="btn" href="#">Reserve a table</a><a class="btn" style="background:#fff;color:#111" href="#">View menu</a></div></div></div></div>
+<div class="wrap sec grid g2" style="align-items:center;gap:50px"><img style="border-radius:20px" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800"><div><div class="pill">Our story</div><h2 style="font-family:Playfair Display,serif;margin:12px 0">A kitchen with a soul</h2><p class="muted">Chef Amara blends Mediterranean technique with local farm produce. Every plate is fired in our 900°C oak oven and finished by hand.</p><div style="display:flex;gap:40px;margin-top:26px"><div><div style="font-size:34px;font-weight:800;color:var(--a)" data-count="30" data-suf="+"></div><div class="muted">Years open</div></div><div><div style="font-size:34px;font-weight:800;color:var(--a)" data-count="48" data-suf=""></div><div class="muted">Signature dishes</div></div></div></div></div>
+<div style="background:#fff"><div class="wrap sec"><div class="center"><div class="pill">Menu</div><h2 style="font-family:Playfair Display,serif">Chef favourites</h2></div>
+<div class="grid g2" style="margin-top:36px">${[['Truffle Risotto','Arborio, wild mushroom, aged parmesan','$26'],['Oak-fired Lamb','Rosemary jus, heritage carrots','$34'],['Saffron Seafood Paella','Prawns, mussels, bomba rice','$31'],['Burrata & Peach','Basil oil, toasted pistachio','$18'],['Duck Confit','Cherry glaze, potato terrine','$29'],['Dark Chocolate Fondant','Salted caramel, vanilla bean','$12']].map(m=>`<div class="menu-item"><div><b>${m[0]}</b><div class="muted" style="font-size:14px">${m[1]}</div></div><div class="dot"></div><b style="color:var(--a)">${m[2]}</b></div>`).join('')}</div></div></div>
+<div class="wrap sec grid g3 gal">${['1504674900247-0877df9cc836','1565299624946-b28f40a0ae38','1540189549336-e6e99c3679fe'].map(i=>`<img src="https://images.unsplash.com/photo-${i}?w=600">`).join('')}</div>
+<div style="background:#1c1917;color:#fff" class="center"><div class="wrap sec"><h2 style="font-family:Playfair Display,serif">Book your table tonight</h2><p style="opacity:.7;margin:10px 0 24px">Open Tue–Sun · 6pm to late · 24 Harbour Street</p><a class="btn" href="#">Reserve now</a></div></div>
+<footer>© 2026 Saffron · Instagram · Facebook</footer>`);
+
+/* 3 Portfolio dark */
+add('Kai — Creative Portfolio','Creative','Portfolio','#c4f000','#0a0a0a','Space Grotesk,sans-serif',`
+body{background:#0b0b0d;color:#f2f2f2}.wrap{max-width:1180px}.muted{color:#8b8b95}
+h1{font-size:78px;font-weight:700;letter-spacing:-3px}nav .logo,nav ul{color:#fff}
+.btn{background:var(--a);color:#000}.btn.alt{border-color:#333;color:#fff}
+.card{background:#141418;border-color:#222;color:#eee}
+.work{border-radius:20px;overflow:hidden;position:relative}
+.work img{height:300px;width:100%;object-fit:cover;filter:grayscale(1);transition:.4s}
+.work:hover img{filter:none;transform:scale(1.05)}
+.work .lab{position:absolute;left:0;bottom:0;right:0;padding:20px;background:linear-gradient(transparent,rgba(0,0,0,.85))}
+.marq{border-block:1px solid #222;padding:18px 0;font-size:30px;font-weight:700;white-space:nowrap;overflow:hidden}
+.marq span{display:inline-block;animation:m 18s linear infinite}@keyframes m{to{transform:translateX(-50%)}}
+footer{border-color:#222}`,`
+${nav('KAI.',['Work','Studio','Services','Contact'])}
+<div class="wrap" style="padding:70px 0 40px"><p style="color:var(--a);font-weight:700">Available for freelance — 2026</p>
+<h1>Designer &<br>Front-end<br><span style="color:var(--a)">Developer.</span></h1>
+<div style="display:flex;justify-content:space-between;align-items:end;margin-top:30px;gap:30px;flex-wrap:wrap"><p class="muted" style="max-width:420px">I craft bold digital identities and high-converting websites for ambitious brands across 14 countries.</p><a class="btn" href="#">Let's talk →</a></div></div>
+<div class="marq"><span>BRANDING ✦ WEBFLOW ✦ UI/UX ✦ MOTION ✦ 3D ✦ ART DIRECTION ✦ BRANDING ✦ WEBFLOW ✦ UI/UX ✦ MOTION ✦ 3D ✦ ART DIRECTION ✦ </span></div>
+<div class="wrap sec grid g2">${[['Lumen Skincare','Brand + E-com','1522335789203-aabd1fc54bc9'],['Atlas Fintech','Product design','1551288049-bebda4e38f71'],['Nordic Chairs','Art direction','1567538096630-e0c55bd6374c'],['Pulse Fitness','Web app','1571019613454-1cb2f99b2d8b']].map(w=>`<a class="work" href="#"><img src="https://images.unsplash.com/photo-${w[2]}?w=800"><div class="lab"><b style="font-size:20px">${w[0]}</b><div class="muted">${w[1]}</div></div></a>`).join('')}</div>
+<div class="wrap sec grid g3">${[['01','Brand Identity','Logos, systems, guidelines'],['02','Web Design','Figma to pixel-perfect code'],['03','Motion','Micro-interactions that sell']].map(s=>`<div class="card"><div style="color:var(--a);font-weight:700">${s[0]}</div><h3 style="margin:8px 0">${s[1]}</h3><p class="muted">${s[2]}</p></div>`).join('')}</div>
+<div class="wrap sec center"><h2 style="font-size:52px">Got a project in mind?</h2><a class="btn" style="margin-top:22px" href="#">hello@kai.design</a></div>
+<footer>© 2026 Kai Studio — Made with caffeine.</footer>`);
+
+/* 4 Ecommerce */
+add('Lumière Store','E-commerce','Shop','#111827','#f59e0b','Inter,sans-serif',`
+.top{background:#111827;color:#fff;text-align:center;padding:10px;font-size:13px;letter-spacing:1px}
+.hero{background:#f6f2ee;padding:70px 0}
+.prod img{height:300px;width:100%;object-fit:cover;border-radius:14px}
+.prod{cursor:pointer}.prod:hover img{opacity:.85}
+.tagp{position:absolute;top:12px;left:12px;background:var(--b);color:#fff;font-size:12px;padding:4px 10px;border-radius:99px;font-weight:700}
+h1{font-family:'Playfair Display',serif;font-size:60px}`,`
+<div class="top">FREE WORLDWIDE SHIPPING ON ORDERS OVER $120 ✦ 30-DAY RETURNS</div>
+${nav('LUMIÈRE',['New in','Women','Men','Accessories','Sale'])}
+<div class="hero"><div class="wrap grid g2" style="align-items:center;gap:46px"><div><h1>Quiet luxury,<br>everyday wear.</h1><p class="muted" style="margin:16px 0 26px;font-size:18px">The Autumn 26 collection — organic cotton, responsibly made in Portugal.</p><a class="btn" href="#">Shop the collection</a></div><img style="border-radius:20px;height:420px;object-fit:cover" src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=900"></div></div>
+<div class="wrap sec"><div style="display:flex;justify-content:space-between;align-items:center"><h2>Best sellers</h2><a style="font-weight:700;border-bottom:2px solid var(--b)" href="#">View all</a></div>
+<div class="grid g4" style="margin-top:32px">${[['Oversized Wool Coat','$189','1591047139829-d91aecb6caea','New'],['Linen Shirt','$69','1596755094514-f87e34085b2c',''],['Leather Tote','$149','1584917865442-de89df76afd3','-20%'],['Knit Sweater','$99','1576566588028-4147f3842f27','']].map(p=>`<div class="prod" style="position:relative">${p[3]?`<span class="tagp">${p[3]}</span>`:''}<img src="https://images.unsplash.com/photo-${p[2]}?w=600"><div style="margin-top:12px;font-weight:600">${p[0]}</div><div class="muted">${p[1]}</div></div>`).join('')}</div></div>
+<div style="background:#f6f2ee"><div class="wrap sec grid g3 center">${[['🚚','Free delivery','On all orders over $120'],['♻️','Sustainable','GOTS certified fabrics'],['🔁','Easy returns','30 days, no questions']].map(x=>`<div><div style="font-size:30px">${x[0]}</div><h3>${x[1]}</h3><p class="muted">${x[2]}</p></div>`).join('')}</div></div>
+<div class="wrap sec center"><h2 style="font-family:Playfair Display,serif">Join the list</h2><p class="muted">Get 10% off your first order.</p><div style="margin-top:20px"><input placeholder="Email address" style="padding:14px 18px;border:1px solid #ddd;border-radius:10px;width:300px"><button class="btn" style="margin-left:8px">Subscribe</button></div></div>
+<footer>© 2026 Lumière · Shipping · Returns · Contact</footer>`);
+
+/* 5 Agency */
+add('Vertex Digital Agency','Business','Agency','#0ea5e9','#0f172a','Inter,sans-serif',`
+body{background:#fff}.hero{background:#0f172a;color:#fff;padding:0 0 90px;border-radius:0 0 40px 40px}
+.hero nav .logo,.hero nav ul{color:#fff}h1{font-size:60px}
+.stat{border-left:3px solid var(--a);padding-left:16px}
+.logo-row{display:flex;gap:50px;justify-content:center;opacity:.5;font-weight:800;font-size:20px;flex-wrap:wrap}
+.step{position:relative;padding-left:60px}
+.step .n{position:absolute;left:0;top:0;width:42px;height:42px;border-radius:50%;background:var(--a);color:#fff;display:grid;place-items:center;font-weight:800}`,`
+<div class="hero">${nav('VERTEX',['Services','Work','Process','Insights'])}
+<div class="wrap center" style="padding-top:60px"><h1>We build brands that<br><span style="color:var(--a)">outperform the market</span></h1>
+<p style="opacity:.75;max-width:600px;margin:18px auto 30px;font-size:18px">Strategy, design and performance marketing under one roof. 250+ launches, $80M revenue generated for clients.</p>
+<a class="btn" href="#">Book a free strategy call</a></div></div>
+<div class="wrap sec"><div class="logo-row"><span>FORBES</span><span>STRIPE</span><span>NIKE</span><span>AIRBNB</span><span>SPOTIFY</span></div></div>
+<div class="wrap grid g4 sec">${[['250','Projects'],['80','M Revenue'],['14','Countries'],['98','% Retention']].map(s=>`<div class="stat"><div style="font-size:40px;font-weight:900" data-count="${s[0]}"></div><div class="muted">${s[1]}</div></div>`).join('')}</div>
+<div style="background:#f8fafc"><div class="wrap sec grid g2" style="gap:50px"><div><h2>What we do</h2><p class="muted" style="margin-top:12px">Full funnel growth for ambitious companies.</p></div>
+<div class="grid">${[['Brand Strategy','Positioning, naming, identity systems'],['Web & Product','Design and development that converts'],['Performance Ads','Meta, Google and TikTok at scale'],['SEO & Content','Own your category on page one']].map(s=>`<div class="card"><b>${s[0]}</b><p class="muted" style="margin-top:6px">${s[1]}</p></div>`).join('')}</div></div></div>
+<div class="wrap sec grid g3">${[['1','Discover','We audit your market, funnel and competitors.'],['2','Design','Prototypes and messaging tested with real users.'],['3','Deliver','Launch, measure, iterate every two weeks.']].map(s=>`<div class="step"><div class="n">${s[0]}</div><h3>${s[1]}</h3><p class="muted">${s[2]}</p></div>`).join('')}</div>
+<div style="background:var(--a);color:#fff" class="center"><div class="wrap sec"><h2>Let's grow your revenue.</h2><a class="btn" style="background:#fff;color:var(--a);margin-top:18px" href="#">Start a project</a></div></div>
+<footer>© 2026 Vertex Digital</footer>`);
+
+/* 6 Real estate */
+add('Haven Real Estate','Business','Real Estate','#0f766e','#f59e0b','Inter,sans-serif',`
+.hero{background:linear-gradient(rgba(4,30,28,.55),rgba(4,30,28,.55)),url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1400') center/cover;color:#fff;padding-bottom:110px}
+.hero nav .logo,.hero nav ul{color:#fff}
+.search{background:#fff;border-radius:16px;padding:16px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;box-shadow:0 20px 40px rgba(0,0,0,.2);margin-top:-50px}
+.search input,.search select{padding:14px;border:1px solid #e5e7eb;border-radius:10px;width:100%}
+.pimg{height:220px;width:100%;object-fit:cover;border-radius:14px 14px 0 0}
+.plist{border:1px solid #e9ecf3;border-radius:16px;overflow:hidden;background:#fff}
+.meta{display:flex;gap:16px;color:#6b7280;font-size:14px;margin-top:8px}`,`
+<div class="hero">${nav('🏡 HAVEN',['Buy','Rent','Sell','Agents'])}
+<div class="wrap center" style="padding:90px 0 40px"><h1>Find the place<br>you'll love coming home to</h1><p style="opacity:.9;margin-top:14px">3,482 verified listings across 40 cities.</p></div></div>
+<div class="wrap"><div class="search"><input placeholder="📍 City or ZIP"><select><option>Property type</option><option>House</option><option>Apartment</option></select><select><option>Price range</option><option>$200k – $500k</option></select><button class="btn">Search homes</button></div></div>
+<div class="wrap sec"><h2>Featured listings</h2><div class="grid g3" style="margin-top:28px">${[['Modern Hillside Villa','$1,250,000','4 bd · 3 ba · 3,200 sqft','1600585154340-be6161a56a0c'],['Downtown Loft','$680,000','2 bd · 2 ba · 1,400 sqft','1502672260266-1c1ef2d93688'],['Coastal Family Home','$940,000','5 bd · 4 ba · 2,900 sqft','1600607687939-ce8a6c25118c']].map(p=>`<div class="plist"><img class="pimg" src="https://images.unsplash.com/photo-${p[3]}?w=700"><div style="padding:18px"><b style="color:var(--a);font-size:20px">${p[1]}</b><h3 style="margin:4px 0;font-size:18px">${p[0]}</h3><div class="meta">${p[2]}</div><a class="btn alt" style="margin-top:14px;display:block;text-align:center" href="#">View details</a></div></div>`).join('')}</div></div>
+<div style="background:#f0fdfa"><div class="wrap sec grid g2" style="align-items:center;gap:40px"><div><h2>Sell your home for more, faster.</h2><p class="muted" style="margin:12px 0 20px">Free valuation, professional photography and a dedicated agent from day one.</p><a class="btn" href="#">Get free valuation</a></div><div class="grid g2">${[['1,200','Homes sold'],['21','Avg. days on market'],['4.9★','Client rating'],['$0','Upfront fees']].map(s=>`<div class="card center"><div style="font-size:26px;font-weight:800;color:var(--a)">${s[0]}</div><div class="muted">${s[1]}</div></div>`).join('')}</div></div></div>
+<footer>© 2026 Haven Realty · Licensed brokerage</footer>`);
+
+/* 7 Fitness gym */
+add('IRON Fitness Club','Health','Gym','#ef4444','#111','Poppins,sans-serif',`
+body{background:#0c0c0c;color:#fff}.muted{color:#9ca3af}.card{background:#161616;border-color:#262626;color:#fff}
+.hero{background:linear-gradient(90deg,rgba(0,0,0,.9),rgba(0,0,0,.35)),url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1400') center/cover;padding-bottom:100px}
+h1{font-size:72px;font-weight:800;text-transform:uppercase;font-style:italic}
+.plan{border:1px solid #262626;border-radius:18px;padding:30px;background:#141414}
+.plan.hot{border-color:var(--a);background:linear-gradient(#1b1010,#141414)}
+footer{border-color:#222;color:#666}`,`
+<div class="hero">${nav('IRON',['Classes','Trainers','Pricing','Shop'])}
+<div class="wrap" style="padding-top:70px"><h1>No excuses.<br><span style="color:var(--a)">Only results.</span></h1><p class="muted" style="max-width:480px;margin:16px 0 26px;font-size:18px">24/7 access, 60 weekly classes and coaches who actually care. First week free.</p><a class="btn" href="#">Claim free week</a></div></div>
+<div class="wrap sec grid g4 center">${[['24/7','Open access'],['60','Weekly classes'],['18','Expert coaches'],['5','Locations']].map(s=>`<div><div style="font-size:38px;font-weight:800;color:var(--a)">${s[0]}</div><div class="muted">${s[1]}</div></div>`).join('')}</div>
+<div class="wrap sec"><h2>Popular classes</h2><div class="grid g3" style="margin-top:26px">${[['HIIT Burn','45 min · 600 kcal','1517836357463-d25dfeac3438'],['Power Lifting','60 min · Strength','1541534741688-6078c6bfb5c5'],['Yoga Flow','50 min · Mobility','1544367567-0f2fcb009e0b']].map(c=>`<div class="card" style="padding:0;overflow:hidden"><img style="height:200px;width:100%;object-fit:cover" src="https://images.unsplash.com/photo-${c[2]}?w=700"><div style="padding:20px"><h3>${c[0]}</h3><p class="muted">${c[1]}</p></div></div>`).join('')}</div></div>
+<div class="wrap sec"><h2 class="center">Membership plans</h2><div class="grid g3" style="margin-top:30px">${[['Basic','$29','Gym access · Locker',''],['Pro','$49','+ All classes · Sauna','hot'],['Elite','$89','+ 4 PT sessions / mo','']].map(p=>`<div class="plan ${p[3]}"><h3>${p[0]}</h3><div style="font-size:42px;font-weight:900;color:var(--a)">${p[1]}</div><p class="muted">${p[2]}</p><a class="btn" style="margin-top:18px;display:block;text-align:center" href="#">Join now</a></div>`).join('')}</div></div>
+<footer>© 2026 IRON Fitness Club</footer>`);
+
+/* 8 Medical */
+add('MediCare Clinic','Health','Medical','#2563eb','#22c55e','Inter,sans-serif',`
+.hero{background:linear-gradient(120deg,#eff6ff,#fff)}
+.spec{display:flex;gap:14px;align-items:center}
+.ico{width:52px;height:52px;border-radius:14px;background:#dbeafe;display:grid;place-items:center;font-size:22px;flex:none}
+.doc img{height:240px;width:100%;object-fit:cover;border-radius:16px}
+.book{background:#fff;border-radius:18px;padding:24px;box-shadow:0 20px 50px rgba(30,60,120,.12)}
+.book input,.book select{width:100%;padding:12px;border:1px solid #e5e7eb;border-radius:10px;margin-bottom:12px}`,`
+<div class="hero">${nav('✚ MediCare',['Departments','Doctors','Services','Contact'])}
+<div class="wrap grid g2 sec" style="align-items:center;gap:46px"><div><span style="color:var(--b);font-weight:700">Trusted by 50,000+ patients</span><h1 style="margin:14px 0;font-size:52px">Your health, our lifelong commitment</h1><p class="muted" style="font-size:18px">Same-day appointments, 30+ specialists and modern diagnostics — all under one roof.</p><div style="margin-top:24px;display:flex;gap:14px"><a class="btn" href="#">Book appointment</a><a class="btn alt" href="#">☎ Emergency 24/7</a></div></div>
+<div class="book"><h3>Request a visit</h3><p class="muted" style="margin-bottom:14px;font-size:14px">We reply within 15 minutes.</p><input placeholder="Full name"><input placeholder="Phone number"><select><option>Choose department</option><option>Cardiology</option><option>Dental</option><option>Pediatrics</option></select><input type="date"><button class="btn" style="width:100%">Confirm booking</button></div></div></div>
+<div class="wrap sec"><h2 class="center">Our departments</h2><div class="grid g3" style="margin-top:32px">${[['❤️','Cardiology','Heart screening & surgery'],['🦷','Dentistry','Implants, braces, whitening'],['🧠','Neurology','Advanced MRI diagnostics'],['👶','Pediatrics','Gentle care for little ones'],['🦴','Orthopedics','Joint and sports injuries'],['👁','Ophthalmology','Laser vision correction']].map(d=>`<div class="card spec"><div class="ico">${d[0]}</div><div><b>${d[1]}</b><div class="muted" style="font-size:14px">${d[2]}</div></div></div>`).join('')}</div></div>
+<div style="background:#f8fafc"><div class="wrap sec"><h2 class="center">Meet our specialists</h2><div class="grid g4" style="margin-top:30px">${[['Dr. Sara Malik','Cardiologist','1559839734-2b71ea197ec2'],['Dr. John Reed','Neurologist','1612349317150-e413f6a5b16d'],['Dr. Ayesha Khan','Pediatrician','1594824476967-48c8b964273f'],['Dr. Omar Aziz','Orthopedic','1537368910025-700350fe46c7']].map(d=>`<div class="doc center"><img src="https://images.unsplash.com/photo-${d[2]}?w=500"><h3 style="margin-top:12px;font-size:18px">${d[0]}</h3><div class="muted">${d[1]}</div></div>`).join('')}</div></div></div>
+<footer>© 2026 MediCare Clinic · 24/7 Helpline 1-800-333</footer>`);
+
+/* 9 Education */
+add('EduPro Online Courses','Education','LMS','#7c3aed','#f59e0b','Inter,sans-serif',`
+.hero{background:linear-gradient(135deg,#f5f3ff,#fff)}
+.course img{height:180px;width:100%;object-fit:cover}
+.course{border:1px solid #eee;border-radius:16px;overflow:hidden;background:#fff}
+.bar{height:6px;background:#eee;border-radius:9px}.bar i{display:block;height:100%;background:var(--a);border-radius:9px}
+.tagc{font-size:12px;background:#ede9fe;color:var(--a);padding:4px 10px;border-radius:99px;font-weight:700}`,`
+<div class="hero">${nav('🎓 EduPro',['Courses','Paths','Mentors','Pricing'])}
+<div class="wrap grid g2 sec" style="align-items:center;gap:40px"><div><span class="tagc">Over 1.2M learners</span><h1 style="margin:16px 0;font-size:52px">Learn the skills that get you hired</h1><p class="muted" style="font-size:18px">Project-based courses in coding, design and AI, taught by working professionals.</p><div style="margin-top:24px;display:flex;gap:12px"><a class="btn" href="#">Browse courses</a><a class="btn alt" href="#">Free trial</a></div></div><img style="border-radius:20px" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800"></div></div>
+<div class="wrap sec"><div style="display:flex;justify-content:space-between;align-items:center"><h2>Top rated courses</h2><a href="#" style="font-weight:700;color:var(--a)">All 480 courses →</a></div>
+<div class="grid g4" style="margin-top:28px">${[['Full-Stack JavaScript','42h · Beginner','$49','1517180102446-f3ece451e9d8'],['UI/UX Design Mastery','28h · All levels','$39','1561070791-2526d30994b5'],['Python for Data & AI','36h · Intermediate','$59','1526379095098-d400fd0bf935'],['Digital Marketing 360','19h · Beginner','$29','1460925895917-afdab827c52f']].map(c=>`<div class="course"><img src="https://images.unsplash.com/photo-${c[3]}?w=600"><div style="padding:16px"><b>${c[0]}</b><div class="muted" style="font-size:14px;margin:6px 0">${c[1]} · ★ 4.8</div><div class="bar"><i style="width:${60+Math.random()*35}%"></i></div><div style="margin-top:12px;display:flex;justify-content:space-between;align-items:center"><b style="color:var(--a)">${c[2]}</b><a class="btn" style="padding:8px 16px" href="#">Enroll</a></div></div></div>`).join('')}</div></div>
+<div style="background:#faf5ff"><div class="wrap sec grid g4 center">${[['480','Courses'],['1.2M','Students'],['92','% Completion'],['4.9','Avg rating']].map(s=>`<div><div style="font-size:36px;font-weight:900;color:var(--a)">${s[0]}</div><div class="muted">${s[1]}</div></div>`).join('')}</div></div>
+<div class="wrap sec center"><h2>Start learning today</h2><p class="muted">7-day free trial · Cancel anytime</p><a class="btn" style="margin-top:18px" href="#">Create free account</a></div>
+<footer>© 2026 EduPro Learning</footer>`);
+
+/* 10 Travel */
+add('Wanderlust Travel','Travel','Tourism','#0891b2','#f97316','Poppins,sans-serif',`
+.hero{min-height:560px;background:linear-gradient(rgba(0,20,30,.45),rgba(0,20,30,.6)),url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1400') center/cover;color:#fff}
+.hero nav .logo,.hero nav ul{color:#fff}h1{font-size:62px}
+.dest{position:relative;border-radius:18px;overflow:hidden;height:280px}
+.dest img{height:100%;width:100%;object-fit:cover;transition:.5s}.dest:hover img{transform:scale(1.08)}
+.dest span{position:absolute;bottom:16px;left:16px;color:#fff;font-weight:700;font-size:20px;text-shadow:0 2px 10px #000}
+.pkg{border:1px solid #e5e7eb;border-radius:16px;overflow:hidden}
+.pkg img{height:190px;width:100%;object-fit:cover}`,`
+<div class="hero">${nav('✈ Wanderlust',['Destinations','Packages','Blog','About'],'color:#fff')}
+<div class="wrap center" style="padding:110px 0"><h1>Your next story<br>begins here</h1><p style="opacity:.9;margin:14px 0 26px;font-size:18px">Handpicked tours to 60+ countries with local expert guides.</p><a class="btn" href="#">Explore packages</a></div></div>
+<div class="wrap sec"><h2 class="center">Trending destinations</h2><div class="grid g4" style="margin-top:30px">${[['Santorini','1570077188670-e3a8d69ac5ff'],['Bali','1537996194471-e657df975ab4'],['Swiss Alps','1531366936337-7c912a4589a7'],['Kyoto','1493976040374-85c8e12f0c0e']].map(d=>`<div class="dest"><img src="https://images.unsplash.com/photo-${d[1]}?w=600"><span>${d[0]}</span></div>`).join('')}</div></div>
+<div style="background:#f0f9ff"><div class="wrap sec"><h2 class="center">Popular packages</h2><div class="grid g3" style="margin-top:30px">${[['Greek Island Hop','7 days · 4 islands','$1,290','1533105079780-92b9be482077'],['Safari Kenya','5 days · All inclusive','$1,850','1516426122078-c23e76319801'],['Northern Lights','4 days · Iceland','$1,120','1531366936337-7c912a4589a7']].map(p=>`<div class="pkg" style="background:#fff"><img src="https://images.unsplash.com/photo-${p[3]}?w=700"><div style="padding:18px"><b style="font-size:19px">${p[0]}</b><div class="muted">${p[1]}</div><div style="display:flex;justify-content:space-between;align-items:center;margin-top:14px"><b style="color:var(--b);font-size:22px">${p[2]}</b><a class="btn" style="padding:10px 18px" href="#">Book</a></div></div></div>`).join('')}</div></div></div>
+<div class="wrap sec center"><h2>Get travel deals in your inbox</h2><div style="margin-top:18px"><input placeholder="Your email" style="padding:14px;border:1px solid #ddd;border-radius:10px;width:280px"><button class="btn">Subscribe</button></div></div>
+<footer>© 2026 Wanderlust Travel Co.</footer>`);
+
+/* 11 App landing */
+add('Zenly Mobile App','Startup','App Landing','#10b981','#064e3b','Poppins,sans-serif',`
+body{background:#f7fdfb}.hero{background:radial-gradient(800px 400px at 70% 0,#d1fae5,transparent)}
+.phone{width:280px;height:560px;background:#111;border-radius:42px;padding:12px;box-shadow:0 30px 70px rgba(6,78,59,.25);margin:auto}
+.screen{background:linear-gradient(160deg,#10b981,#065f46);height:100%;border-radius:32px;color:#fff;padding:24px}
+.row{background:rgba(255,255,255,.18);height:46px;border-radius:12px;margin-bottom:12px}
+h1{font-size:54px}`,`
+<div class="hero">${nav('Zenly',['Features','How it works','Reviews','Download'])}
+<div class="wrap grid g2 sec" style="align-items:center;gap:40px"><div><h1>Master your money in 5 minutes a day</h1><p class="muted" style="font-size:18px;margin:16px 0 26px">Track spending, automate savings and hit every goal — with a calm interface that never nags.</p><div style="display:flex;gap:12px"><a class="btn" href="#"> App Store</a><a class="btn" style="background:#111" href="#">▶ Google Play</a></div><p class="muted" style="margin-top:16px">★★★★★ 4.9 · 180k ratings</p></div>
+<div class="phone"><div class="screen"><div style="opacity:.8;font-size:13px">Total balance</div><div style="font-size:38px;font-weight:800">$12,480</div><div style="margin-top:22px">${'<div class="row"></div>'.repeat(5)}</div><div style="background:#fff;color:#065f46;border-radius:14px;padding:14px;text-align:center;font-weight:700">+ Add savings goal</div></div></div></div></div>
+<div class="wrap sec grid g3">${[['📊','Smart insights','See where every dollar goes, automatically categorised.'],['🎯','Goal engine','Round-ups and auto transfers make saving effortless.'],['🔒','Private by design','Bank-level encryption, no data selling. Ever.']].map(f=>`<div class="card"><div style="font-size:28px">${f[0]}</div><h3 style="margin:10px 0 6px">${f[1]}</h3><p class="muted">${f[2]}</p></div>`).join('')}</div>
+<div style="background:#064e3b;color:#fff" class="center"><div class="wrap sec"><h2>Download Zenly free</h2><p style="opacity:.75;margin:10px 0 22px">Join 2.4 million people already saving more.</p><a class="btn" style="background:#fff;color:#064e3b" href="#">Get the app</a></div></div>
+<footer>© 2026 Zenly Finance</footer>`);
+
+/* 12 Photography */
+add('Aperture Photography','Creative','Photography','#111','#d4a373','Playfair Display,serif',`
+body{background:#fdfcfb}nav ul{font-family:Inter,sans-serif;letter-spacing:1px;text-transform:uppercase;font-size:12px}
+h1{font-size:64px;font-weight:700}.muted{font-family:Inter,sans-serif}
+.mas{columns:3;column-gap:16px}.mas img{margin-bottom:16px;border-radius:6px;break-inside:avoid;width:100%}
+.btn{background:#111;border-radius:0;font-family:Inter,sans-serif;letter-spacing:1px;text-transform:uppercase;font-size:13px}`,`
+${nav('APERTURE',['Portfolio','Weddings','Portraits','Contact'])}
+<div class="wrap center sec"><h1>Moments, made<br>timeless.</h1><p class="muted" style="max-width:520px;margin:16px auto 0;color:#777">Documentary wedding and portrait photography in Lisbon and worldwide.</p></div>
+<div class="wrap mas">${['1519741497674-611481863552','1511285560929-80b456fea0bc','1465495976277-4387d4b0b4c6','1519225421980-715cb0215aed','1522673607200-164d1b6ce486','1537633552985-df8429e8048b','1460364157752-926555421a7e','1583939003579-730e3918a45a'].map(i=>`<img src="https://images.unsplash.com/photo-${i}?w=600">`).join('')}</div>
+<div style="background:#f6f1ec;margin-top:60px"><div class="wrap sec grid g3 center">${[['Weddings','Full day coverage from $1,800'],['Portraits','Studio or outdoor from $320'],['Events','Corporate & editorial from $600']].map(s=>`<div><h3 style="font-size:24px">${s[0]}</h3><p class="muted" style="color:#777">${s[1]}</p></div>`).join('')}</div></div>
+<div class="wrap sec center"><h2>Let's create something beautiful</h2><a class="btn" style="margin-top:20px" href="#">Check availability</a></div>
+<footer>© 2026 Aperture Studio · Lisbon</footer>`);
+
+/* 13 Barber/salon */
+add('Blade & Fade Barbershop','Beauty','Barber','#b45309','#1c1917','Poppins,sans-serif',`
+body{background:#141210;color:#f5f0e8}.muted{color:#a8a29e}.card{background:#1e1b17;border-color:#2c2823;color:#f5f0e8}
+.hero{background:linear-gradient(rgba(10,8,6,.7),rgba(10,8,6,.85)),url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1400') center/cover;padding-bottom:90px}
+h1{font-size:64px;text-transform:uppercase;letter-spacing:-2px}
+.price-row{display:flex;justify-content:space-between;border-bottom:1px solid #2c2823;padding:14px 0}
+footer{border-color:#2c2823;color:#78716c}`,`
+<div class="hero">${nav('BLADE & FADE',['Services','Barbers','Gallery','Book'])}
+<div class="wrap" style="padding-top:60px"><h1>Sharp cuts.<br><span style="color:var(--a)">Since 1986.</span></h1><p class="muted" style="max-width:460px;margin:14px 0 26px">Classic barbering, hot towel shaves and beard sculpting by award-winning barbers.</p><a class="btn" href="#">Book your chair</a></div></div>
+<div class="wrap sec grid g2" style="gap:50px"><div><h2>Services & prices</h2><div style="margin-top:20px">${[['Signature Haircut','$35'],['Skin Fade','$40'],['Hot Towel Shave','$30'],['Beard Sculpt','$25'],['Father & Son','$55'],['Full Grooming','$70']].map(s=>`<div class="price-row"><span>${s[0]}</span><b style="color:var(--a)">${s[1]}</b></div>`).join('')}</div></div>
+<div class="grid g2">${['1621605815971-fbc98d665033','1599351431202-1e0f0137899a','1585747860715-2ba37e788b70','1622286342621-4bd786c2447c'].map(i=>`<img style="border-radius:12px;height:170px;width:100%;object-fit:cover" src="https://images.unsplash.com/photo-${i}?w=500">`).join('')}</div></div>
+<div style="background:#1e1b17"><div class="wrap sec center"><h2>Walk in. Walk out a legend.</h2><p class="muted" style="margin:10px 0 22px">Open Mon–Sat 9am–8pm · 12 King Street</p><a class="btn" href="#">Reserve now</a></div></div>
+<footer>© 2026 Blade & Fade Barbershop</footer>`);
+
+/* 14 Wedding */
+add('Aria & Liam Wedding','Events','Wedding','#be7b6b','#fdf6f2','Playfair Display,serif',`
+body{background:#fdf8f5;color:#4b3b34}h1{font-size:68px;font-weight:700}.muted{font-family:Inter,sans-serif;color:#8a746b}
+nav ul{font-family:Inter,sans-serif;font-size:13px;letter-spacing:2px;text-transform:uppercase}
+.btn{background:var(--a);border-radius:99px;font-family:Inter,sans-serif;letter-spacing:1px}
+.hero{text-align:center;padding:40px 0 70px;background:radial-gradient(600px 300px at 50% 0,#f6e5dd,transparent)}
+.count{display:flex;gap:26px;justify-content:center;margin-top:28px}
+.count div{background:#fff;border-radius:16px;padding:18px 26px;box-shadow:0 10px 30px rgba(180,120,100,.12)}
+.count b{font-size:32px;display:block}`,`
+${nav('A ✦ L',['Our story','Events','Gallery','RSVP'])}
+<div class="hero wrap"><p class="muted" style="letter-spacing:4px">WE ARE GETTING MARRIED</p><h1 style="margin:14px 0">Aria & Liam</h1><p class="muted">September 14, 2026 · Villa Rosa, Tuscany</p>
+<div class="count">${[['86','Days'],['14','Hours'],['22','Minutes']].map(c=>`<div><b>${c[0]}</b><span class="muted">${c[1]}</span></div>`).join('')}</div>
+<a class="btn" style="margin-top:28px" href="#">RSVP now</a></div>
+<div class="wrap sec grid g2" style="align-items:center;gap:46px"><img style="border-radius:200px 200px 16px 16px;height:420px;object-fit:cover" src="https://images.unsplash.com/photo-1519741497674-611481863552?w=700"><div><h2>Our story</h2><p class="muted" style="margin-top:14px">We met on a rainy Tuesday in a tiny bookshop in Florence — he was looking for poetry, she was hiding from the storm. Seven years, three cities and one very stubborn dog later, we are saying forever.</p></div></div>
+<div style="background:#f6e9e3"><div class="wrap sec center"><h2>The day</h2><div class="grid g3" style="margin-top:30px">${[['Ceremony','3:00 PM · Garden Chapel'],['Reception','6:00 PM · Villa Terrace'],['Party','9:00 PM · Olive Courtyard']].map(e=>`<div><h3 style="font-size:24px">${e[0]}</h3><p class="muted">${e[1]}</p></div>`).join('')}</div></div></div>
+<div class="wrap sec center"><h2>Will you join us?</h2><p class="muted">Kindly respond before August 1st.</p><a class="btn" style="margin-top:18px" href="#">Send RSVP</a></div>
+<footer>With love, Aria & Liam ✦ 2026</footer>`);
+
+/* 15 Coffee shop */
+add('Brew Lane Coffee','Food','Cafe','#7c4a21','#e7c69a','Poppins,sans-serif',`
+body{background:#fffdf9}.hero{background:#2b1b10;color:#fff;border-radius:0 0 60px 60px;padding-bottom:80px}
+.hero nav .logo,.hero nav ul{color:#fff}h1{font-size:58px}
+.mcard{text-align:center}.mcard img{height:180px;width:180px;object-fit:cover;border-radius:50%;margin:auto}
+.badge{background:var(--b);color:#4a2c14;padding:6px 14px;border-radius:99px;font-weight:700;font-size:13px}`,`
+<div class="hero">${nav('☕ BREW LANE',['Menu','Beans','Locations','Order'])}
+<div class="wrap grid g2" style="align-items:center;gap:40px;padding-top:40px"><div><span class="badge">Roasted fresh daily</span><h1 style="margin:16px 0">Coffee worth<br>waking up for</h1><p style="opacity:.8">Single-origin beans, slow-bar brewing and pastries baked at 5am next door.</p><div style="margin-top:24px;display:flex;gap:12px"><a class="btn" href="#">Order online</a><a class="btn" style="background:#fff;color:#2b1b10" href="#">Find us</a></div></div><img style="border-radius:24px;height:360px;object-fit:cover" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800"></div></div>
+<div class="wrap sec"><h2 class="center">Our favourites</h2><div class="grid g4" style="margin-top:34px">${[['Flat White','$4.20','1517701550927-30cf4ba1dba5'],['Cold Brew','$4.80','1461023058943-07fcbe16d735'],['Cappuccino','$4.00','1572442388796-11668a67e53d'],['Matcha Latte','$5.10','1536256263959-770b48d82b0a']].map(m=>`<div class="mcard"><img src="https://images.unsplash.com/photo-${m[2]}?w=400"><h3 style="margin-top:14px;font-size:19px">${m[0]}</h3><p style="color:var(--a);font-weight:700">${m[1]}</p></div>`).join('')}</div></div>
+<div style="background:#faf3ea"><div class="wrap sec grid g3 center">${[['🌱','Ethically sourced','Direct trade with 9 farms'],['🔥','Roasted in-house','Small batches, every morning'],['🥐','Fresh bakes','Croissants out at 7am sharp']].map(x=>`<div><div style="font-size:30px">${x[0]}</div><h3>${x[1]}</h3><p class="muted">${x[2]}</p></div>`).join('')}</div></div>
+<div class="wrap sec center"><h2>Visit us</h2><p class="muted">18 Brew Lane · Open 7am – 6pm daily</p><a class="btn" style="margin-top:16px" href="#">Get directions</a></div>
+<footer>© 2026 Brew Lane Coffee Roasters</footer>`);
+
+/* 16 Law firm */
+add('Sterling & Co. Law','Business','Law Firm','#1e3a8a','#b08d57','Playfair Display,serif',`
+body{background:#fff;color:#111827}.muted{font-family:Inter,sans-serif;color:#64748b}
+nav ul{font-family:Inter,sans-serif;font-size:14px}
+.hero{background:#0f1f3d;color:#fff;padding-bottom:80px}.hero nav .logo,.hero nav ul{color:#fff}
+h1{font-size:54px}.btn{background:var(--b);border-radius:2px;font-family:Inter,sans-serif}
+.prac{border-top:3px solid var(--b);padding-top:18px}`,`
+<div class="hero">${nav('STERLING & CO.',['Practice','Attorneys','Cases','Contact'])}
+<div class="wrap grid g2" style="gap:40px;padding-top:50px;align-items:center"><div><h1>Decisive counsel when it matters most</h1><p style="opacity:.8;font-family:Inter,sans-serif;margin:16px 0 26px">40 years defending businesses and families across corporate, family and criminal law.</p><a class="btn" href="#">Free case evaluation</a></div><div style="border:1px solid rgba(255,255,255,.2);padding:26px">${[['40+','Years of practice'],['1,800','Cases won'],['$120M','Recovered for clients']].map(s=>`<div style="padding:12px 0;border-bottom:1px solid rgba(255,255,255,.12)"><b style="font-size:30px;color:var(--b)">${s[0]}</b><div style="opacity:.75;font-family:Inter,sans-serif">${s[1]}</div></div>`).join('')}</div></div></div>
+<div class="wrap sec"><h2 class="center">Practice areas</h2><div class="grid g3" style="margin-top:34px">${[['Corporate Law','M&A, compliance, contracts'],['Family Law','Divorce, custody, mediation'],['Criminal Defense','State and federal matters'],['Real Estate','Transactions and disputes'],['Employment','Wrongful termination claims'],['Estate Planning','Wills, trusts, probate']].map(p=>`<div class="prac"><h3 style="font-size:22px">${p[0]}</h3><p class="muted">${p[1]}</p></div>`).join('')}</div></div>
+<div style="background:#f8fafc"><div class="wrap sec center"><h2>"They turned an impossible case into a clean win."</h2><p class="muted" style="margin-top:12px">— Marcus Hale, CEO of Halcyon Group</p></div></div>
+<div class="wrap sec center"><h2>Speak to an attorney today</h2><p class="muted">Confidential consultation · No obligation</p><a class="btn" style="margin-top:18px" href="#">Call (212) 555-0142</a></div>
+<footer>© 2026 Sterling & Co. Attorneys at Law</footer>`);
+
+/* 17 Construction */
+add('BuildRight Construction','Business','Construction','#f59e0b','#111827','Inter,sans-serif',`
+.hero{background:linear-gradient(rgba(17,24,39,.75),rgba(17,24,39,.75)),url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1400') center/cover;color:#fff;padding-bottom:90px}
+.hero nav .logo,.hero nav ul{color:#fff}h1{font-size:58px;text-transform:uppercase;font-weight:900}
+.stripe{background:var(--a);color:#111;font-weight:800;padding:16px 0;letter-spacing:2px;text-transform:uppercase;text-align:center}
+.svc{border-left:4px solid var(--a);padding-left:18px}
+.proj img{height:230px;width:100%;object-fit:cover;border-radius:10px}`,`
+<div class="hero">${nav('🏗 BUILDRIGHT',['Services','Projects','Safety','Careers'])}
+<div class="wrap" style="padding-top:60px"><h1>Building what<br>lasts generations</h1><p style="opacity:.85;max-width:520px;margin:16px 0 26px;font-size:18px">Commercial and residential construction delivered on time, on budget, zero compromise on safety.</p><a class="btn" href="#">Request a quote</a></div></div>
+<div class="stripe">Licensed · Bonded · Insured · 100% Safety Record Since 2009</div>
+<div class="wrap sec grid g3">${[['Commercial Build','Offices, retail and warehouses'],['Residential','Custom homes and extensions'],['Renovation','Full structural remodelling'],['Civil Works','Roads, drainage and utilities'],['Project Management','End-to-end supervision'],['Design & Build','Architecture under one contract']].map(s=>`<div class="svc"><h3>${s[0]}</h3><p class="muted">${s[1]}</p></div>`).join('')}</div>
+<div style="background:#f3f4f6"><div class="wrap sec"><h2 class="center">Recent projects</h2><div class="grid g3 proj" style="margin-top:28px">${[['Vertex Tower','Commercial · 2025','1486406146926-c627a92ad1ab'],['Lakeview Homes','Residential · 2024','1512917774080-9991f1c4c750'],['Metro Bridge','Civil · 2024','1503387762-592deb58ef4e']].map(p=>`<div><img src="https://images.unsplash.com/photo-${p[2]}?w=700"><h3 style="margin-top:12px">${p[0]}</h3><p class="muted">${p[1]}</p></div>`).join('')}</div></div></div>
+<div class="wrap sec grid g4 center">${[['420','Projects done'],['16','Years experience'],['180','Team members'],['100','% On-time']].map(s=>`<div><div style="font-size:40px;font-weight:900;color:var(--a)" data-count="${s[0]}"></div><div class="muted">${s[1]}</div></div>`).join('')}</div>
+<footer>© 2026 BuildRight Construction Ltd.</footer>`);
+
+/* 18 Crypto */
+add('BlockX Crypto','Startup','Crypto','#8b5cf6','#22d3ee','Space Grotesk,sans-serif',`
+body{background:#07060f;color:#e9e7f7}.muted{color:#8f8bb0}.card{background:#110f1f;border-color:#221f3a;color:#e9e7f7}
+.hero{background:radial-gradient(700px 350px at 30% 0,rgba(139,92,246,.35),transparent),radial-gradient(600px 300px at 80% 20%,rgba(34,211,238,.25),transparent)}
+h1{font-size:60px}.btn{background:linear-gradient(90deg,var(--a),var(--b));color:#07060f}
+.ticker{display:flex;gap:16px;overflow:hidden}.tk{background:#110f1f;border:1px solid #221f3a;border-radius:14px;padding:14px 20px;flex:1}
+.up{color:#34d399}.dn{color:#fb7185}footer{border-color:#221f3a;color:#6b678c}`,`
+<div class="hero">${nav('◆ BlockX',['Markets','Earn','Wallet','Learn'])}
+<div class="wrap center" style="padding:60px 0"><h1>Trade crypto<br>with <span style="background:linear-gradient(90deg,var(--a),var(--b));-webkit-background-clip:text;color:transparent">zero friction</span></h1><p class="muted" style="max-width:560px;margin:16px auto 26px;font-size:18px">Buy, sell and stake 300+ assets with institutional-grade security and 0.05% fees.</p><a class="btn" href="#">Create free wallet</a></div>
+<div class="wrap ticker">${[['BTC','$94,120','+2.4%','up'],['ETH','$5,310','+1.1%','up'],['SOL','$248','-0.8%','dn'],['XRP','$3.02','+4.7%','up']].map(t=>`<div class="tk"><b>${t[0]}</b><div style="font-size:20px;font-weight:700">${t[1]}</div><span class="${t[3]}">${t[2]}</span></div>`).join('')}</div></div>
+<div class="wrap sec grid g3">${[['🛡','Cold storage','98% of assets held offline, fully insured.'],['⚡','Instant swaps','Sub-second execution across 12 chains.'],['💰','Earn up to 9%','Flexible staking with daily payouts.']].map(f=>`<div class="card"><div style="font-size:26px">${f[0]}</div><h3 style="margin:10px 0 6px">${f[1]}</h3><p class="muted">${f[2]}</p></div>`).join('')}</div>
+<div class="wrap sec grid g2" style="align-items:center;gap:40px"><div><h2>Your portfolio, in real time</h2><p class="muted" style="margin-top:12px">Advanced charting, automated DCA bots and tax reports exported in one click.</p><a class="btn" style="margin-top:20px" href="#">Explore dashboard</a></div>
+<div class="card"><div style="display:flex;justify-content:space-between"><span class="muted">Portfolio value</span><span class="up">+18.2%</span></div><div style="font-size:34px;font-weight:800">$48,920.14</div><svg viewBox="0 0 300 100" style="width:100%;margin-top:14px"><polyline fill="none" stroke="#22d3ee" stroke-width="3" points="0,80 40,60 80,70 120,40 160,50 200,25 240,35 300,10"/></svg></div></div>
+<footer>© 2026 BlockX · Crypto involves risk.</footer>`);
+
+/* 19 Nonprofit */
+add('GreenHope Nonprofit','Nonprofit','Charity','#16a34a','#065f46','Inter,sans-serif',`
+.hero{background:linear-gradient(rgba(4,40,20,.55),rgba(4,40,20,.65)),url('https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=1400') center/cover;color:#fff;padding-bottom:80px}
+.hero nav .logo,.hero nav ul{color:#fff}h1{font-size:56px}
+.prog{background:#e8f5ec;border-radius:16px;padding:24px}
+.bar{height:10px;background:#d1fae5;border-radius:9px;margin-top:10px}.bar i{display:block;height:100%;background:var(--a);border-radius:9px}`,`
+<div class="hero">${nav('🌿 GreenHope',['Causes','Donate','Volunteer','About'])}
+<div class="wrap" style="padding-top:60px"><h1>Small acts.<br>Massive change.</h1><p style="opacity:.9;max-width:520px;margin:16px 0 26px;font-size:18px">We plant forests, build wells and fund schools in 22 communities. 91 cents of every dollar reaches the ground.</p><div style="display:flex;gap:12px"><a class="btn" href="#">Donate now</a><a class="btn" style="background:#fff;color:#065f46" href="#">Volunteer</a></div></div></div>
+<div class="wrap sec grid g4 center">${[['420000','Trees planted'],['96','Wells built'],['22','Communities'],['91','% To programs']].map(s=>`<div><div style="font-size:36px;font-weight:900;color:var(--a)" data-count="${s[0]}"></div><div class="muted">${s[1]}</div></div>`).join('')}</div>
+<div class="wrap sec"><h2 class="center">Current campaigns</h2><div class="grid g3" style="margin-top:30px">${[['Clean Water for Kilifi','$38,200 raised of $50,000',76],['Reforest the Highlands','$22,900 of $40,000',57],['School Kits 2026','$14,100 of $18,000',78]].map(c=>`<div class="prog"><h3>${c[0]}</h3><p class="muted" style="font-size:14px">${c[1]}</p><div class="bar"><i style="width:${c[2]}%"></i></div><a class="btn" style="margin-top:16px;display:block;text-align:center" href="#">Support this</a></div>`).join('')}</div></div>
+<div style="background:#065f46;color:#fff" class="center"><div class="wrap sec"><h2>$25 gives one family clean water for a year</h2><a class="btn" style="background:#fff;color:#065f46;margin-top:18px" href="#">Give monthly</a></div></div>
+<footer>© 2026 GreenHope Foundation · Registered charity</footer>`);
+
+/* 20 Blog/magazine */
+add('The Daily Ink Magazine','Media','Blog','#dc2626','#111','Playfair Display,serif',`
+body{background:#fff}.muted{font-family:Inter,sans-serif;color:#6b7280}
+nav{border-bottom:2px solid #111}nav ul{font-family:Inter,sans-serif;font-size:14px;text-transform:uppercase;letter-spacing:1px}
+.logo{font-size:34px!important;letter-spacing:-1px}
+.lead img{height:380px;width:100%;object-fit:cover}
+.kicker{color:var(--a);font-family:Inter,sans-serif;font-weight:800;font-size:12px;letter-spacing:2px;text-transform:uppercase}
+.post{border-bottom:1px solid #eee;padding:18px 0}
+.side{background:#f8f8f8;padding:24px;border-radius:12px}
+h2{font-size:30px}`,`
+${nav('The Daily Ink',['World','Tech','Culture','Business','Opinion'])}
+<div class="wrap sec" style="padding-top:34px"><div class="grid" style="grid-template-columns:2fr 1fr;gap:40px">
+<div><div class="lead"><img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1000"><div class="kicker" style="margin-top:16px">Cover story</div><h1 style="font-size:42px;margin:8px 0">The quiet revolution reshaping how we work in 2026</h1><p class="muted">Remote-first companies are outperforming their office-bound rivals — and the data is finally in.</p><p class="muted" style="margin-top:10px;font-size:14px">By Elena Marsh · 8 min read</p></div>
+<div class="grid g2" style="margin-top:40px">${[['Tech','AI agents are writing 40% of new code'],['Culture','Why vinyl outsold streaming in Japan'],['Business','The rise of the four-day work week'],['World','Inside the city that banned cars']].map(p=>`<div class="post"><div class="kicker">${p[0]}</div><h3 style="font-size:21px;margin-top:6px">${p[1]}</h3><p class="muted" style="font-size:14px">3 min read</p></div>`).join('')}</div></div>
+<div><div class="side"><h3>Most read</h3>${['The end of the open-plan office','A beginner guide to slow travel','How to actually read 50 books a year','Ten founders on their biggest failure'].map((p,i)=>`<div style="display:flex;gap:12px;margin-top:14px"><b style="color:var(--a);font-size:22px">${i+1}</b><span style="font-family:Inter,sans-serif;font-size:15px">${p}</span></div>`).join('')}</div>
+<div class="side" style="margin-top:22px;background:#111;color:#fff"><h3>Newsletter</h3><p class="muted" style="color:#aaa;font-size:14px">One great story every morning.</p><input placeholder="Email" style="width:100%;padding:12px;margin:12px 0;border-radius:8px;border:0"><button class="btn" style="width:100%">Subscribe free</button></div></div></div></div>
+<footer>© 2026 The Daily Ink · Independent journalism</footer>`);
+
+/* 21 Event conference */
+add('SummitX Conference','Events','Conference','#f43f5e','#4f46e5','Space Grotesk,sans-serif',`
+body{background:#0b0716;color:#fff}.muted{color:#a29cc0}.card{background:#150f26;border-color:#2a2142;color:#fff}
+.hero{background:radial-gradient(800px 400px at 50% -10%,rgba(244,63,94,.35),transparent),#0b0716;text-align:center;padding-bottom:70px}
+h1{font-size:70px;letter-spacing:-3px}
+.btn{background:linear-gradient(90deg,var(--a),var(--b))}
+.sp img{height:200px;width:100%;object-fit:cover;border-radius:14px}
+.agenda{display:flex;gap:20px;border-bottom:1px solid #2a2142;padding:16px 0}
+footer{border-color:#2a2142;color:#6f688f}`,`
+<div class="hero">${nav('SUMMIT/X',['Speakers','Agenda','Venue','Tickets'])}
+<div class="wrap" style="padding-top:50px"><p style="color:var(--a);font-weight:700;letter-spacing:3px">MAY 18–20, 2026 · BERLIN</p><h1 style="margin:14px 0">The future of<br>product & AI</h1><p class="muted" style="max-width:560px;margin:auto">3 days, 48 speakers, 2,000 builders. The one event you cannot afford to miss this year.</p><div style="margin-top:28px;display:flex;gap:14px;justify-content:center"><a class="btn" href="#">Get tickets from $199</a><a class="btn" style="background:#221a38" href="#">View agenda</a></div></div></div>
+<div class="wrap sec"><h2>Featured speakers</h2><div class="grid g4 sp" style="margin-top:26px">${[['Nadia Rowe','VP Product, Stripe','1580489944761-15a19d654956'],['Tomás Vidal','Founder, Loop AI','1507003211169-0a1dd7228f2d'],['Mei Chen','Head of Design, Figma','1573497019940-1c28c88b4f3e'],['Jonas Weber','CTO, Vercel','1500648767791-00dcc994a43e']].map(s=>`<div><img src="https://images.unsplash.com/photo-${s[2]}?w=500"><h3 style="margin-top:12px;font-size:18px">${s[0]}</h3><p class="muted">${s[1]}</p></div>`).join('')}</div></div>
+<div class="wrap sec"><h2>Day one agenda</h2><div style="margin-top:18px">${[['09:00','Registration & coffee'],['10:00','Keynote: Products that think'],['11:30','Panel: Designing with AI'],['13:00','Lunch & networking'],['14:30','Workshops (4 tracks)'],['19:00','Rooftop after-party']].map(a=>`<div class="agenda"><b style="color:var(--a);width:70px">${a[0]}</b><span>${a[1]}</span></div>`).join('')}</div></div>
+<div class="wrap sec center"><h2>Early bird ends in 9 days</h2><a class="btn" style="margin-top:18px" href="#">Reserve my seat</a></div>
+<footer>© 2026 SummitX Conference</footer>`);
+
+/* 22 Interior design */
+add('Studio Nord Interiors','Creative','Interior','#8d7b68','#1f2937','Inter,sans-serif',`
+body{background:#faf8f5;color:#28241f}h1{font-size:58px;letter-spacing:-2px;font-weight:300}
+h1 b{font-weight:800}.muted{color:#7a7269}
+.btn{background:#28241f;border-radius:0}
+.split img{height:520px;width:100%;object-fit:cover}
+.pj{position:relative;overflow:hidden}.pj img{height:320px;width:100%;object-fit:cover;transition:.6s}.pj:hover img{transform:scale(1.06)}
+.num{font-size:13px;letter-spacing:3px;color:var(--a);text-transform:uppercase}`,`
+${nav('STUDIO NORD',['Projects','Services','Studio','Journal'])}
+<div class="wrap grid g2 sec" style="align-items:center;gap:50px"><div><div class="num">Interior architecture · Since 2012</div><h1 style="margin:16px 0">Spaces that feel<br><b>like a deep breath.</b></h1><p class="muted">We design calm, tactile interiors for homes, hotels and studios across Scandinavia.</p><a class="btn" style="margin-top:24px" href="#">See our work</a></div><div class="split"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800"></div></div>
+<div class="wrap grid g3">${[['Oslo Townhouse','Residential','1586023492125-27b2c045efd7'],['Hotel Fjell','Hospitality','1560448204-e02f11c3d0e2'],['Nord Office','Commercial','1497366216548-37526070297c']].map(p=>`<div class="pj"><img src="https://images.unsplash.com/photo-${p[2]}?w=700"><h3 style="margin-top:12px;font-weight:500">${p[0]}</h3><p class="muted">${p[1]}</p></div>`).join('')}</div>
+<div class="wrap sec grid g3">${[['01','Consultation','We listen, measure and understand how you live.'],['02','Concept','Moodboards, 3D renders and material palettes.'],['03','Delivery','Full project management to the final cushion.']].map(s=>`<div><div class="num">${s[0]}</div><h3 style="margin:8px 0;font-weight:500">${s[1]}</h3><p class="muted">${s[2]}</p></div>`).join('')}</div>
+<div style="background:#eee9e2"><div class="wrap sec center"><h2 style="font-weight:300">Let's design your <b>next chapter</b></h2><a class="btn" style="margin-top:20px" href="#">Book a consultation</a></div></div>
+<footer>© 2026 Studio Nord · Oslo / Copenhagen</footer>`);
+
+/* 23 Music/DJ */
+add('PULSE Music Artist','Creative','Music','#a855f7','#22d3ee','Space Grotesk,sans-serif',`
+body{background:#07070c;color:#fff}.muted{color:#9a94b8}
+.hero{min-height:560px;background:linear-gradient(rgba(5,5,12,.5),rgba(5,5,12,.95)),url('https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=1400') center/cover;display:flex;flex-direction:column}
+.mid{flex:1;display:grid;place-items:center;text-align:center}
+h1{font-size:88px;font-weight:700;letter-spacing:-4px;background:linear-gradient(90deg,var(--a),var(--b));-webkit-background-clip:text;color:transparent}
+.btn{background:linear-gradient(90deg,var(--a),var(--b));color:#07070c}
+.tour{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #1d1a2e;padding:16px 0;gap:14px}
+.trk{display:flex;align-items:center;gap:14px;background:#0f0e1a;border-radius:12px;padding:14px;margin-bottom:10px}
+.play{width:40px;height:40px;border-radius:50%;background:var(--a);display:grid;place-items:center;flex:none}
+footer{border-color:#1d1a2e;color:#6a6488}`,`
+<div class="hero">${nav('PULSE',['Music','Tour','Videos','Store'])}
+<div class="mid wrap"><div><p style="letter-spacing:6px;color:#9a94b8">NEW ALBUM OUT NOW</p><h1>NEON<br>NIGHTS</h1><div style="margin-top:20px;display:flex;gap:14px;justify-content:center"><a class="btn" href="#">▶ Listen now</a><a class="btn" style="background:#1d1a2e;color:#fff" href="#">Tour dates</a></div></div></div></div>
+<div class="wrap sec grid g2" style="gap:44px"><div><h2>Top tracks</h2><div style="margin-top:20px">${[['Neon Nights','3:42'],['Afterglow','4:08'],['Midnight Drive','3:15'],['Static Love','3:58']].map(t=>`<div class="trk"><div class="play">▶</div><div style="flex:1"><b>${t[0]}</b><div class="muted" style="font-size:13px">PULSE · Neon Nights</div></div><span class="muted">${t[1]}</span></div>`).join('')}</div></div>
+<div><h2>2026 world tour</h2><div style="margin-top:20px">${[['MAY 12','Berlin','Astra Hall'],['MAY 19','Amsterdam','Paradiso'],['JUN 02','London','O2 Academy'],['JUN 14','Paris','Le Trianon']].map(t=>`<div class="tour"><div><b style="color:var(--b)">${t[0]}</b><div>${t[1]} — ${t[2]}</div></div><a class="btn" style="padding:9px 16px" href="#">Tickets</a></div>`).join('')}</div></div></div>
+<footer>© 2026 PULSE · Booking: mgmt@pulse.fm</footer>`);
+
+/* 24 Pet care */
+add('Happy Paws Pet Care','Services','Pets','#f97316','#0ea5e9','Poppins,sans-serif',`
+body{background:#fffaf4}.hero{background:radial-gradient(700px 350px at 80% 0,#ffe8d3,transparent)}
+h1{font-size:54px}.card{border-radius:24px}
+.svc{text-align:center;border-radius:24px;padding:28px;background:#fff;border:1px solid #ffe3cc}
+.svc .e{font-size:38px}
+.pill{background:#ffedd5;color:#c2410c;padding:6px 16px;border-radius:99px;font-weight:700;font-size:13px}`,`
+<div class="hero">${nav('🐾 Happy Paws',['Services','Pricing','Team','Book'])}
+<div class="wrap grid g2 sec" style="align-items:center;gap:40px"><div><span class="pill">Loved by 3,000+ pets</span><h1 style="margin:16px 0">Because they're family too</h1><p class="muted" style="font-size:18px">Grooming, daycare, walking and vet checkups — with live photo updates all day.</p><div style="margin-top:24px;display:flex;gap:12px"><a class="btn" href="#">Book a visit</a><a class="btn alt" href="#">See pricing</a></div></div><img style="border-radius:30px;height:380px;object-fit:cover" src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=800"></div></div>
+<div class="wrap sec grid g4">${[['✂️','Grooming','From $35'],['🏠','Daycare','From $28/day'],['🦮','Dog walking','From $18'],['🩺','Vet checkup','From $45']].map(s=>`<div class="svc"><div class="e">${s[0]}</div><h3>${s[1]}</h3><p class="muted">${s[2]}</p></div>`).join('')}</div>
+<div style="background:#fff5ea"><div class="wrap sec center"><h2>Happy tails</h2><div class="grid g3" style="margin-top:28px">${[['"Milo comes home smelling amazing and completely worn out. Perfect."','— Sofia R.'],['"The photo updates during daycare make my day, every day."','— Daniel K.'],['"Gentle, patient and genuinely caring with my anxious rescue."','— Priya M.']].map(t=>`<div class="card"><p>${t[0]}</p><b style="display:block;margin-top:12px;color:var(--a)">${t[1]}</b></div>`).join('')}</div></div></div>
+<div class="wrap sec center"><h2>First visit 20% off</h2><a class="btn" style="margin-top:16px" href="#">Claim offer</a></div>
+<footer>© 2026 Happy Paws Pet Care</footer>`);
+
+/* 25 Resume/personal */
+add('Ayaan Ali — Personal CV','Creative','Resume','#0f172a','#38bdf8','Inter,sans-serif',`
+body{background:#f1f5f9}.sheet{max-width:1000px;margin:40px auto;background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 30px 70px rgba(15,23,42,.14);display:grid;grid-template-columns:320px 1fr}
+.side{background:#0f172a;color:#fff;padding:36px}
+.side img{width:120px;height:120px;border-radius:50%;object-fit:cover;border:4px solid var(--b)}
+.side h1{font-size:26px;margin:16px 0 4px}.side p{color:#94a3b8;font-size:14px}
+.side h4{margin:24px 0 8px;color:var(--b);font-size:13px;letter-spacing:2px;text-transform:uppercase}
+.skill{margin-bottom:10px}.sb{height:7px;background:#1e293b;border-radius:9px}.sb i{display:block;height:100%;background:var(--b);border-radius:9px}
+.main{padding:40px}.main h3{font-size:14px;letter-spacing:2px;text-transform:uppercase;color:var(--b);margin:26px 0 12px}
+.item{border-left:2px solid #e2e8f0;padding:0 0 18px 18px;position:relative}
+.item:before{content:'';position:absolute;left:-6px;top:4px;width:10px;height:10px;border-radius:50%;background:var(--b)}`,`
+<div class="sheet"><div class="side"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300"><h1>Ayaan Ali</h1><p>Senior Product Designer</p>
+<h4>Contact</h4><p>✉ ayaan@mail.com<br>☎ +92 300 1234567<br>📍 Lahore, Pakistan</p>
+<h4>Skills</h4>${[['UI/UX Design',95],['Figma & Prototyping',92],['Front-end (HTML/CSS/JS)',85],['Design Systems',88],['User Research',75]].map(s=>`<div class="skill"><div style="font-size:13px;display:flex;justify-content:space-between"><span>${s[0]}</span><span>${s[1]}%</span></div><div class="sb"><i style="width:${s[1]}%"></i></div></div>`).join('')}
+<h4>Languages</h4><p>English · Urdu · Arabic</p></div>
+<div class="main"><h2 style="font-size:30px">Designing products people actually enjoy using.</h2><p class="muted" style="margin-top:10px">8 years turning complex problems into clean, profitable interfaces for fintech and SaaS companies.</p>
+<h3>Experience</h3>${[['Lead Product Designer — Finlytics','2022 — Present','Rebuilt the core dashboard, lifting activation by 41% and cutting support tickets in half.'],['Senior UI Designer — Nexa Labs','2019 — 2022','Created a 200-component design system used by 6 product teams.'],['UI Designer — Bright Studio','2017 — 2019','Delivered 40+ client websites and mobile apps.']].map(e=>`<div class="item"><b>${e[0]}</b><div class="muted" style="font-size:13px">${e[1]}</div><p class="muted">${e[2]}</p></div>`).join('')}
+<h3>Education</h3><div class="item"><b>BSc Computer Science — UET Lahore</b><div class="muted" style="font-size:13px">2013 — 2017</div></div>
+<a class="btn" style="margin-top:14px" href="#">Download CV</a></div></div>`);
+
+/* 26 Car dealer */
+add('AutoMax Car Dealer','Business','Automotive','#dc2626','#0f172a','Inter,sans-serif',`
+body{background:#0f1115;color:#fff}.muted{color:#9aa1ae}.card{background:#171a21;border-color:#252a35;color:#fff}
+.hero{background:linear-gradient(90deg,#0f1115 40%,rgba(15,17,21,.2)),url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1400') right/cover;padding-bottom:80px}
+h1{font-size:58px;font-weight:900}
+.car img{height:200px;width:100%;object-fit:cover;border-radius:12px}
+.spec{display:flex;gap:14px;font-size:13px;color:#9aa1ae;margin-top:8px}
+.filters{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;background:#171a21;padding:16px;border-radius:14px}
+.filters select{padding:12px;border-radius:10px;border:1px solid #252a35;background:#0f1115;color:#fff}
+footer{border-color:#252a35;color:#6b7280}`,`
+<div class="hero">${nav('AUTOMAX',['Inventory','Finance','Trade-in','Contact'])}
+<div class="wrap" style="padding-top:60px"><h1>Drive home<br>today.</h1><p class="muted" style="max-width:440px;margin:14px 0 26px;font-size:18px">380 certified pre-owned vehicles. Instant finance approval in 9 minutes.</p><a class="btn" href="#">Browse inventory</a></div></div>
+<div class="wrap" style="margin-top:-40px"><div class="filters"><select><option>Any make</option><option>BMW</option><option>Toyota</option></select><select><option>Any model</option></select><select><option>Any price</option><option>Under $20k</option></select><button class="btn">Search 380 cars</button></div></div>
+<div class="wrap sec"><h2>Featured vehicles</h2><div class="grid g3" style="margin-top:26px">${[['BMW 4 Series','$38,900','2023 · 18,200 km · Auto','1555215695-3004980ad54e'],['Toyota Land Cruiser','$62,400','2022 · 34,000 km · Diesel','1519641471654-76ce0107ad1b'],['Mercedes C-Class','$45,100','2023 · 12,800 km · Petrol','1618843479313-40f8afb4b4d8']].map(c=>`<div class="card car"><img src="https://images.unsplash.com/photo-${c[3]}?w=700"><h3 style="margin-top:12px">${c[0]}</h3><div class="spec">${c[2]}</div><div style="display:flex;justify-content:space-between;align-items:center;margin-top:14px"><b style="font-size:22px;color:var(--a)">${c[1]}</b><a class="btn" style="padding:9px 16px" href="#">Details</a></div></div>`).join('')}</div></div>
+<div class="wrap sec grid g4 center">${[['380','Cars in stock'],['9','Min approval'],['150','Point inspection'],['7','Day returns']].map(s=>`<div><div style="font-size:36px;font-weight:900;color:var(--a)">${s[0]}</div><div class="muted">${s[1]}</div></div>`).join('')}</div>
+<footer>© 2026 AutoMax Motors</footer>`);
+
+/* 27 Boutique hotel */
+add('Casa Maré Hotel','Travel','Boutique Hotel','#bb8f57','#12353b','Playfair Display,serif',`
+body{background:#f6f4ee;color:#14333a}.muted{color:#647677}.hero{min-height:670px;background:linear-gradient(90deg,rgba(6,35,43,.76),rgba(6,35,43,.08)),url('${photo(3761182)}') center/cover;color:#fff}
+.hero h1{font-size:76px;font-weight:700;max-width:680px}.btn{background:#b78b51;border-radius:0;font-family:Inter,sans-serif;font-size:14px}.ey{letter-spacing:4px;font:700 12px Inter,sans-serif;text-transform:uppercase}
+.suite img{height:310px;width:100%;object-fit:cover}.suite h3{margin-top:16px;font-size:24px}.bookbar{background:#10363c;color:#fff;padding:30px;display:flex;gap:24px;justify-content:space-between;align-items:center;font-family:Inter,sans-serif}
+footer{background:#10363c;color:#b5c6c8;border:0}`,`
+<div class="hero"><nav class="wrap"><div class="logo">CASA MARÉ</div><ul><li>The house</li><li>Suites</li><li>Experiences</li></ul><a class="btn" href="#suites">Explore suites</a></nav>
+<div class="wrap" style="padding-top:125px"><p class="ey">A private escape on the Atlantic</p><h1 style="margin:20px 0">A slower kind<br>of somewhere.</h1><p style="max-width:470px;font:17px Inter,sans-serif;line-height:1.8">Wake to the sea. Stay for the stillness. Twelve thoughtfully made rooms on Portugal's wild coast.</p><a class="btn" style="margin-top:28px" href="#suites">Discover the house</a></div></div>
+<div class="bookbar wrap"><span>COMPORTA, PORTUGAL</span><span>12 ROOMS / ONE UNFORGETTABLE STAY</span><a href="#suites" style="border-bottom:1px solid #c99b62">View availability</a></div>
+<section id="suites" class="wrap sec"><p class="ey" style="color:var(--a)">Find your place</p><h2 style="margin:12px 0 30px">Rooms to remember.</h2><div class="grid g2">${[['The Ocean Suite','From $290 / night','https://images.unsplash.com/photo-1566073771259-6a8506099945?w=900'],['The Garden Room','From $210 / night','https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=900']].map(s=>`<div class="suite"><img src="${s[2]}" alt="Hotel guest room"><h3>${s[0]}</h3><p class="muted">${s[1]}</p></div>`).join('')}</div></section>
+<section class="wrap sec center" style="border-top:1px solid #d8dfdb"><p class="ey" style="color:var(--a)">The good kind of away</p><h2 style="margin:12px 0">Your next morning starts here.</h2><a class="btn" href="#suites" style="margin-top:18px">Plan your stay</a></section>
+<footer>CASA MARÉ / Comporta, Portugal / 2026</footer>`);
+
+/* 28 Dentistry */
+add('Pearl Dental Studio','Health','Dentistry','#59b9b3','#083d42','Inter,sans-serif',`
+body{background:#fbfdfc;color:#13343a}.hero{min-height:620px;background:linear-gradient(90deg,rgba(7,47,52,.91),rgba(7,47,52,.16)),url('${photo(6627575)}') center/cover;color:#fff}
+.hero h1{font-size:68px;max-width:640px}.btn{background:#50aaa5;border-radius:100px}.ey{font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:700;color:#7ee0d4}
+.service{border-top:1px solid #cbdedc;padding:24px 0;display:flex;justify-content:space-between;gap:25px;align-items:baseline}.service b{font-size:22px}.service p{max-width:310px}
+.formbox{background:#e8f4f1;padding:44px}.formbox input,.formbox select{border:1px solid #abcac6;background:#fff;padding:13px;width:100%;margin:8px 0;font:inherit;border-radius:6px}
+.formbox [role=status]{font-size:13px;color:#125f61;margin-top:10px}footer{background:#07373d;color:#b8d2cf;border:0}`,`
+<div class="hero"><nav class="wrap"><div class="logo">pearl.</div><ul><li>Our care</li><li>The team</li><li>Patient stories</li></ul><a class="btn" href="#appointment">Book a visit</a></nav>
+<div class="wrap" style="padding-top:105px"><p class="ey">Dentistry, without the dread</p><h1 style="margin:16px 0">Come as you are.<br>Leave smiling.</h1><p style="max-width:460px;font-size:18px">Gentle, modern dental care that makes feeling good part of the experience.</p><a href="#appointment" class="btn" style="margin-top:25px">Your first appointment</a></div></div>
+<section class="wrap sec"><p class="ey" style="color:#278d89">The way we care</p><h2 style="margin:12px 0 28px">A little more human.</h2>${[['01','Everyday dentistry','Cleanings, checkups and care made comfortable.'],['02','Smile design','Whitening and clear aligners, designed around you.'],['03','Restorative care','Modern solutions that look and feel like you.']].map(s=>`<div class="service"><span class="muted">${s[0]}</span><b>${s[1]}</b><p class="muted">${s[2]}</p></div>`).join('')}</section>
+<section id="appointment" class="formbox"><div class="wrap grid g2" style="align-items:center;gap:50px"><div><h2>Let's start with hello.</h2><p class="muted" style="margin-top:12px">Tell us what you need. Our team will help you find your next step.</p></div><form data-demo="This is a sample booking form. Your details were not sent." class="grid g2" style="gap:8px"><input aria-label="Your name" required placeholder="Your name"><input type="email" aria-label="Email" required placeholder="Email address"><select aria-label="Type of visit"><option>What can we help with?</option><option>General care</option><option>Cosmetic care</option></select><button class="btn" type="submit">Request an appointment</button><p role="status" style="grid-column:1/-1"></p></form></div></section>
+<footer>Pearl Dental Studio / Care that feels different.</footer>`);
+
+/* 29 Spa */
+add('Serein Ritual Spa','Beauty','Spa','#ad8970','#41363b','Playfair Display,serif',`
+body{background:#f8f3ee;color:#332a2a}.hero{min-height:680px;background:linear-gradient(rgba(39,33,38,.54),rgba(39,33,38,.68)),url('${photo(7235064)}') center/cover;color:#fff}
+.hero h1{font-size:78px;font-weight:700;max-width:710px}.btn{border-radius:0;background:#b58f76;font-family:Inter,sans-serif;letter-spacing:1px;text-transform:uppercase;font-size:12px}
+.ey{font:600 12px Inter,sans-serif;letter-spacing:4px;text-transform:uppercase}.treatment{padding:23px 0;border-bottom:1px solid #d8cfc7;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.treatment b{font-size:24px;font-weight:700}.treatment span{font-family:Inter,sans-serif;font-size:14px}.quote{font-size:36px;line-height:1.3;max-width:760px;margin:auto}
+footer{border-color:#e0d7d0;color:#8d7d73}`,`
+<div class="hero"><nav class="wrap"><div class="logo">serein.</div><ul><li>Rituals</li><li>Our space</li><li>Gifts</li></ul><a href="#rituals" class="btn">Explore rituals</a></nav>
+<div class="wrap" style="padding-top:132px;text-align:center"><p class="ey">An invitation to pause</p><h1 style="margin:18px auto">A softer place<br>to land.</h1><p style="max-width:500px;margin:auto;font:17px Inter,sans-serif;line-height:1.8">Slow mornings, warm hands, and treatments made for the way you feel today.</p><a class="btn" href="#rituals" style="margin-top:26px">Find your ritual</a></div></div>
+<section id="rituals" class="wrap sec"><p class="ey" style="color:var(--a)">The treatment menu</p><h2 style="margin:12px 0 28px">Stay a little longer.</h2>${[['01','Deep rest massage','60 minutes','$110'],['02','The facial reset','75 minutes','$135'],['03','Serein full day','Half-day journey','$260']].map(x=>`<div class="treatment"><span>${x[0]}</span><b>${x[1]}</b><span class="muted">${x[2]}</span><span>${x[3]}</span></div>`).join('')}</section>
+<section style="background:#ece3da" class="sec center"><div class="wrap"><p class="ey" style="color:var(--a)">A note to yourself</p><h2 class="quote" style="margin-top:18px">"You don't have to earn your rest."</h2><a href="#rituals" class="btn" style="margin-top:24px">Make time for you</a></div></section>
+<footer>Serein Ritual Spa / New York / 2026</footer>`);
+
+/* 30 Bakery */
+add('Maison Crumb Bakery','Food','Bakery','#df8a37','#5c2f24','Playfair Display,serif',`
+body{background:#fff9ed;color:#442821}.hero{min-height:660px;color:#fff;background:linear-gradient(90deg,rgba(50,26,14,.85),rgba(50,26,14,.15)),url('${photo(7405059)}') center/cover}
+.hero h1{font-size:76px;max-width:680px}.btn{background:#d77b36;border-radius:0;font-family:Inter,sans-serif}.ey{font:700 12px Inter,sans-serif;letter-spacing:3px;text-transform:uppercase}
+.menu{border-bottom:1px solid #dbc8ad;display:flex;justify-content:space-between;padding:20px 0;gap:16px}.menu b{font-size:22px}.menu span{font:600 16px Inter,sans-serif}
+.story{background:#e9b674;color:#482411}footer{background:#472c20;color:#f0d9bf;border:0}`,`
+<div class="hero"><nav class="wrap"><div class="logo">MAISON CRUMB</div><ul><li>Our bake</li><li>The menu</li><li>Find us</li></ul><a class="btn" href="#menu">See the menu</a></nav>
+<div class="wrap" style="padding-top:100px"><p class="ey">Made at 5 am / every morning</p><h1 style="margin:18px 0">Baked at dawn.<br>Gone by noon.</h1><p style="font:18px Inter,sans-serif;max-width:450px">Long-fermented dough, cultured butter, and a little bit of magic.</p><a href="#menu" class="btn" style="margin-top:28px">What's in the oven?</a></div></div>
+<section id="menu" class="wrap sec"><div class="grid g2" style="gap:80px"><div><p class="ey" style="color:#b26d32">The daily bake</p><h2 style="margin:13px 0 25px">Always worth the early start.</h2><p class="muted">Fresh from our oven every morning. When it's gone, it's gone.</p></div><div>${[['Butter croissant','$4.50'],['Cardamom bun','$5.00'],['Country sourdough','$9.00'],['Almond morning bun','$5.50'],['Pain au chocolat','$5.25']].map(x=>`<div class="menu"><b>${x[0]}</b><span>${x[1]}</span></div>`).join('')}</div></div></section>
+<section class="story sec center"><div class="wrap"><p class="ey">Visit us</p><h2 style="margin:12px 0">A little corner of joy.</h2><p>23 Market Street / Tuesday to Sunday / 7:00 am until sold out</p><a href="#menu" class="btn" style="margin-top:22px;background:#482411">See today's bake</a></div></section>
+<footer>Maison Crumb / Flour, butter, better mornings.</footer>`);
+
+/* 31 Florist */
+add('Stem & Story Florist','E-commerce','Florist','#c44d69','#304f3a','Playfair Display,serif',`
+body{background:#fffaf7;color:#3c3331}.hero{min-height:690px;color:#fff;background:linear-gradient(90deg,rgba(59,29,35,.86),rgba(59,29,35,.05)),url('${photo(5410077)}') center/cover}
+.hero h1{font-size:78px;max-width:700px}.btn{background:#b74061;border-radius:2px;font:600 14px Inter,sans-serif}.ey{font:600 12px Inter,sans-serif;letter-spacing:3px;text-transform:uppercase}
+.bouquet img{height:310px;width:100%;object-fit:cover}.bouquet h3{font-size:24px;margin-top:14px}.strip{background:#e6e8df;text-align:center;padding:32px;font:600 14px Inter,sans-serif;letter-spacing:2px}
+footer{background:#304f3a;color:#e8eee8;border:0}`,`
+<div class="hero"><nav class="wrap"><div class="logo">STEM & STORY</div><ul><li>Flowers</li><li>Subscriptions</li><li>Our story</li></ul><a class="btn" href="#flowers">Shop flowers</a></nav>
+<div class="wrap" style="padding-top:120px"><p class="ey">For all the things you can't quite say</p><h1 style="margin:18px 0">Flowers with<br>a feeling.</h1><p style="font:17px Inter,sans-serif;max-width:470px;line-height:1.8">Seasonal flowers, gathered by hand and arranged with heart. Delivered the same day.</p><a class="btn" href="#flowers" style="margin-top:26px">Browse the bouquets</a></div></div>
+<div class="strip">LOCAL FLOWERS / SUSTAINABLE WRAPPING / SAME-DAY DELIVERY</div>
+<section id="flowers" class="wrap sec"><p class="ey" style="color:var(--a)">Our favourites</p><h2 style="margin:12px 0 30px">Send a little something.</h2><div class="grid g3">${[['The Sunday Bunch','$48','https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=700'],['The Wild One','$65','https://images.unsplash.com/photo-1457089328109-e5d9bd499191?w=700'],['Just Because','$52','https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?w=700']].map(s=>`<div class="bouquet"><img src="${s[2]}" alt="Hand-tied floral bouquet"><h3>${s[0]}</h3><p class="muted">From ${s[1]}</p></div>`).join('')}</div></section>
+<section class="wrap sec center" style="border-top:1px solid #eadfdb"><h2>Brighten their day.</h2><a class="btn" style="margin-top:20px" href="#flowers">Find their flowers</a></section>
+<footer>Stem & Story / Flowers for real life.</footer>`);
+
+/* 32 Jewelry */
+add('AUREL Fine Jewelry','E-commerce','Jewelry','#aa8a5a','#171511','Playfair Display,serif',`
+body{background:#f7f4ef;color:#26211b}.hero{min-height:700px;color:#fff;background:linear-gradient(270deg,rgba(20,17,12,.85),rgba(20,17,12,.08)),url('${photo(30541185)}') center/cover}
+.hero h1{font-size:80px;font-weight:700;max-width:710px}.btn{background:#b39361;border-radius:0;font:600 12px Inter,sans-serif;letter-spacing:2px;text-transform:uppercase}
+.ey{font:600 11px Inter,sans-serif;letter-spacing:4px;text-transform:uppercase}.line{height:1px;background:#d7cbb9;margin:28px 0}
+.edit img{height:430px;width:100%;object-fit:cover}footer{background:#252019;border:0;color:#bcae9a}`,`
+<div class="hero"><nav class="wrap"><div class="logo" style="letter-spacing:6px">AUREL</div><ul><li>Collections</li><li>Our craft</li><li>The journal</li></ul><a class="btn" href="#collection">Shop the edit</a></nav>
+<div class="wrap" style="padding-top:130px;text-align:right"><p class="ey">Every piece carries a story</p><h1 style="margin:18px 0 18px auto">Not just worn.<br>Remembered.</h1><p style="max-width:480px;margin-left:auto;font:17px Inter,sans-serif;line-height:1.8">Modern heirlooms, designed to stay with you through every chapter.</p><a class="btn" href="#collection" style="margin-top:25px">Explore the collection</a></div></div>
+<section id="collection" class="wrap sec"><div class="grid g2" style="align-items:center;gap:70px"><div class="edit"><img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=900" alt="Gold jewelry worn close to the skin"></div><div><p class="ey" style="color:var(--a)">The signature edit</p><h2 style="margin:15px 0">The beauty of keeping things close.</h2><p class="muted">Thoughtful details, responsibly sourced stones, and a kind of gold that feels like you.</p><div class="line"></div><p>01 &nbsp; Everyday gold</p><div class="line"></div><p>02 &nbsp; The occasion pieces</p><div class="line"></div><p>03 &nbsp; Personal engravings</p><a class="btn" href="#collection" style="margin-top:28px">Discover the edit</a></div></div></section>
+<footer>AUREL / Made to be yours, made to last.</footer>`);
+
+/* 33 Furniture */
+add('Forma Living Furniture','E-commerce','Furniture','#e65e35','#253c73','Space Grotesk,sans-serif',`
+body{background:#f5f3ec;color:#243469}.hero{min-height:650px;color:#fff;background:linear-gradient(90deg,rgba(25,44,94,.88),rgba(25,44,94,.04)),url('${photo(2766975)}') center/cover}
+.hero h1{font-size:84px;max-width:700px;line-height:1}.btn{background:#ef6037;border-radius:0}.ey{font-size:13px;font-weight:700;letter-spacing:3px;text-transform:uppercase}
+.shape{border-top:1px solid #aab3ca;padding:26px 0;display:flex;gap:40px;justify-content:space-between}.shape b{font-size:23px}.shape span{max-width:310px}
+.statement{background:#e9603b;color:#fff;padding:70px 0}footer{background:#243469;border:0;color:#cbd4e6}`,`
+<div class="hero"><nav class="wrap"><div class="logo" style="letter-spacing:-2px">FORMA.</div><ul><li>Furniture</li><li>Objects</li><li>About</li></ul><a class="btn" href="#pieces">Meet the pieces</a></nav>
+<div class="wrap" style="padding-top:115px"><p class="ey">For rooms with personality</p><h1 style="margin:17px 0">Serious design.<br>Zero serious faces.</h1><p style="font-size:18px;max-width:490px">Colorful furniture for people who actually live in their homes.</p><a class="btn" style="margin-top:27px" href="#pieces">Find your next favourite</a></div></div>
+<section id="pieces" class="wrap sec"><p class="ey" style="color:var(--a)">Made to stand out</p><h2 style="margin:12px 0 28px">Furniture with a point of view.</h2>${[['01','The Loop Chair','Oak frame / all-day comfort'],['02','The Sunday Sofa','Soft curves / deep conversations'],['03','The Little Side Table','A little loud / a lot useful']].map(x=>`<div class="shape"><b>${x[0]} / ${x[1]}</b><span class="muted">${x[2]}</span><span>Explore piece +</span></div>`).join('')}</section>
+<section class="statement center"><div class="wrap"><h2>Less showroom. More living room.</h2><p style="margin-top:10px">Thoughtful materials, bold ideas, built for the everyday.</p><a class="btn" href="#pieces" style="background:#243469;margin-top:20px">Explore Forma</a></div></section>
+<footer>FORMA. / Objects for living / 2026</footer>`);
+
+/* 34 Bookstore */
+add('The Margin Bookshop','E-commerce','Bookshop','#ce765b','#30291e','Playfair Display,serif',`
+body{background:#f5eee3;color:#2e281e}.hero{min-height:660px;color:#fff;background:linear-gradient(rgba(31,26,17,.57),rgba(31,26,17,.72)),url('${photo(34149049)}') center/cover;text-align:center}
+.hero h1{font-size:82px;max-width:850px;margin:0 auto}.btn{background:#ce765b;border-radius:0;font:600 12px Inter,sans-serif;letter-spacing:2px;text-transform:uppercase}
+.ey{font:700 11px Inter,sans-serif;letter-spacing:4px;text-transform:uppercase}.book{display:flex;gap:25px;align-items:baseline;border-top:1px solid #d3c7b6;padding:22px 0}
+.book b{font-size:24px;flex:1}.book span{font:14px Inter,sans-serif}.quote{background:#e7d9c8;padding:80px 0}
+footer{background:#30291e;color:#ddcfb9;border:0}`,`
+<div class="hero"><nav class="wrap"><div class="logo">the margin.</div><ul><li>Our shelves</li><li>Events</li><li>Our story</li></ul><a class="btn" href="#picks">Staff picks</a></nav>
+<div class="wrap" style="padding-top:105px"><p class="ey">An independent bookshop for the endlessly curious</p><h1 style="margin:20px auto">There's more to the story.</h1><p style="font:18px Inter,sans-serif;max-width:580px;margin:auto">A place to get lost, find something new, and stay for one more chapter.</p><a class="btn" href="#picks" style="margin-top:28px">Come on in</a></div></div>
+<section id="picks" class="wrap sec"><p class="ey" style="color:var(--a)">The booksellers' shelf</p><h2 style="margin:12px 0 30px">Handpicked, never an algorithm.</h2>${[['01','The Memory Library','Fiction / a slow, beautiful read'],['02','Between Two Cities','Nonfiction / an original new voice'],['03','The Art of Noticing','Culture / for the curious mind'],['04','A Room to Grow','Home / find your next idea']].map(b=>`<div class="book"><span>${b[0]}</span><b>${b[1]}</b><span class="muted">${b[2]}</span></div>`).join('')}</section>
+<section class="quote center"><div class="wrap"><h2 style="max-width:690px;margin:auto">Good books make good company.</h2><p class="muted" style="margin:12px 0">17 Willow Street / Open every day except Monday</p><a class="btn" href="#picks">Find your next read</a></div></section>
+<footer>The Margin / A neighbourhood bookshop / 2026</footer>`);
+
+/* 35 Financial advisory */
+add('Northstar Wealth','Business','Financial Advisor','#c5a270','#122c37','Inter,sans-serif',`
+body{background:#f8f7f2;color:#152f39}.hero{min-height:650px;color:#fff;background:linear-gradient(90deg,rgba(12,39,49,.94),rgba(12,39,49,.13)),url('${photo(8439655)}') center/cover}
+.hero h1{font-family:'Playfair Display',serif;font-size:69px;max-width:710px}.btn{background:#b38e5b;border-radius:0}
+.ey{font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#edc99a}.approach{border-top:1px solid #bbc9c8;padding:26px 0;display:grid;grid-template-columns:60px 1fr 1fr;gap:24px}
+.approach b{font-size:21px}footer{background:#122c37;color:#b4c6c7;border:0}`,`
+<div class="hero"><nav class="wrap"><div class="logo">NORTHSTAR</div><ul><li>Our approach</li><li>Services</li><li>Insights</li></ul><a class="btn" href="#approach">Get to know us</a></nav>
+<div class="wrap" style="padding-top:108px"><p class="ey">Good decisions, for the long run</p><h1 style="margin:18px 0">A clearer path to<br>what matters most.</h1><p style="max-width:490px;font-size:18px">Personal financial advice shaped around your life, not a spreadsheet.</p><a class="btn" href="#approach" style="margin-top:28px">Let's talk about your future</a></div></div>
+<section id="approach" class="wrap sec"><p class="ey" style="color:var(--a)">Planning with purpose</p><h2 style="margin:13px 0 30px">Money has a meaning beyond money.</h2>${[['01','Make a plan','Turn what you want next into a clear, achievable strategy.'],['02','Build with confidence','Invest thoughtfully, with a team that knows your name.'],['03','Protect what matters','Keep the people and plans you love in the picture.']].map(x=>`<div class="approach"><span>${x[0]}</span><b>${x[1]}</b><p class="muted">${x[2]}</p></div>`).join('')}</section>
+<section class="wrap sec center" style="border-top:1px solid #cbd3d0"><h2>Your future deserves a real conversation.</h2><a class="btn" href="#approach" style="margin-top:20px">Start a conversation</a></section>
+<footer>Northstar Wealth / Independent financial planning / 2026</footer>`);
+
+/* 36 Insurance */
+add('Clover Cover Insurance','Business','Insurance','#388575','#f3c778','Poppins,sans-serif',`
+body{background:#f8f7ec;color:#163f39}.hero{min-height:640px;background:linear-gradient(90deg,rgba(248,247,235,.96),rgba(248,247,235,.04)),url('${photo(4609052)}') center/cover}
+.hero h1{font-size:63px;max-width:590px}.btn{background:#25826f;border-radius:100px}.ey{font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#25826f}
+.policy{border-top:1px solid #b8d4c9;padding:24px 0;display:flex;gap:18px;justify-content:space-between;align-items:baseline}.policy b{font-size:23px}.policy span{max-width:400px}
+.quote{background:#e5f0e7;padding:60px 0}.quote select,.quote input{padding:13px;border:1px solid #98bdb0;border-radius:9px;background:#fff;font:inherit;width:100%}
+footer{background:#19483f;color:#c1d7d0;border:0}`,`
+<div class="hero"><nav class="wrap"><div class="logo">clover.</div><ul><li>Coverage</li><li>Claims</li><li>Our promise</li></ul><a class="btn" href="#quote">Get a quote</a></nav>
+<div class="wrap" style="padding-top:110px"><p class="ey">The good stuff, covered</p><h1 style="margin:16px 0">Protection that feels like peace of mind.</h1><p style="max-width:470px;font-size:18px">Simple cover for the people, places, and moments that matter to you.</p><a href="#quote" class="btn" style="margin-top:26px">Find your cover</a></div></div>
+<section class="wrap sec"><p class="ey">What we cover</p><h2 style="margin:12px 0 28px">Life happens. We're here.</h2>${[['Home','For everything that makes a house yours.'],['Health','Because feeling cared for should be simple.'],['Auto','More open road, less what-if.'],['Life','Your people, always part of the plan.']].map(p=>`<div class="policy"><b>${p[0]}</b><span class="muted">${p[1]}</span><span>Learn more +</span></div>`).join('')}</section>
+<section id="quote" class="quote"><div class="wrap grid g2" style="align-items:center;gap:60px"><div><h2>Start with a simple question.</h2><p class="muted">Choose what matters to you and see how we can help.</p></div><form data-demo="This is a sample quote form. No information was submitted." class="grid g2" style="gap:10px"><select aria-label="Coverage type"><option>What would you like to cover?</option><option>Home</option><option>Health</option><option>Auto</option></select><input aria-label="Postcode" required placeholder="Your postcode"><button class="btn" type="submit">Explore options</button><p role="status" style="align-self:center;color:#256d61;font-size:13px"></p></form></div></section>
+<footer>Clover Cover / Cover for real life / 2026</footer>`);
+
+/* 37 Logistics */
+add('Waypoint Logistics','Business','Logistics','#f3a523','#112531','Inter,sans-serif',`
+body{background:#f4f5f3;color:#122936}.hero{min-height:650px;color:#fff;background:linear-gradient(90deg,rgba(10,30,44,.92),rgba(10,30,44,.17)),url('${photo(1267325)}') center/cover}
+.hero h1{font-size:74px;text-transform:uppercase;letter-spacing:-3px;max-width:750px;font-weight:900}.btn{background:#f3a523;color:#172734;border-radius:2px}
+.ey{font-size:12px;letter-spacing:3px;font-weight:800;text-transform:uppercase;color:#ffc66d}.route{border-top:1px solid #bdc7c9;padding:24px 0;display:flex;gap:20px;justify-content:space-between}.route b{font-size:23px}
+.track{background:#142c38;color:#fff;padding:60px 0}.track input{padding:14px;border:0;border-radius:2px;min-width:240px;font:inherit}.track [role=status]{margin-top:10px;font-size:14px;color:#ffcf82}
+footer{background:#112531;color:#abc3c8;border:0}`,`
+<div class="hero"><nav class="wrap"><div class="logo">WAYPOINT /</div><ul><li>Solutions</li><li>Network</li><li>About</li></ul><a class="btn" href="#tracking">Track shipment</a></nav>
+<div class="wrap" style="padding-top:110px"><p class="ey">Goods move. Business moves.</p><h1 style="margin:18px 0">Where it needs<br>to be. On time.</h1><p style="max-width:510px;font-size:18px">Freight, fulfilment and last-mile delivery built for businesses that cannot slow down.</p><a class="btn" href="#services" style="margin-top:28px">Explore our network</a></div></div>
+<section id="services" class="wrap sec"><p class="ey" style="color:#bd790c">From door to destination</p><h2 style="margin:12px 0 30px">The right route for every shipment.</h2>${[['01','Freight forwarding','Air, sea and road, planned around your timeline.'],['02','Fulfilment','Smart storage and same-day pick-and-pack.'],['03','Last mile','Reliable delivery all the way to the customer.']].map(r=>`<div class="route"><b>${r[0]} / ${r[1]}</b><span class="muted">${r[2]}</span></div>`).join('')}</section>
+<section id="tracking" class="track"><div class="wrap grid g2" style="align-items:center;gap:40px"><div><h2>Keep an eye on your shipment.</h2><p style="opacity:.7">See how a tracking flow could work for your company.</p></div><form data-demo="Demo only: tracking is not connected to a shipping system."><div style="display:flex;gap:10px;flex-wrap:wrap"><input required aria-label="Tracking number" placeholder="Enter tracking number"><button class="btn" type="submit">Track now</button></div><p role="status"></p></form></div></section>
+<footer>Waypoint Logistics / Going the distance since 2008</footer>`);
+
+/* 38 Solar energy */
+add('Sunwell Solar','Business','Solar Energy','#e09a28','#183f3b','Inter,sans-serif',`
+body{background:#fcfaf2;color:#183d3b}.hero{min-height:680px;color:#fff;background:linear-gradient(90deg,rgba(14,47,42,.9),rgba(14,47,42,.1)),url('${photo(12284244)}') center/cover}
+.hero h1{font-size:71px;max-width:700px}.btn{background:#f4ab3c;color:#173d39;border-radius:100px}
+.ey{font-size:12px;letter-spacing:3px;font-weight:800;text-transform:uppercase;color:#ffc65f}.step{border-top:1px solid #cadad2;padding:24px 0;display:grid;grid-template-columns:55px 1fr 1fr;gap:18px}.step b{font-size:22px}
+.dark{background:#183f3b;color:#fff}.dark p{color:#b7d5cb}footer{background:#15332f;color:#bad0c8;border:0}`,`
+<div class="hero"><nav class="wrap"><div class="logo">SUNWELL.</div><ul><li>How it works</li><li>Homes</li><li>Why solar</li></ul><a href="#how" class="btn">See the process</a></nav>
+<div class="wrap" style="padding-top:112px"><p class="ey">Better energy starts at home</p><h1 style="margin:17px 0">Make the most<br>of every sunny day.</h1><p style="max-width:480px;font-size:18px">Beautifully simple solar for a home that gives more back.</p><a href="#how" class="btn" style="margin-top:26px">See if solar fits</a></div></div>
+<section id="how" class="wrap sec"><p class="ey" style="color:#ba7c19">Made uncomplicated</p><h2 style="margin:12px 0 30px">The switch looks good from here.</h2>${[['01','Tell us about your home','A friendly chat about your energy use and roof.'],['02','Get a thoughtful plan','A custom system, clear pricing, no hard sell.'],['03','We handle the rest','Installation, paperwork and support, all covered.']].map(s=>`<div class="step"><span>${s[0]}</span><b>${s[1]}</b><p class="muted">${s[2]}</p></div>`).join('')}</section>
+<section class="dark sec center"><div class="wrap"><h2>A brighter way forward.</h2><p style="margin:10px 0 20px">Let's see what your roof can do.</p><a href="#how" class="btn">Get a solar plan</a></div></section>
+<footer>Sunwell Solar / Good energy, made simple / 2026</footer>`);
+
+/* 39 Esports */
+add('CTRL Esports Arena','Events','Gaming','#d7ff42','#8b5cf6','Space Grotesk,sans-serif',`
+body{background:#090c12;color:#f7f8f9}.muted{color:#aab0c2}.hero{min-height:680px;background:linear-gradient(90deg,rgba(6,8,18,.91),rgba(6,8,18,.18)),url('${photo(9072216)}') center/cover}
+.hero h1{font-size:91px;text-transform:uppercase;line-height:.98;max-width:760px}.btn{background:#d7ff42;color:#09100b;border-radius:0;text-transform:uppercase}
+.ey{font-size:12px;letter-spacing:4px;color:#d7ff42;text-transform:uppercase;font-weight:800}.match{display:grid;grid-template-columns:90px 1fr 1fr 130px;gap:15px;align-items:center;padding:23px 0;border-bottom:1px solid #293244}.match b{font-size:23px}
+.signal{background:#d7ff42;color:#0a1110;padding:66px 0}footer{border-color:#293244;color:#687287}`,`
+<div class="hero"><nav class="wrap"><div class="logo" style="letter-spacing:-2px">CTRL_</div><ul><li>Compete</li><li>Watch</li><li>The arena</li></ul><a class="btn" href="#events">See events</a></nav>
+<div class="wrap" style="padding-top:104px"><p class="ey">The next generation of play</p><h1 style="margin:18px 0">This is where<br>legends queue.</h1><p style="max-width:510px;font-size:18px;color:#d0d7e1">Tournaments, teams and late-night matches. Your seat is waiting.</p><a href="#events" class="btn" style="margin-top:28px">Enter the arena</a></div></div>
+<section id="events" class="wrap sec"><p class="ey">On the calendar</p><h2 style="margin:12px 0 24px">Upcoming battles.</h2>${[['JUL 08','Valorant open qualifier','5v5 / online'],['JUL 16','Fighting game Friday','Open bracket / in person'],['AUG 02','Summer invitational','Finals / live arena']].map(m=>`<div class="match"><span style="color:var(--a)">${m[0]}</span><b>${m[1]}</b><span class="muted">${m[2]}</span><span>View event +</span></div>`).join('')}</section>
+<section class="signal center"><div class="wrap"><h2>Find your people. Find your game.</h2><a class="btn" href="#events" style="margin-top:20px;background:#101823;color:#fff">See the lineup</a></div></section>
+<footer>CTRL_ Esports / Play further / 2026</footer>`);
+
+/* 40 Podcast */
+add('The Good Signal Podcast','Media','Podcast','#eb9e86','#3c2632','Playfair Display,serif',`
+body{background:#f8eee7;color:#352831}.hero{min-height:670px;color:#fff;background:linear-gradient(90deg,rgba(42,24,32,.88),rgba(42,24,32,.12)),url('${photo(7598553)}') center/cover}
+.hero h1{font-size:74px;max-width:730px}.btn{background:#df947d;border-radius:100px;font:700 14px Inter,sans-serif}
+.ey{font:700 12px Inter,sans-serif;letter-spacing:3px;text-transform:uppercase}.episode{border-top:1px solid #d7c8c3;padding:24px 0;display:grid;grid-template-columns:80px 1fr 190px;align-items:baseline;gap:20px}
+.episode b{font-size:23px}.episode span{font:14px Inter,sans-serif}.episode:last-child{border-bottom:1px solid #d7c8c3}
+.subscribe{background:#3c2632;color:#fff;padding:75px 0}footer{background:#2e2028;color:#c1abae;border:0}`,`
+<div class="hero"><nav class="wrap"><div class="logo">the good signal.</div><ul><li>Episodes</li><li>About the show</li><li>Our guests</li></ul><a class="btn" href="#episodes">Browse episodes</a></nav>
+<div class="wrap" style="padding-top:115px"><p class="ey">A podcast for curious people</p><h1 style="margin:18px 0">Good questions.<br>Better conversations.</h1><p style="font:18px Inter,sans-serif;max-width:490px">Thoughtful stories about work, life and everything we are still figuring out.</p><a href="#episodes" class="btn" style="margin-top:27px">Explore the show</a></div></div>
+<section id="episodes" class="wrap sec"><p class="ey" style="color:#b46b58">Latest from the studio</p><h2 style="margin:12px 0 30px">Press pause and listen in.</h2>${[['042','On making things that matter','with Elena Park / 42 min'],['041','What a slower life looks like','with Miles Rowan / 36 min'],['040','The courage to begin again','with Sara Noor / 48 min']].map(e=>`<div class="episode"><span>EP ${e[0]}</span><b>${e[1]}</b><span class="muted">${e[2]}</span></div>`).join('')}</section>
+<section class="subscribe center"><div class="wrap"><h2>Something good in your ears.</h2><p style="margin-top:10px;opacity:.7">A new conversation every Thursday.</p><a class="btn" href="#episodes" style="margin-top:20px">See all episodes</a></div></section>
+<footer>The Good Signal / Independent conversations / 2026</footer>`);
+
+/* 41 Yoga */
+add('KINDRED Yoga Studio','Health','Yoga','#9e9b79','#504f40','Playfair Display,serif',`
+body{background:#eeeee5;color:#404336}.hero{min-height:690px;color:#fff;background:linear-gradient(rgba(40,47,39,.58),rgba(40,47,39,.68)),url('${photo(8436684)}') center/cover}
+.hero h1{font-size:78px;max-width:760px}.btn{background:#9a9b72;border-radius:0;font:700 13px Inter,sans-serif;letter-spacing:1px}
+.ey{font:600 12px Inter,sans-serif;letter-spacing:3px;text-transform:uppercase}.class-row{padding:21px 0;border-bottom:1px solid #c8ccba;display:flex;gap:18px;justify-content:space-between;align-items:baseline}.class-row b{font-size:24px}
+.note{background:#dcded1;padding:70px 0}footer{background:#484e40;border:0;color:#cbd2c2}`,`
+<div class="hero"><nav class="wrap"><div class="logo">KINDRED</div><ul><li>Practice</li><li>Schedule</li><li>Our space</li></ul><a class="btn" href="#classes">Find a class</a></nav>
+<div class="wrap" style="padding-top:120px;text-align:center"><p class="ey">Space to come back to yourself</p><h1 style="margin:18px auto">Move a little.<br>Feel a lot.</h1><p style="font:18px Inter,sans-serif;max-width:470px;margin:auto">A welcoming yoga space for every body and every beginning.</p><a href="#classes" class="btn" style="margin-top:28px">Come practise with us</a></div></div>
+<section id="classes" class="wrap sec"><p class="ey" style="color:#838669">Find your flow</p><h2 style="margin:12px 0 28px">A practice for today.</h2>${[['Slow Flow','Gentle movement / all levels','MON / 8:00 AM'],['Open Vinyasa','Find your rhythm / intermediate','WED / 6:30 PM'],['Rest & Restore','Let it all go / all levels','FRI / 5:00 PM'],['Weekend Grounding','Start again / all levels','SUN / 9:00 AM']].map(c=>`<div class="class-row"><b>${c[0]}</b><span class="muted">${c[1]}</span><span>${c[2]}</span></div>`).join('')}</section>
+<section class="note center"><div class="wrap"><h2>You belong here.</h2><p class="muted" style="margin:12px 0">Your first class is on us. Mat included.</p><a href="#classes" class="btn">Explore classes</a></div></section>
+<footer>KINDRED Yoga / Room to be yourself / 2026</footer>`);
+
+/* 42 Developer tools */
+add('STACK Developer API','Startup','Developer Tools','#7df2c5','#161b36','Space Grotesk,sans-serif',`
+body{background:#0b1120;color:#f1f5fa}.muted{color:#9ba9b8}.hero{min-height:650px;background:linear-gradient(90deg,rgba(8,17,32,.94),rgba(8,17,32,.24)),url('${photo(943096)}') center/cover}
+.hero h1{font-size:77px;max-width:760px;letter-spacing:-3px}.btn{background:#7df2c5;color:#081c19;border-radius:6px}
+.ey{font-size:12px;font-weight:700;letter-spacing:3px;color:#7df2c5;text-transform:uppercase}.feature{border-top:1px solid #263b45;padding:26px 0;display:grid;grid-template-columns:70px 1fr 1fr;gap:25px}.feature b{font-size:23px}
+pre{background:#101e2e;border-left:3px solid #7df2c5;padding:26px;overflow:auto;color:#c8f8df;line-height:2;font-size:15px}
+footer{background:#080e1b;color:#607586;border-color:#20313d}`,`
+<div class="hero"><nav class="wrap"><div class="logo">STACK<span style="color:#7df2c5">.</span></div><ul><li>Platform</li><li>Docs</li><li>Pricing</li></ul><a href="#api" class="btn">Explore the API</a></nav>
+<div class="wrap" style="padding-top:105px"><p class="ey">Build faster. Ship calmer.</p><h1 style="margin:17px 0">The backend you<br>don't have to build.</h1><p style="font-size:18px;max-width:520px;color:#c2d0d7">Authentication, events and storage. One clean API. Back to the part only you can build.</p><a class="btn" href="#api" style="margin-top:27px">See how it works</a></div></div>
+<section id="api" class="wrap sec grid g2" style="align-items:center;gap:60px"><div><p class="ey">From idea to live</p><h2 style="margin:12px 0">Your first request. In minutes.</h2><p class="muted">Readable endpoints. Helpful errors. Documentation written for humans.</p></div><pre><code>const response = await fetch('/v1/events', {
+  method: 'POST',
+  headers: { authorization: 'Bearer KEY' },
+  body: JSON.stringify({ event: 'signup' })
+});</code></pre></section>
+<section class="wrap sec">${[['01','One API','Auth, payments and storage in one place.'],['02','Built to scale','From first prototype to your millionth user.'],['03','Less busywork','Spend your time building the good stuff.']].map(f=>`<div class="feature"><span style="color:var(--a)">${f[0]}</span><b>${f[1]}</b><p class="muted">${f[2]}</p></div>`).join('')}</section>
+<footer>STACK. / The infrastructure for what's next / 2026</footer>`);
+
+/* 43 Architecture */
+add('MONO Architecture','Creative','Architecture','#cf664f','#282c2c','Inter,sans-serif',`
+body{background:#f5f3ee;color:#262c2c}.hero{min-height:720px;color:#fff;background:linear-gradient(90deg,rgba(24,29,29,.78),rgba(24,29,29,.08)),url('${photo(4328661)}') center/cover}
+.hero h1{font-size:85px;line-height:1;max-width:720px;font-weight:600}.btn{background:#cb624b;border-radius:0;text-transform:uppercase;font-size:13px;letter-spacing:1px}
+.ey{font-size:12px;letter-spacing:4px;text-transform:uppercase;font-weight:700}.work{display:grid;grid-template-columns:130px 1fr 1fr;border-top:1px solid #c5c9c7;padding:24px 0;align-items:baseline;gap:20px}
+.work b{font-size:26px}.manifesto{background:#2b3030;color:#fff;padding:75px 0}footer{background:#242929;border:0;color:#a8b1b0}`,`
+<div class="hero"><nav class="wrap"><div class="logo" style="letter-spacing:3px">MONO / A</div><ul><li>Work</li><li>Studio</li><li>Process</li></ul><a class="btn" href="#work">Selected work</a></nav>
+<div class="wrap" style="padding-top:135px"><p class="ey">Architecture for the way we live</p><h1 style="margin:20px 0">Space shapes<br>everything.</h1><p style="font-size:19px;max-width:450px">We design places that feel inevitable, memorable and entirely yours.</p><a href="#work" class="btn" style="margin-top:28px">Explore the practice</a></div></div>
+<section id="work" class="wrap sec"><p class="ey" style="color:var(--a)">A selection</p><h2 style="margin:12px 0 32px">Work that speaks for itself.</h2>${[['01','Courtyard House','Residential / Copenhagen'],['02','The Fold','Cultural / London'],['03','Horizon Office','Commercial / Rotterdam']].map(w=>`<div class="work"><span>${w[0]}</span><b>${w[1]}</b><span class="muted">${w[2]}</span></div>`).join('')}</section>
+<section class="manifesto center"><div class="wrap"><h2>Built for the people who use it.</h2><p style="margin:12px 0;color:#b9c4c1">A collaborative practice, from first sketch to final detail.</p><a href="#work" class="btn">Start a conversation</a></div></section>
+<footer>MONO Architecture / Copenhagen / 2026</footer>`);
+
+/* 44 Coworking */
+add('The Commons Coworking','Business','Coworking','#ee704d','#244768','Poppins,sans-serif',`
+body{background:#f9f4e9;color:#1d374d}.hero{min-height:670px;color:#fff;background:linear-gradient(90deg,rgba(24,51,76,.85),rgba(24,51,76,.05)),url('${photo(2041627)}') center/cover}
+.hero h1{font-size:73px;max-width:720px}.btn{background:#ed704c;border-radius:100px}
+.ey{font-size:12px;text-transform:uppercase;letter-spacing:3px;font-weight:700}.desk{border-top:1px solid #bed1d8;padding:24px 0;display:flex;justify-content:space-between;gap:16px;align-items:baseline}.desk b{font-size:22px}
+.join{background:#ee704d;color:#fff;padding:70px 0}.join .btn{background:#183a57}footer{background:#1d405a;border:0;color:#bcd0d8}`,`
+<div class="hero"><nav class="wrap"><div class="logo">the commons.</div><ul><li>Spaces</li><li>Community</li><li>Membership</li></ul><a class="btn" href="#spaces">Explore the space</a></nav>
+<div class="wrap" style="padding-top:105px"><p class="ey">Your best work happens together</p><h1 style="margin:17px 0">Room to make<br>something happen.</h1><p style="font-size:18px;max-width:500px">Workspaces, good coffee and better company. Come for a desk, stay for the people.</p><a href="#spaces" class="btn" style="margin-top:27px">Find your place</a></div></div>
+<section id="spaces" class="wrap sec"><p class="ey" style="color:var(--a)">Pick your pace</p><h2 style="margin:12px 0 28px">A seat for every kind of workday.</h2>${[['The day pass','Drop in whenever inspiration strikes','$25 / day'],['The flex desk','Find your rhythm, three days a week','$149 / mo'],['The dedicated desk','A desk that feels like yours','$299 / mo']].map(x=>`<div class="desk"><b>${x[0]}</b><span class="muted">${x[1]}</span><strong>${x[2]}</strong></div>`).join('')}</section>
+<section class="join center"><div class="wrap"><h2>Come work alongside us.</h2><p style="margin:10px 0">Tour the space, meet the team, get a coffee on us.</p><a class="btn" href="#spaces" style="margin-top:14px">Explore memberships</a></div></section>
+<footer>The Commons / More than a workspace / 2026</footer>`);
+
+/* 45 Cleaning service */
+add('TidyCo Home Cleaning','Services','Home Cleaning','#4d9c88','#f1c967','Inter,sans-serif',`
+body{background:#f4faf6;color:#204d48}.hero{min-height:660px;background:linear-gradient(90deg,rgba(231,249,239,.97),rgba(231,249,239,.05)),url('${photo(6195275)}') center/cover}
+.hero h1{font-size:71px;max-width:650px}.btn{background:#338d78;border-radius:100px}
+.ey{font-size:12px;letter-spacing:3px;font-weight:800;text-transform:uppercase;color:#338d78}.service{display:flex;justify-content:space-between;gap:24px;border-top:1px solid #b9d6ca;padding:22px 0;align-items:baseline}.service b{font-size:23px}
+.book{background:#e3f1e9;padding:65px 0}.book input,.book select{padding:13px;border:1px solid #a0c8b7;background:#fff;border-radius:9px;font:inherit;width:100%}
+footer{background:#1f4d42;color:#bfd7cb;border:0}`,`
+<div class="hero"><nav class="wrap"><div class="logo">tidyco.</div><ul><li>Services</li><li>How it works</li><li>Reviews</li></ul><a class="btn" href="#booking">Book a clean</a></nav>
+<div class="wrap" style="padding-top:115px"><p class="ey">More life. Less mess.</p><h1 style="margin:17px 0">Come home to<br>a fresh start.</h1><p style="font-size:18px;max-width:485px">Reliable, thoughtful home cleaning with a personal touch. Your space, the way you love it.</p><a href="#booking" class="btn" style="margin-top:28px">Get a cleaning quote</a></div></div>
+<section class="wrap sec"><p class="ey">A clean for every need</p><h2 style="margin:12px 0 28px">A little help goes a long way.</h2>${[['Regular refresh','Weekly or fortnightly / from $85'],['Deep clean','The top-to-bottom reset / from $160'],['Move-in and move-out','One less thing to think about / from $220']].map(s=>`<div class="service"><b>${s[0]}</b><span class="muted">${s[1]}</span></div>`).join('')}</section>
+<section id="booking" class="book"><div class="wrap grid g2" style="align-items:center;gap:60px"><div><h2>A cleaner home starts here.</h2><p class="muted" style="margin-top:12px">A sample of the simple booking experience your customers could have.</p></div><form data-demo="This is a sample cleaning request. No booking was placed." class="grid g2" style="gap:10px"><input required aria-label="Your postcode" placeholder="Your postcode"><select aria-label="Cleaning service"><option>Choose a service</option><option>Regular clean</option><option>Deep clean</option></select><button class="btn" type="submit">Explore availability</button><p role="status" style="font-size:13px;align-self:center"></p></form></div></section>
+<footer>TidyCo / Good cleaning, good feeling / 2026</footer>`);
+
+/* 46 Farm shop */
+add('Good Earth Farm Shop','Food','Farm Shop','#54834f','#edb35b','Playfair Display,serif',`
+body{background:#f9f3e7;color:#34432e}.hero{min-height:670px;color:#fff;background:linear-gradient(90deg,rgba(32,62,33,.82),rgba(32,62,33,.05)),url('${photo(5084088)}') center/cover}
+.hero h1{font-size:78px;max-width:740px}.btn{background:#e4a65b;color:#2d4430;border-radius:2px;font:700 14px Inter,sans-serif}
+.ey{font:700 12px Inter,sans-serif;text-transform:uppercase;letter-spacing:3px}.harvest{border-top:1px solid #c8d3bd;padding:23px 0;display:flex;justify-content:space-between;gap:18px;align-items:baseline}.harvest b{font-size:23px}
+.field{background:#e7ead7;padding:80px 0}footer{background:#344d35;color:#c8d6ba;border:0}`,`
+<div class="hero"><nav class="wrap"><div class="logo">good earth.</div><ul><li>What's fresh</li><li>Our farm</li><li>Visit us</li></ul><a class="btn" href="#harvest">See the harvest</a></nav>
+<div class="wrap" style="padding-top:120px"><p class="ey">Grown close. Gathered with care.</p><h1 style="margin:17px 0">Good food begins<br>in good soil.</h1><p style="font:18px Inter,sans-serif;max-width:470px">Seasonal produce, straight from our fields to your kitchen table.</p><a href="#harvest" class="btn" style="margin-top:28px">What's in season?</a></div></div>
+<section id="harvest" class="wrap sec"><p class="ey" style="color:#54834f">Fresh from the fields</p><h2 style="margin:12px 0 28px">This week's harvest.</h2>${[['01','The seasonal veg box','Our best picks of the week / from $22'],['02','The fruit box','The sweet, sunny stuff / from $18'],['03','The market basket','A little of everything / from $32']].map(h=>`<div class="harvest"><span>${h[0]}</span><b>${h[1]}</b><span class="muted">${h[2]}</span></div>`).join('')}</section>
+<section class="field center"><div class="wrap"><p class="ey" style="color:#54834f">Come by and say hello</p><h2 style="margin:12px 0">Good things grow here.</h2><p class="muted">Farm stand open Saturdays / 9 am to 2 pm</p><a class="btn" style="margin-top:22px" href="#harvest">Discover the shop</a></div></section>
+<footer>Good Earth Farm / Seasonal by nature / 2026</footer>`);
+
+/* 47 Language school */
+add('Say Hello Language School','Education','Language School','#6c59d9','#fc766a','Poppins,sans-serif',`
+body{background:#fffaf2;color:#2d2b5f}.hero{min-height:670px;color:#fff;background:linear-gradient(90deg,rgba(48,36,122,.87),rgba(48,36,122,.06)),url('${photo(6683888)}') center/cover}
+.hero h1{font-size:76px;max-width:750px}.btn{background:#fa755f;border-radius:100px}
+.ey{font-size:12px;text-transform:uppercase;letter-spacing:3px;font-weight:700}.course{border-top:1px solid #d3cdeb;padding:23px 0;display:flex;align-items:baseline;justify-content:space-between;gap:16px}.course b{font-size:24px}
+.hello{background:#e9e4ff;padding:76px 0}footer{background:#373076;color:#d3d0ed;border:0}`,`
+<div class="hero"><nav class="wrap"><div class="logo">say hello.</div><ul><li>Languages</li><li>How we teach</li><li>Our teachers</li></ul><a class="btn" href="#courses">Explore classes</a></nav>
+<div class="wrap" style="padding-top:108px"><p class="ey">Speak more. See more. Be more.</p><h1 style="margin:18px 0">The world opens<br>when you do.</h1><p style="font-size:18px;max-width:500px">Real conversations from day one. Small classes, good people, big possibilities.</p><a href="#courses" class="btn" style="margin-top:27px">Find your language</a></div></div>
+<section id="courses" class="wrap sec"><p class="ey" style="color:var(--a)">Choose a new beginning</p><h2 style="margin:12px 0 28px">What do you want to say?</h2>${[['Spanish','For the journey / beginner to fluent'],['French','For the feeling / beginner to fluent'],['Japanese','For the curiosity / beginner to fluent'],['English','For whatever comes next / all levels']].map(c=>`<div class="course"><b>${c[0]}</b><span class="muted">${c[1]}</span><span>Explore +</span></div>`).join('')}</section>
+<section class="hello center"><div class="wrap"><h2>It starts with hello.</h2><p class="muted">Come meet your next favourite teacher. First class is free.</p><a class="btn" href="#courses" style="margin-top:20px">See the classes</a></div></section>
+<footer>Say Hello / Small classes, wide horizons / 2026</footer>`);
+
+/* 48 Immigration consultancy */
+add('Atlas Visa & Migration','Business','Immigration','#e1a548','#16324f','Inter,sans-serif',`
+body{background:#f7f8f7;color:#18314d}.hero{min-height:670px;color:#fff;background:linear-gradient(90deg,rgba(17,45,72,.9),rgba(17,45,72,.12)),url('${photo(39075597)}') center/cover}
+.hero h1{font-size:69px;max-width:720px}.btn{background:#dfa13f;color:#18314d;border-radius:4px}
+.ey{font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#ffd187}.path{border-top:1px solid #c3d1d9;padding:24px 0;display:grid;grid-template-columns:75px 1fr 1fr;gap:22px}.path b{font-size:22px}
+details{border-bottom:1px solid #c3d1d9;padding:20px 0}summary{font-weight:700;cursor:pointer}details p{color:#67788b;padding-top:12px}
+footer{background:#16324f;color:#bbcbd9;border:0}`,`
+<div class="hero"><nav class="wrap"><div class="logo">ATLAS /</div><ul><li>Visa routes</li><li>Our team</li><li>Questions</li></ul><a class="btn" href="#journey">See your next step</a></nav>
+<div class="wrap" style="padding-top:113px"><p class="ey">A new chapter starts with a plan</p><h1 style="margin:18px 0">Your world is<br>bigger than borders.</h1><p style="font-size:18px;max-width:515px">Clear, personal guidance for work, study and family visa journeys.</p><a href="#journey" class="btn" style="margin-top:28px">Explore your options</a></div></div>
+<section id="journey" class="wrap sec"><p class="ey" style="color:#b68132">How we help</p><h2 style="margin:12px 0 28px">A real person at every step.</h2>${[['01','Understand your options','Talk through your plans and the relevant routes.'],['02','Prepare with confidence','Gather the right documents, with guidance.'],['03','Stay supported','Clear updates throughout your application.']].map(s=>`<div class="path"><span>${s[0]}</span><b>${s[1]}</b><p class="muted">${s[2]}</p></div>`).join('')}</section>
+<section class="wrap sec" style="border-top:1px solid #c3d1d9"><h2>Questions are welcome.</h2><div style="margin-top:20px"><details><summary>Where should I start?</summary><p>Begin with a consultation so we can understand your circumstances and explain which routes may be relevant.</p></details><details><summary>What documents will I need?</summary><p>Requirements depend on the destination and visa type. We will outline a tailored document checklist after reviewing your situation.</p></details></div></section>
+<footer>Atlas Visa / Guidance, not guarantees / 2026</footer>`);
+
+/* 49 Hair salon */
+add('MUSE Hair Atelier','Beauty','Hair Salon','#d8a78f','#3c322f','Playfair Display,serif',`
+body{background:#f8f1e9;color:#3d322f}.hero{min-height:700px;color:#fff;background:linear-gradient(270deg,rgba(46,33,29,.88),rgba(46,33,29,.08)),url('${photo(3331488)}') center/cover}
+.hero h1{font-size:82px;max-width:750px}.btn{background:#ba806a;border-radius:0;font:600 13px Inter,sans-serif;text-transform:uppercase;letter-spacing:2px}
+.ey{font:700 12px Inter,sans-serif;letter-spacing:4px;text-transform:uppercase}.service{border-top:1px solid #d3c2b4;padding:22px 0;display:flex;justify-content:space-between;gap:20px;align-items:baseline}.service b{font-size:24px}
+.note{background:#e8d9ca;padding:75px 0}footer{background:#3c322f;color:#d9c8ba;border:0}`,`
+<div class="hero"><nav class="wrap"><div class="logo" style="letter-spacing:4px">MUSE.</div><ul><li>Our work</li><li>Services</li><li>Our people</li></ul><a class="btn" href="#services">See services</a></nav>
+<div class="wrap" style="padding-top:124px;text-align:right"><p class="ey">A different kind of salon</p><h1 style="margin:18px 0 18px auto">Great hair.<br>More you.</h1><p style="font:18px Inter,sans-serif;max-width:480px;margin-left:auto">A space to feel seen, a cut to feel yourself. Come in as you are.</p><a href="#services" class="btn" style="margin-top:27px">Explore the atelier</a></div></div>
+<section id="services" class="wrap sec"><p class="ey" style="color:#a66b55">The service menu</p><h2 style="margin:12px 0 28px">Time for your kind of hair.</h2>${[['The signature cut','From $70'],['Colour, your way','From $125'],['The gloss and go','From $55'],['Occasion styling','From $90']].map(s=>`<div class="service"><b>${s[0]}</b><span class="muted">${s[1]}</span></div>`).join('')}</section>
+<section class="note center"><div class="wrap"><h2>Good hair days begin here.</h2><p class="muted" style="margin:10px 0">One-on-one attention. No rush, no rules.</p><a class="btn" href="#services" style="margin-top:16px">Find your service</a></div></section>
+<footer>MUSE Hair Atelier / Make room for yourself / 2026</footer>`);
+
+/* 50 Childcare */
+add('Little Sprouts Preschool','Education','Childcare','#f29e56','#527d65','Poppins,sans-serif',`
+body{background:#fffaf0;color:#365748}.hero{min-height:680px;color:#fff;background:linear-gradient(90deg,rgba(40,72,55,.87),rgba(40,72,55,.04)),url('${photo(8612993)}') center/cover}
+.hero h1{font-size:72px;max-width:740px}.btn{background:#ee9854;border-radius:100px}
+.ey{font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:700}.age{border-top:1px solid #cad9c5;padding:25px 0;display:grid;grid-template-columns:120px 1fr 1fr;gap:18px;align-items:baseline}.age b{font-size:24px}
+.visit{background:#e8f1e1;padding:75px 0}.visit input{padding:14px;background:#fff;border:1px solid #afcbaa;border-radius:12px;font:inherit;width:100%}.visit [role=status]{color:#35624d;margin-top:10px;font-size:13px}
+footer{background:#365748;color:#c4d8c5;border:0}`,`
+<div class="hero"><nav class="wrap"><div class="logo">little sprouts.</div><ul><li>Our day</li><li>Programs</li><li>Families</li></ul><a class="btn" href="#programs">Meet the school</a></nav>
+<div class="wrap" style="padding-top:113px"><p class="ey">Big little beginnings</p><h1 style="margin:18px 0">A happy place<br>to grow into you.</h1><p style="font-size:18px;max-width:490px">Play-led days, curious minds and gentle hands. A warm first home away from home.</p><a href="#programs" class="btn" style="margin-top:28px">Explore our programs</a></div></div>
+<section id="programs" class="wrap sec"><p class="ey" style="color:#d4803e">Room to grow</p><h2 style="margin:12px 0 28px">Every age has its own magic.</h2>${[['18 mo - 2 y','Little explorers','Safe routines and plenty of play.'],['2 - 3 y','Big discoveries','Songs, stories and first friendships.'],['3 - 5 y','Ready for anything','Curiosity-led learning for the next step.']].map(p=>`<div class="age"><span>${p[0]}</span><b>${p[1]}</b><p class="muted">${p[2]}</p></div>`).join('')}</section>
+<section class="visit"><div class="wrap grid g2" style="align-items:center;gap:55px"><div><h2>Come see the happy for yourself.</h2><p class="muted" style="margin-top:12px">A friendly school tour is the best place to start.</p></div><form data-demo="This is a sample tour form. No visit was booked."><input type="email" required aria-label="Your email" placeholder="Your email address"><button type="submit" class="btn" style="margin-top:12px">Explore a tour</button><p role="status"></p></form></div></section>
+<footer>Little Sprouts / Where belonging begins / 2026</footer>`);
+
+/* ============================================================
+   GALLERY LOGIC
+   ============================================================ */
+const gallery = document.getElementById('gallery');
+const cats = ['All', ...new Set(T.map(t=>t.cat))];
+const filters = document.getElementById('filters');
+const search = document.getElementById('search');
+const resultCount = document.getElementById('resultCount');
+const whatsappUrl = message => `https://wa.me/919307427854?text=${encodeURIComponent(message)}`;
+const defaultMessage = 'Hi G-7, I would like to discuss a website template.';
+let activeCategory = 'All';
+let previewObserver;
+const previewResizer = new ResizeObserver(entries => {
+  entries.forEach(({target}) => target.style.setProperty('--preview-scale', (target.clientWidth / 1280).toFixed(4)));
+});
+
+document.getElementById('totalCount').textContent = T.length;
+document.getElementById('contactLink').href = whatsappUrl(defaultMessage);
+filters.innerHTML = cats.map((c,i)=>`<button type="button" class="chip ${i===0?'active':''}" data-c="${c}" aria-pressed="${i===0}">${c}</button>`).join('');
+
+function render(){
+  if(previewObserver) previewObserver.disconnect();
+  previewResizer.disconnect();
+  const query = search.value.trim().toLowerCase();
+  const found = T.map((t,i)=>({t,i})).filter(({t})=>(activeCategory==='All'||t.cat===activeCategory) && `${t.t} ${t.cat} ${t.tag}`.toLowerCase().includes(query));
+  resultCount.textContent = found.length === T.length ? `Showing all ${T.length} templates` : `Showing ${found.length} of ${T.length} templates`;
+  gallery.replaceChildren();
+  if(!found.length){gallery.innerHTML='<p style="grid-column:1/-1;color:#64748b;text-align:center;padding:64px 0;font-size:15px">No matches yet. Try another search or category.</p>';return;}
+  const fragment = document.createDocumentFragment();
+  found.forEach(({t,i},order)=>{
+    const el=document.createElement('article');
+    el.className='gallery-card';
+    el.style.setProperty('--order', `${Math.min(order,9)*45}ms`);
+    el.innerHTML=`<div class="shell"><div class="shell-loader">Loading preview…</div><iframe class="frame" loading="lazy" title="Thumbnail of ${t.t}" tabindex="-1" aria-hidden="true" sandbox="allow-scripts" data-i="${i}"></iframe></div>
+    <div class="card-body">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:8px">
+        <h2>${t.t}</h2>
+        <span class="tag">${t.tag}</span>
+      </div>
+      <p class="meta">${t.cat} / Responsive design</p>
+      <div class="actions">
+        <button type="button" class="demo" data-i="${i}">See live demo</button>
+        <button type="button" class="tab" data-i="${i}" aria-label="Open ${t.t} in a new tab">Open tab</button>
+      </div>
+    </div>`;
+    fragment.appendChild(el);
+  });
+  gallery.appendChild(fragment);
+  previewObserver = new IntersectionObserver(entries=>entries.forEach(entry=>{
+    if(!entry.isIntersecting)return;
+    const frame=entry.target;
+    frame.addEventListener('load',()=>frame.classList.add('ready'),{once:true});
+    frame.srcdoc=T[frame.dataset.i].html;
+    previewObserver.unobserve(frame);
+  }),{rootMargin:'180px'});
+  gallery.querySelectorAll('.frame').forEach(frame=>{
+    previewResizer.observe(frame.parentElement);
+    previewObserver.observe(frame);
+  });
+}
+filters.addEventListener('click',e=>{
+  const button=e.target.closest('[data-c]');
+  if(!button)return;
+  activeCategory=button.dataset.c;
+  filters.querySelectorAll('.chip').forEach(chip=>{
+    const active=chip===button;
+    chip.classList.toggle('active',active);
+    chip.setAttribute('aria-pressed',String(active));
+  });
+  render();
+});
+let searchTimer;
+search.addEventListener('input',()=>{clearTimeout(searchTimer);searchTimer=setTimeout(render,120);});
+
+const modal=document.getElementById('modal'),mFrame=document.getElementById('mFrame');
+let current=0;
+let returnFocus;
+gallery.addEventListener('click',e=>{
+  const d=e.target.closest('.demo'), tb=e.target.closest('.tab');
+  if(d){current=+d.dataset.i;open_(current);}
+  if(tb){openTab(+tb.dataset.i);}
+});
+function open_(i){
+  returnFocus=document.activeElement;
+  document.getElementById('mTitle').textContent=T[i].t;
+  mFrame.srcdoc=T[i].html;
+  mFrame.style.width='100%';
+  document.querySelectorAll('.dev').forEach((b,n)=>b.classList.toggle('active',n===0));
+  modal.classList.remove('hidden');
+  document.body.style.overflow='hidden';
+  document.getElementById('close').focus();
+}
+function openTab(i){
+  const url=URL.createObjectURL(new Blob([T[i].html],{type:'text/html'}));
+  window.open(url,'_blank','noopener,noreferrer');
+  setTimeout(()=>URL.revokeObjectURL(url),120000);
+}
+document.getElementById('close').onclick=()=>{
+  modal.classList.add('hidden');
+  mFrame.srcdoc='';
+  document.body.style.overflow='';
+  returnFocus?.focus();
+};
+document.getElementById('newTab').onclick=()=>openTab(current);
+document.getElementById('devices').onclick=e=>{const b=e.target.closest('.dev');if(!b)return;
+  document.querySelectorAll('.dev').forEach(x=>x.classList.remove('active'));b.classList.add('active');mFrame.style.width=b.dataset.w;};
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!modal.classList.contains('hidden'))document.getElementById('close').click();});
+
+/* Header scroll */
+const header = document.getElementById('siteHeader');
+window.addEventListener('scroll',()=>{header.classList.toggle('scrolled',window.scrollY>20)},{passive:true});
+
+/* Mobile menu */
+const mBtn=document.getElementById('mobileBtn'),mMenu=document.getElementById('mobileMenu');
+if(mBtn&&mMenu){mBtn.addEventListener('click',()=>{const o=mMenu.classList.toggle('open');mBtn.setAttribute('aria-expanded',o?'true':'false');const i=mBtn.querySelector('i');i.classList.toggle('fa-bars',!o);i.classList.toggle('fa-times',o)});}
+
+render();
+</script>
+
+</body>
+</html>
